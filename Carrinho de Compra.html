@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Carrinho de Compras</title>
+ <link rel="stylesheet" href="Carrinho de Compra.css">
+ <style>
+   /* Adicione estilos básicos aqui */
+   .cart { max-width: 600px; margin: auto; }
+   .product { display: flex; justify-content: space-between; margin-bottom: 10px; }
+   .total { font-weight: bold; }
+ </style>
+</head>
+<body>
+ <div class="cart">
+   <h1>Carrinho de Compras</h1>
+   <div id="products">
+     <!-- Produtos serão adicionados dinamicamente -->
+   </div>
+   <p class="total">Total: R$ <span id="total">0.00</span></p>
+   <button onclick="finalizarCompra()">Finalizar Compra</button>
+ </div>
+ <script src="Carrinho de Compra.js"></script>
+</body>
+</html>

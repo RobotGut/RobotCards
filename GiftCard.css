@@ -1,0 +1,410 @@
+
+/* RESET */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CONFIG GERAL */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+}
+
+/* HEADER */
+
+header {
+  background: #1f1f1f;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+header h1 {
+  padding: 20px;
+}
+
+/* NAV */
+
+nav {
+  background: #111;
+  padding: 30px;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
+nav ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 600px;
+
+  flex-wrap: wrap;
+}
+
+nav li {
+  transition: transform 0.3s ease;
+}
+
+nav li:hover {
+  transform: scale(1.8);
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* LINHA ANIMADA */
+
+nav a::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0%;
+  height: 2px;
+
+  left: 0;
+  bottom: -5px;
+
+  background: #00ffcc;
+
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* HERO */
+
+.header1 {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.header1 h1 {
+  font-size: 3rem;
+}
+
+.header1 h2 {
+  margin-top: 10px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* GRID DOS CARDS */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit, minmax(335px, 1fr));
+
+  gap: 20px;
+
+  padding: 40px;
+}
+
+/* CARD BASE */
+
+.card {
+  height: 250px;
+
+  border-radius: 40px;
+
+  position: relative;
+  overflow: hidden;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+
+/* EFEITO ESCURO */
+
+.card::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.3);
+
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* HOVER GLOBAL */
+
+.card:hover {
+  transform: scale(1.08);
+}
+
+/* IMAGENS DOS CARDS */
+
+.cardNetflix {
+  background-image:
+  url('https://th.bing.com/th?id=OIF.Jx9zt%2bDIZNuDoZeSlEBoZw&rs=1&pid=ImgDetMain&o=7&rm=3');
+}
+
+.cardMicrosoft {
+  background-image:
+  url('https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg');
+}
+
+.cardRoblox {
+  background-image:
+  url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg');
+}
+
+.cardUber {
+  background-image:
+  url('https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg');
+}
+
+.cardXbox {
+  background-image:
+  url('https://assets.xboxservices.com/assets/5c/55/5c554715-fac4-4c09-8006-d8e62d355157.jpg');
+}
+
+.cardOverwatch {
+  background-image:
+  url('https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo');
+}
+
+.cardLegueOfLegends {
+  background-image:
+  url('https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK');
+}
+
+.cardSea {
+  background-image:
+  url('https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK');
+}
+
+.cardCentauro {
+  background-image:
+  url('https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa');
+}
+
+.cardNetshoes {
+  background-image:
+  url('https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png');
+}
+
+.cardDecathlon {
+  background-image:
+  url('https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2');
+}
+
+.cardKopenhagem {
+  background-image:
+  url('https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg');
+}
+
+/* GLOWS INDIVIDUAIS */
+
+.cardNetflix:hover {
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+.cardMicrosoft:hover {
+  box-shadow:
+    0 0 10px rgba(121, 121, 121, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.cardRoblox:hover {
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 60, 0, 0.6),
+    0 0 40px rgba(0,255,150,0.6);
+}
+
+.cardUber:hover {
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(253, 255, 254, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardXbox:hover {
+  box-shadow:
+    0 0 10px rgba(0,255,150,0.6),
+    0 0 20px rgba(0,255,150,0.6),
+    0 0 40px rgba(0,255,150,0.6);
+}
+
+.cardOverwatch:hover {
+  box-shadow:
+    0 0 10px rgba(255, 230, 3, 0.6),
+    0 0 20px rgba(172, 172, 172, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardLegueOfLegends:hover {
+  box-shadow:
+    0 0 10px rgba(0,255,150,0.6),
+    0 0 20px rgba(255, 60, 0, 0.6),
+    0 0 40px rgba(219, 255, 61, 0.6);
+}
+
+.cardSea:hover {
+  box-shadow:
+    0 0 10px rgba(64, 95, 182, 0.6),
+    0 0 20px rgba(255, 251, 21, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.cardCentauro:hover {
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 252, 252, 0.6);
+}
+
+.cardNetshoes:hover {
+  box-shadow:
+    0 0 10px rgba(126, 45, 201, 0.6),
+    0 0 20px rgba(126, 45, 201, 0.6),
+    0 0 40px rgba(126, 45, 201, 0.6);
+}
+
+.cardDecathlon:hover {
+  box-shadow:
+    0 0 10px rgba(8, 90, 197, 0.6),
+    0 0 20px rgba(8, 90, 197, 0.6),
+    0 0 40px rgba(8, 90, 197, 0.6);
+}
+
+.cardKopenhagem:hover {
+  box-shadow:
+    0 0 10px rgba(223, 255, 44, 0.6),
+    0 0 20px rgba(197, 8, 8, 0.6),
+    0 0 40px rgba(219, 255, 56, 0.6);
+}
+
+/* BENEFÍCIOS */
+
+.container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+
+  padding: 20px;
+  margin: 30px auto;
+
+  max-width: 1200px;
+}
+
+.container img {
+  max-width: 180px;
+
+  width: 100%;
+
+  height: auto;
+
+  border-radius: 10px;
+}
+
+/* SEÇÃO JOGOS */
+
+.jogo {
+  text-align: center;
+
+  padding: 15px;
+
+  background: #1f1f1f;
+
+  border-radius: 20px;
+
+  margin: 20px;
+}
+
+h2,
+h3 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  padding: 20px;
+
+  background: #222;
+
+  color: white;
+
+  margin-top: 40px;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 768px) {
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  .header1 h1 {
+    font-size: 2.2rem;
+  }
+
+  .container img {
+    max-width: 140px;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
