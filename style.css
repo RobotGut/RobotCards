@@ -37,20 +37,16 @@ header h1 {
 
 nav {
   background: #111;
-  padding: 30px;
+  padding: 30px 40px;
   margin-top: 10px;
   border-radius: 12px;
 }
 
 nav ul {
   list-style: none;
-
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-
-  gap: 20%;
-
   flex-wrap: wrap;
 }
 
