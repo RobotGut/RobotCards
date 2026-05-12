@@ -5,6 +5,8 @@ body {
     color: white;
 }
 
+/* TOPO */
+
 .topbar {
     display: flex;
     justify-content: space-between;
@@ -20,14 +22,29 @@ body {
     text-decoration: none;
 }
 
+/* PRODUTO */
+
 .product {
     display: flex;
     gap: 40px;
 
     padding: 40px;
 
+    align-items: flex-start;
+
     flex-wrap: wrap;
 }
+
+/* COLUNA ESQUERDA */
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+
+    max-width: 320px;
+}
+
+/* IMAGEM */
 
 .product-image {
     width: 320px;
@@ -39,7 +56,152 @@ body {
     background-position: center;
 }
 
-/* IMAGENS */
+/* TEXTO EMBAIXO DA IMAGEM */
+
+.text {
+    margin-top: 20px;
+
+    line-height: 1.6;
+
+    text-align: left;
+
+    color: #ddd;
+}
+
+/* COLUNA DIREITA */
+
+.product-info {
+    flex: 1;
+
+    min-width: 300px;
+
+    max-width: 500px;
+}
+
+/* DESCRIÇÃO */
+
+.description {
+    opacity: 0.8;
+}
+
+/* BADGES */
+
+.badges {
+    display: flex;
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    margin: 20px 0;
+}
+
+.badges span {
+    background: #222;
+
+    padding: 8px 12px;
+
+    border-radius: 8px;
+}
+
+/* PREÇOS */
+
+.prices {
+    display: flex;
+
+    gap: 10px;
+
+    margin: 20px 0;
+
+    flex-wrap: wrap;
+}
+
+.prices button {
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #333;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.prices button:hover {
+    background: #00ffcc;
+    color: black;
+}
+
+/* BOTÕES */
+
+.actions {
+    display: flex;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    flex-wrap: wrap;
+}
+
+.buy,
+.cart {
+    padding: 14px 20px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.buy {
+    background: #00ffcc;
+    color: black;
+}
+
+.buy:hover {
+    transform: scale(1.05);
+}
+
+.cart {
+    background: #333;
+    color: white;
+}
+
+.cart:hover {
+    background: #444;
+}
+
+/* IMAGENS INFERIORES */
+
+.container {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+}
+
+.container img {
+    max-width: 180px;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 10px;
+}
+
+/* IMAGENS DOS GIFTS */
 
 .netflix {
     background-image: url("https://thf.bing.com/th/id/OIP.lyBkxZEDYmYJRLJJIU5lJAHaE4?w=252&h=180&c=7&r=0&o=7&cb=thfc1&pid=1.7&rm=3");
@@ -89,125 +251,35 @@ body {
     background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
 }
 
-.product-info {
-    max-width: 500px;
-}
-
-.description {
-    opacity: 0.8;
-}
-
-.badges {
-    display: flex;
-    gap: 10px;
-
-    flex-wrap: wrap;
-
-    margin: 20px 0;
-}
-
-.badges span {
-    background: #222;
-
-    padding: 8px 12px;
-
-    border-radius: 8px;
-}
-
-.prices {
-    display: flex;
-
-    gap: 10px;
-
-    margin: 20px 0;
-
-    flex-wrap: wrap;
-}
-
-.prices button {
-    padding: 12px;
-
-    border: none;
-
-    border-radius: 8px;
-
-    background: #333;
-
-    color: white;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-.prices button:hover {
-    background: #00ffcc;
-    color: black;
-}
-
-.actions {
-    display: flex;
-    gap: 10px;
-
-    margin-top: 20px;
-
-    flex-wrap: wrap;
-}
-
-.buy,
-.cart {
-    padding: 14px 20px;
-
-    border: none;
-
-    border-radius: 10px;
-
-    cursor: pointer;
-
-    font-weight: bold;
-
-    transition: 0.3s;
-}
-
-.buy {
-    background: #00ffcc;
-    color: black;
-}
-
-.buy:hover {
-    transform: scale(1.05);
-}
-
-.cart {
-    background: #333;
-    color: white;
-}
-
-.cart:hover {
-    background: #444;
-}
-
-.container img {
-    max-width: 180px;
-
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 10px;
-}
-
-p {
-    text-align: left;
-}
+/* RESPONSIVO */
 
 @media (max-width: 768px) {
+
     .product {
         padding: 20px;
+
+        flex-direction: column;
+    }
+
+    .left-side {
+        max-width: 100%;
     }
 
     .product-image {
         width: 100%;
         height: 250px;
+    }
+
+    .product-info {
+        max-width: 100%;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .buy,
+    .cart {
+        width: 100%;
     }
 }
