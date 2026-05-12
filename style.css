@@ -111,7 +111,7 @@ nav a:hover::after {
   display: grid;
 
   grid-template-columns:
-  repeat(auto-fit, minmax(335px, 1fr));
+  repeat(auto-fit, minmax(20%, 1fr));
 
   gap: 20px;
 
