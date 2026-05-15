@@ -1,114 +1,168 @@
+  /* =========================
+   RESET
+========================= */
 
-/* RESET */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* CONFIG GERAL */
-
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #121212;
-  color: #fff;
+body{
+  font-family:'Poppins',sans-serif;
+  background:
+  radial-gradient(circle at top,#1d1d1d,#0b0b0b 60%);
+  color:white;
+  overflow-x:hidden;
 }
 
-/* HEADER */
+/* =========================
+   HEADER
+========================= */
 
-header {
-  background: #1f1f1f;
-  padding: 20px;
-  text-align: center;
-  width: 100%;
-  z-index: 1000;
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  backdrop-filter:blur(18px);
+
+  background:rgba(10,10,10,0.7);
+
+  border-bottom:1px solid rgba(255,255,255,0.08);
+
+  padding:20px 40px;
 }
 
-header h1 {
-  padding: 20px;
+header h1{
+  text-align:center;
+  font-size:2.2rem;
+  font-weight:800;
+
+  background:linear-gradient(90deg,#00ffcc,#00a2ff);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+
+  margin-bottom:20px;
 }
 
-/* NAV */
+/* =========================
+   NAVBAR
+========================= */
 
-nav {
-  background: #111;
-  padding: 30px 40px;
-  margin-top: 10px;
-  border-radius: 12px;
+nav{
+  max-width:1200px;
+  margin:auto;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+nav ul{
+  list-style:none;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  gap:40px;
+
+  flex-wrap:wrap;
 }
 
-nav li {
-  transition: transform 0.3s ease;
-  font-size: 20px; /* Define o tamanho da fonte como 20 pixels */
+nav a{
+  text-decoration:none;
+  color:#f1f1f1;
+
+  font-size:1rem;
+  font-weight:600;
+
+  transition:0.3s;
+  position:relative;
 }
 
-nav li:hover {
-  transform: scale(1.4);
+nav a:hover{
+  color:#00ffcc;
 }
 
-nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
-  position: relative;
-  transition: 0.3s;
+nav a::after{
+  content:"";
+
+  position:absolute;
+
+  width:0%;
+  height:2px;
+
+  left:0;
+  bottom:-6px;
+
+  background:#00ffcc;
+
+  transition:0.3s;
 }
 
-/* LINHA ANIMADA */
-
-nav a::after {
-  content: "";
-
-  position: absolute;
-
-  width: 0%;
-  height: 2px;
-
-  left: 0;
-  bottom: -5px;
-
-  background: #00ffcc;
-
-  transition: 0.3s;
+nav a:hover::after{
+  width:100%;
 }
 
-nav a:hover::after {
-  width: 100%;
+/* =========================
+   HERO
+========================= */
+
+.header1{
+  min-height:55vh;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+
+  padding:60px 20px;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.7)
+  ),
+
+  url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600');
+
+  background-size:cover;
+  background-position:center;
 }
 
-/* HERO */
+.header1 h1{
+  font-size:5rem;
+  font-weight:900;
 
-.header1 {
-  text-align: center;
-  padding: 40px 20px;
+  background:linear-gradient(90deg,#00ffcc,#00a2ff);
+
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
 }
 
-.header1 h1 {
-  font-size: 3rem;
+.header1 h2{
+  margin-top:20px;
+
+  max-width:700px;
+
+  font-size:1.3rem;
+  font-weight:400;
+
+  color:#ddd;
+
+  line-height:1.6;
 }
 
-.header1 h2 {
-  margin-top: 10px;
-  font-weight: 400;
-  opacity: 0.9;
-}
+/* =========================
+   GRID
+========================= */
 
-/* GRID DOS CARDS */
-
-.cards {
+.cards{
   display: grid;
 
   grid-template-columns:
@@ -118,10 +172,12 @@ nav a:hover::after {
   padding: 30px;
 }
 
-/* CARD BASE */
+/* =========================
+   CARD
+========================= */
 
-.card {
-  height: 250px;
+.card{
+ height: 250px;
 
   border-radius: 40px;
 
@@ -137,93 +193,117 @@ nav a:hover::after {
   transition:
   transform 0.3s ease,
   box-shadow 0.3s ease;
+
+
 }
 
+/* OVERLAY */
 
-/* EFEITO ESCURO */
+.card::before{
+  content:"";
 
-.card::before {
-  content: "";
+  position:absolute;
+  inset:0;
 
-  position: absolute;
-  inset: 0;
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.15)
+  );
 
-  background: rgba(0, 0, 0, 0.3);
-
-  transition: 0.3s;
+  transition:.4s;
 }
 
-.card:hover::before {
-  background: rgba(0, 0, 0, 0.15);
+/* TEXTO */
+
+.card::after{
+  content:"Ver Gift Card";
+
+  position:absolute;
+
+  bottom:20px;
+  left:20px;
+
+  font-size:1.1rem;
+  font-weight:700;
+
+  color:white;
+
+  z-index:2;
+
+  opacity:.9;
 }
 
-/* HOVER GLOBAL */
+/* HOVER */
 
-.card:hover {
-  transform: scale(1.04);
+.card:hover{
+  transform:
+  translateY(-10px)
+  scale(1.02);
 }
 
-/* IMAGENS DOS CARDS */
-
-.cardNetflix {
-  background-image:
-  url('https://th.bing.com/th?id=OIF.Jx9zt%2bDIZNuDoZeSlEBoZw&rs=1&pid=ImgDetMain&o=7&rm=3');
+.card:hover::before{
+  background:
+  linear-gradient(
+    to top,
+    rgba(0,0,0,0.4),
+    rgba(0,0,0,0.1)
+  );
 }
 
-.cardMicrosoft {
-  background-image:
-  url('https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg');
+/* =========================
+   IMAGENS
+========================= */
+
+.cardNetflix{
+  background-image:url('https://tse3.mm.bing.net/th/id/OIP.af85UIGhzdzgfIckakDGNwHaEK?w=760&h=428&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
 
-.cardRoblox {
-  background-image:
-  url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg');
+.cardMicrosoft{
+  background-image:url('https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg');
 }
 
-.cardUber {
-  background-image:
-  url('https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg');
+.cardRoblox{
+  background-image:url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg');
 }
 
-.cardXbox {
-  background-image:
-  url('https://www.xboxuser.de/categories/2/page.jpg?1454154908');
+.cardUber{
+  background-image:url('https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg');
 }
 
-.cardOverwatch {
-  background-image:
-  url('https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo');
+.cardXbox{
+  background-image:url('https://www.xboxuser.de/categories/2/page.jpg?1454154908');
 }
 
-.cardLegueOfLegends {
-  background-image:
-  url('https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK');
+.cardOverwatch{
+  background-image:url('https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo');
 }
 
-.cardSea {
-  background-image:
-  url('https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK');
+.cardLegueOfLegends{
+  background-image:url('https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK');
 }
 
-.cardCentauro {
-  background-image:
-  url('https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa');
+.cardSea{
+  background-image:url('https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK');
 }
 
-.cardNetshoes {
-  background-image:
-  url('https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png');
+.cardCentauro{
+  background-image:url('https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa');
 }
 
-.cardDecathlon {
-  background-image:
-  url('https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2');
+.cardNetshoes{
+  background-image:url('https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png');
 }
 
-.cardKopenhagem {
-  background-image:
-  url('https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg');
+.cardDecathlon{
+  background-image:url('https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2');
 }
+
+.cardKopenhagem{
+  background-image:url('https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg');
+}
+
 
 /* GLOWS INDIVIDUAIS */
 
@@ -310,87 +390,82 @@ nav a:hover::after {
     0 0 20px rgba(197, 8, 8, 0.6),
     0 0 40px rgba(219, 255, 56, 0.6);
 }
+/* =========================
+   BENEFÍCIOS
+========================= */
 
-/* BENEFÍCIOS */
+.container{
+  display:grid;
 
-.container {
-  display: flex;
+  grid-template-columns:
+  repeat(auto-fit,minmax(180px,1fr));
 
-  justify-content: center;
-  align-items: center;
+  gap:20px;
 
-  gap: 20px;
+  max-width:1200px;
 
-  flex-wrap: wrap;
+  margin:40px auto;
 
-  padding: 20px;
-  margin: 30px auto;
-
-  max-width: 1200px;
+  padding:20px;
 }
 
-.container img {
-  max-width: 180px;
+.container img{
+  width:100%;
 
-  width: 100%;
+  border-radius:18px;
 
-  height: auto;
+  transition:.4s;
 
-  border-radius: 10px;
+
 }
 
-/* SEÇÃO JOGOS */
-
-.jogo {
-  text-align: center;
-
-  padding: 15px;
-
-  background: #1f1f1f;
-
-  border-radius: 20px;
-
-  margin: 20px;
+.container img:hover{
+  transform:translateY(-6px);
 }
 
-h2,
-h3 {
-  text-align: center;
-  margin-top: 20px;
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  margin-top:60px;
+
+  padding:30px;
+
+  text-align:center;
+
+  background:#0d0d0d;
+
+  border-top:
+  1px solid rgba(255,255,255,0.08);
+
+  color:#aaa;
 }
 
-/* FOOTER */
+/* =========================
+   RESPONSIVO
+========================= */
 
-footer {
-  text-align: center;
+@media(max-width:768px){
 
-  padding: 20px;
-
-  background: #222;
-
-  color: white;
-
-  margin-top: 40px;
-}
-
-/* RESPONSIVIDADE */
-
-@media screen and (max-width: 768px) {
-
-  .cards {
-    grid-template-columns: 1fr;
+  .header1{
+    min-height:45vh;
   }
 
-  nav ul {
-    gap: 14px;
+  .header1 h1{
+    font-size:3rem;
   }
 
-  .header1 h1 {
-    font-size: 2.2rem;
+  .header1 h2{
+    font-size:1rem;
   }
 
-  .container img {
-    max-width: 140px;
+  nav ul{
+    gap:20px;
+  }
+
+  .cards{
+    padding:30px 20px;
   }
 
 }
