@@ -2,151 +2,415 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>RobotStore | Gift Cards Netflix, Xbox, Roblox e Uber</title>
+  <title>RobotCard | Gift Cards Premium</title>
 
+  <!-- FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="script.js" defer></script>
 </head>
 
 <body>
 
   <!-- HEADER -->
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <header>
 
-    <h1>RobotCard</h1>
+    <div class="topbar">
 
-    <nav>
-      <ul>
+      <div class="logo">
+        RobotCard
+      </div>
 
-        <li class="menu-item">
-          <a href="#destaque">Em Destaque</a>
-        </li>
+      <nav>
+        <ul>
 
-        <li class="menu-item">
-          <a href="#giftcards">Gift Cards</a>
-        </li>
+          <li><a href="#cards">Gift Cards</a></li>
+          <li><a href="#benefits">Benefícios</a></li>
+          <li><a href="#promo">Promoções</a></li>
+          <li><a href="#support">Suporte</a></li>
 
-        <li class="menu-item">
-          <a href="#jogos">Jogos</a>
-        </li>
+        </ul>
+      </nav>
 
-        <li class="menu-item">
-          <a href="#suporte">Suporte</a>
-        </li>
+      <div class="header-buttons">
 
-      </ul>
-    </nav>
+        <button class="btn btn-login">
+          Entrar
+        </button>
+
+        <button class="btn btn-register">
+          Criar Conta
+        </button>
+
+      </div>
+
+    </div>
 
   </header>
 
   <!-- HERO -->
-  <section class="header1" id="giftcards">
 
-    <h1>Gift Cards Premium</h1>
+  <section class="hero">
 
-  <h2>
-Compre gift cards digitais com entrega imediata,
-pagamento seguro e suporte online 24h.
-</h2>
+    <div class="hero-content">
+
+      <div class="hero-text">
+
+        <h1>
+          Os melhores
+          <span class="gradient-text">
+            Gift Cards
+          </span>
+          do Brasil
+        </h1>
+
+        <p>
+          Compre gift cards digitais com entrega instantânea,
+          pagamentos seguros e suporte online 24 horas.
+          Netflix, Xbox, Roblox, Uber, Steam, League of Legends
+          e muito mais.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#cards" class="btn-main">
+            Comprar Agora
+          </a>
+
+          <a href="#benefits" class="btn-outline">
+            Saiba Mais
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="hero-preview">
+
+        <div class="floating-card">
+
+          <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?q=80&w=1200">
+
+        </div>
+
+      </div>
+
+    </div>
 
   </section>
 
   <!-- CARDS -->
-  <main>
 
-    <section class="cards">
+  <section class="cards-section" id="cards">
 
-      <a href="netflix"
-         onclick="cardNetflix('Netflix', 200)"
-         class="card cardNetflix"></a>
+    <div class="section-title">
 
-     <a href="microsoft"
-         onclick="cardMicrosft('Netflix', 200)"
-         class="card cardMicrosoft"></a>
+      <h2>
+        Gift Cards Populares
+      </h2>
 
+      <p>
+        Escolha sua plataforma favorita e receba
+        seu código imediatamente após a compra.
+      </p>
 
-       <a href="roblox"
-         onclick="cardRoblox('Netflix', 200)"
-         class="card cardRoblox"></a>
+    </div>
 
-       <a href="uber"
-         onclick="cardUber('Netflix', 200)"
-         class="card cardUber"></a>
+    <div class="cards">
 
-        <a href="xbox"
-         onclick="cardXbox('Netflix', 200)"
-         class="card cardXbox"></a>
-        <!-- mudar foto -->
+      <!-- NETFLIX -->
 
-       <a href="overwatch"
-         onclick="cardOverwatch('Netflix', 200)"
-         class="card cardOverwatch"></a>
-        <!-- mudar foto -->
+      <div class="card"
+        style="background-image:url('https://tse3.mm.bing.net/th/id/OIP.af85UIGhzdzgfIckakDGNwHaEK?w=760&h=428&rs=1&pid=ImgDetMain&o=7&rm=3')">
 
-       <a href="league-of-legends"
-         onclick="cardLegueOfLegends('Netflix', 200)"
-         class="card cardLegueOfLegends"></a>
-        <!-- mudar foto -->
+        <div class="card-content">
 
-       <a href="sea-of-thieves"
-         onclick="cardSea('Netflix', 200)"
-         class="card cardSea"></a>   
+          <div class="card-top">
 
-       <a href="centauro"
-         onclick="cardCentauro('Netflix', 200)"
-         class="card cardCentauro"></a>
+            <div class="brand">
+              Netflix
+            </div>
 
-      <a href="netshoes"
-         onclick="cardNetshoes('Netflix', 200)"
-         class="card cardNetshoes"></a>
-        <!-- mudar foto -->
+            <div class="price">
+              R$ 50+
+            </div>
 
-      <a href="decathlon"
-         onclick="cardDecathlon('Netflix', 200)"
-         class="card cardDecathlon"></a>
+          </div>
 
-      <a href="kopenhagen"
-         onclick="cardKopenhagem('Netflix', 200)"
-         class="card cardKopenhagem"></a>
+          <p>
+            Assista filmes, séries e conteúdos exclusivos
+            da Netflix sem complicações.
+          </p>
 
-    </section>
+          <a href="#" class="buy-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Comprar
+          </a>
 
-    <!-- BENEFÍCIOS -->
-    <section class="container">
+        </div>
 
-      <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
+      </div>
 
-      <img src="https://lojadosgifts.com.br/assets/img/pages/suporte_online.webp">
+      <!-- XBOX -->
 
-      <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+      <div class="card"
+        style="background-image:url('https://www.xboxuser.de/categories/2/page.jpg?1454154908')">
 
-      <img src="https://lojadosgifts.com.br/assets/img/pages/campeao_vendas.webp">
+        <div class="card-content">
 
-    </section>
+          <div class="card-top">
 
-  </main>
+            <div class="brand">
+              Xbox
+            </div>
 
+            <div class="price">
+              R$ 30+
+            </div>
 
+          </div>
+
+          <p>
+            Créditos Xbox para jogos, Game Pass,
+            skins e conteúdos exclusivos.
+          </p>
+
+          <a href="#" class="buy-btn">
+            <i class="fa-solid fa-gamepad"></i>
+            Comprar
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- ROBLOX -->
+
+      <div class="card"
+        style="background-image:url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg')">
+
+        <div class="card-content">
+
+          <div class="card-top">
+
+            <div class="brand">
+              Roblox
+            </div>
+
+            <div class="price">
+              R$ 25+
+            </div>
+
+          </div>
+
+          <p>
+            Robux instantâneo para personalizar
+            seu personagem e desbloquear vantagens.
+          </p>
+
+          <a href="#" class="buy-btn">
+            <i class="fa-solid fa-crown"></i>
+            Comprar
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- UBER -->
+
+      <div class="card"
+        style="background-image:url('https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg')">
+
+        <div class="card-content">
+
+          <div class="card-top">
+
+            <div class="brand">
+              Uber
+            </div>
+
+            <div class="price">
+              R$ 20+
+            </div>
+
+          </div>
+
+          <p>
+            Créditos Uber para viagens,
+            entregas e muito mais.
+          </p>
+
+          <a href="#" class="buy-btn">
+            <i class="fa-solid fa-car"></i>
+            Comprar
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFITS -->
+
+  <section class="benefits" id="benefits">
+
+    <div class="section-title">
+
+      <h2>
+        Por que escolher a RobotCard?
+      </h2>
+
+      <p>
+        Plataforma moderna, rápida e segura
+        para comprar gift cards digitais.
+      </p>
+
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit">
+
+        <i class="fa-solid fa-bolt"></i>
+
+        <h3>
+          Entrega Instantânea
+        </h3>
+
+        <p>
+          Receba seu código imediatamente
+          após a confirmação do pagamento.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <i class="fa-solid fa-shield-halved"></i>
+
+        <h3>
+          Pagamento Seguro
+        </h3>
+
+        <p>
+          Sistema protegido com tecnologia
+          moderna e criptografia avançada.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <i class="fa-solid fa-headset"></i>
+
+        <h3>
+          Suporte 24 Horas
+        </h3>
+
+        <p>
+          Atendimento rápido para ajudar
+          sempre que precisar.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <i class="fa-solid fa-star"></i>
+
+        <h3>
+          Plataforma Premium
+        </h3>
+
+        <p>
+          Design moderno, rápido e otimizado
+          para desktop e mobile.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <section class="cta" id="promo">
+
+    <div class="cta-box">
+
+      <h2>
+        Promoções Exclusivas Toda Semana
+      </h2>
+
+      <p>
+        Economize em gift cards das maiores plataformas
+        do mundo com descontos especiais e bônus exclusivos.
+      </p>
+
+      <a href="#cards" class="btn-main">
+        Ver Ofertas
+      </a>
+
+    </div>
+
+  </section>
 
   <!-- FOOTER -->
-  <footer id="suporte" >
 
-    <p>
-      © 2026 - RobotStore |
-      Todos os direitos reservados
-    </p>
+  <footer id="support">
 
+    <div class="footer-content">
+
+      <div>
+
+        <h2 class="logo">
+          RobotCard
+        </h2>
+
+        <p style="margin-top:10px;color:#aaa;">
+          © 2026 - Todos os direitos reservados
+        </p>
+
+      </div>
+
+      <div class="socials">
+
+        <a href="#">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-discord"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-x-twitter"></i>
+        </a>
+
+        <a href="#">
+          <i class="fa-brands fa-youtube"></i>
+        </a>
+
+      </div>
+    </div>
   </footer>
 
 </body>
 </html>
-
-
-
