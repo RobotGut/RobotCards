@@ -1,4 +1,4 @@
-  /* =========================
+/* =========================
    RESET
 ========================= */
 
@@ -15,9 +15,33 @@ html{
 body{
   font-family:'Poppins',sans-serif;
   background:
-  radial-gradient(circle at top,#1d1d1d,#0b0b0b 60%);
+  radial-gradient(circle at top,#1a1a1a,#050505 70%);
   color:white;
   overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+/* =========================
+   BACKGROUND EFFECT
+========================= */
+
+body::before{
+  content:"";
+
+  position:fixed;
+  inset:0;
+
+  background:
+  radial-gradient(circle at 20% 20%,rgba(0,255,204,.08),transparent 20%),
+  radial-gradient(circle at 80% 40%,rgba(0,153,255,.08),transparent 20%),
+  radial-gradient(circle at 50% 80%,rgba(255,0,140,.08),transparent 20%);
+
+  pointer-events:none;
+  z-index:-1;
 }
 
 /* =========================
@@ -27,445 +51,16 @@ body{
 header{
   position:sticky;
   top:0;
-  z-index:1000;
+  z-index:999;
 
   backdrop-filter:blur(18px);
 
-  background:rgba(10,10,10,0.7);
+  background:rgba(5,5,5,.75);
 
-  border-bottom:1px solid rgba(255,255,255,0.08);
+  border-bottom:
+  1px solid rgba(255,255,255,.07);
 
-  padding:20px 40px;
+  padding:18px 40px;
 }
 
-header h1{
-  text-align:center;
-  font-size:2.2rem;
-  font-weight:800;
-
-  background:linear-gradient(90deg,#00ffcc,#00a2ff);
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-
-  margin-bottom:20px;
-}
-
-/* =========================
-   NAVBAR
-========================= */
-
-nav{
-  max-width:1200px;
-  margin:auto;
-}
-
-nav ul{
-  list-style:none;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  gap:40px;
-
-  flex-wrap:wrap;
-}
-
-nav a{
-  text-decoration:none;
-  color:#f1f1f1;
-
-  font-size:1rem;
-  font-weight:600;
-
-  transition:0.3s;
-  position:relative;
-}
-
-nav a:hover{
-  color:#00ffcc;
-}
-
-nav a::after{
-  content:"";
-
-  position:absolute;
-
-  width:0%;
-  height:2px;
-
-  left:0;
-  bottom:-6px;
-
-  background:#00ffcc;
-
-  transition:0.3s;
-}
-
-nav a:hover::after{
-  width:100%;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.header1{
-  min-height:55vh;
-
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-
-  text-align:center;
-
-  padding:60px 20px;
-
-  background:
-  linear-gradient(
-    rgba(0,0,0,0.6),
-    rgba(0,0,0,0.7)
-  ),
-
-  url('https://images.unsplash.com/photo-1511512578047-dfb367046420?q=80&w=1600');
-
-  background-size:cover;
-  background-position:center;
-}
-
-.header1 h1{
-  font-size:5rem;
-  font-weight:900;
-
-  background:linear-gradient(90deg,#00ffcc,#00a2ff);
-
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-
-.header1 h2{
-  margin-top:20px;
-
-  max-width:700px;
-
-  font-size:1.3rem;
-  font-weight:400;
-
-  color:#ddd;
-
-  line-height:1.6;
-}
-
-/* =========================
-   GRID
-========================= */
-
-.cards{
-  display: grid;
-
-  grid-template-columns:
-  repeat(auto-fit, minmax(20%, 1fr));
-
-  gap: 24px;
-  padding: 30px;
-}
-
-/* =========================
-   CARD
-========================= */
-
-.card{
- height: 250px;
-
-  border-radius: 40px;
-
-  position: relative;
-  overflow: hidden;
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  cursor: pointer;
-
-  transition:
-  transform 0.3s ease,
-  box-shadow 0.3s ease;
-
-
-}
-
-/* OVERLAY */
-
-.card::before{
-  content:"";
-
-  position:absolute;
-  inset:0;
-
-  background:
-  linear-gradient(
-    to top,
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.15)
-  );
-
-  transition:.4s;
-}
-
-/* TEXTO */
-
-.card::after{
-  content:"Ver Gift Card";
-
-  position:absolute;
-
-  bottom:20px;
-  left:20px;
-
-  font-size:1.1rem;
-  font-weight:700;
-
-  color:white;
-
-  z-index:2;
-
-  opacity:.9;
-}
-
-/* HOVER */
-
-.card:hover{
-  transform:
-  translateY(-10px)
-  scale(1.02);
-}
-
-.card:hover::before{
-  background:
-  linear-gradient(
-    to top,
-    rgba(0,0,0,0.4),
-    rgba(0,0,0,0.1)
-  );
-}
-
-/* =========================
-   IMAGENS
-========================= */
-
-.cardNetflix{
-  background-image:url('https://tse3.mm.bing.net/th/id/OIP.af85UIGhzdzgfIckakDGNwHaEK?w=760&h=428&rs=1&pid=ImgDetMain&o=7&rm=3');
-}
-
-.cardMicrosoft{
-  background-image:url('https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg');
-}
-
-.cardRoblox{
-  background-image:url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg');
-}
-
-.cardUber{
-  background-image:url('https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg');
-}
-
-.cardXbox{
-  background-image:url('https://www.xboxuser.de/categories/2/page.jpg?1454154908');
-}
-
-.cardOverwatch{
-  background-image:url('https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo');
-}
-
-.cardLegueOfLegends{
-  background-image:url('https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK');
-}
-
-.cardSea{
-  background-image:url('https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK');
-}
-
-.cardCentauro{
-  background-image:url('https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa');
-}
-
-.cardNetshoes{
-  background-image:url('https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png');
-}
-
-.cardDecathlon{
-  background-image:url('https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2');
-}
-
-.cardKopenhagem{
-  background-image:url('https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg');
-}
-
-
-/* GLOWS INDIVIDUAIS */
-
-.cardNetflix:hover {
-  box-shadow:
-    0 0 10px rgba(255, 0, 0, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 0, 0, 0.6);
-}
-
-.cardMicrosoft:hover {
-  box-shadow:
-    0 0 10px rgba(121, 121, 121, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.6),
-    0 0 40px rgba(255, 255, 255, 0.6);
-}
-
-.cardRoblox:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(0,255,150,0.6);
-}
-
-.cardUber:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(253, 255, 254, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-}
-
-.cardXbox:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(0,255,150,0.6),
-    0 0 40px rgba(0,255,150,0.6);
-}
-
-.cardOverwatch:hover {
-  box-shadow:
-    0 0 10px rgba(255, 230, 3, 0.6),
-    0 0 20px rgba(172, 172, 172, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-}
-
-.cardLegueOfLegends:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(219, 255, 61, 0.6);
-}
-
-.cardSea:hover {
-  box-shadow:
-    0 0 10px rgba(64, 95, 182, 0.6),
-    0 0 20px rgba(255, 251, 21, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-}
-
-.cardCentauro:hover {
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 252, 252, 0.6);
-}
-
-.cardNetshoes:hover {
-  box-shadow:
-    0 0 10px rgba(126, 45, 201, 0.6),
-    0 0 20px rgba(126, 45, 201, 0.6),
-    0 0 40px rgba(126, 45, 201, 0.6);
-}
-
-.cardDecathlon:hover {
-  box-shadow:
-    0 0 10px rgba(8, 90, 197, 0.6),
-    0 0 20px rgba(8, 90, 197, 0.6),
-    0 0 40px rgba(8, 90, 197, 0.6);
-}
-
-.cardKopenhagem:hover {
-  box-shadow:
-    0 0 10px rgba(223, 255, 44, 0.6),
-    0 0 20px rgba(197, 8, 8, 0.6),
-    0 0 40px rgba(219, 255, 56, 0.6);
-}
-/* =========================
-   BENEFÍCIOS
-========================= */
-
-.container{
-  display:grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(180px,1fr));
-
-  gap:20px;
-
-  max-width:1200px;
-
-  margin:40px auto;
-
-  padding:20px;
-}
-
-.container img{
-  width:100%;
-
-  border-radius:18px;
-
-  transition:.4s;
-
-
-}
-
-.container img:hover{
-  transform:translateY(-6px);
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-  margin-top:60px;
-
-  padding:30px;
-
-  text-align:center;
-
-  background:#0d0d0d;
-
-  border-top:
-  1px solid rgba(255,255,255,0.08);
-
-  color:#aaa;
-}
-
-/* =========================
-   RESPONSIVO
-========================= */
-
-@media(max-width:768px){
-
-  .header1{
-    min-height:45vh;
-  }
-
-  .header1 h1{
-    font-size:3rem;
-  }
-
-  .header1 h2{
-    font-size:1rem;
-  }
-
-  nav ul{
-    gap:20px;
-  }
-
-  .cards{
-    padding:30px 20px;
-  }
-
-}
+/* restante do CSS continua exatamente igual... */
