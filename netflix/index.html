@@ -1,74 +1,144 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head> 
-    <meta charset="UTF-8"> 
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Netflix Gift Card</title>
-    <link rel="stylesheet" href="../gift-page.css">
-  </head>
-  <body>
-    <header class="topbar"> 
-      <h1>Netflix Gift Card</h1> 
-      <a href="../index.html">← Voltar</a>
-    </header> 
-    <section class="product"> 
-      <div class="product-image netflix"></div>
-      <p>Se você quer assistir às séries e filmes <br>
-        mais comentados do momento e ainda <br> 
-        não é assinante, inscreva-se e comece a <br>
-        usar o serviço Netflix. <br> 
-        <br>
-        A Netflix oferece conteúdo premiado de <br>
-        séries, filmes, documentários e <br> 
-        especiais de comédia. <br> 
-        <br>
-        Como funciona a Netflix? <br>
-        • Lançamos séries e filmes o tempo todo. <br> 
-        Você pode navegar por nossa seleção de <br>
-        títulos novos e assistir aos seus <br> 
-        favoritos diretamente no celular ou em <br> 
-        um dos diversos aparelhos compatíveis. <br> 
-        • Classifique as séries de TV e os filmes <br> 
-        de que mais gosta e indique suas <br> 
-        preferências para que a Netflix possa <br>
-        sugerir os títulos mais indicados para você. <br>
-        • As crianças podem assistir a séries e <br>
-        filmes dentro de um espaço seguro, com <br> 
-        entretenimento para toda a família. <br> 
-        • Assista aos trailers de suas séries e <br>
-        filmes favoritos e fique sabendo quando <br>
-        novos episódios e lançamentos <br>
-        estiverem disponíveis. <br> 
-        <br>
-        Para conhecer todos os Termos e <br>
-        condições, acesse <br> 
-        http://www.netflix.com/termsofuse <br>
-        Para a Declaração de Privacidade, <br>
-        acesse http://www.netflix.com/privacy</p>
-      <div class="product-info">
-        <h2>Gift Card Netflix</h2>
-        <p class="description"> Assista filmes e séries ilimitadas. Entrega automática após confirmação. </p>
-        <div class="badges">
-          <span>⚡ Entrega imediata</span>
-          <span>🔒 Compra segura</span>
-          <span>🎧 Suporte online</span>
-        </div> 
-        <h3>Escolha o valor:</h3> 
-        <div class="prices">
-          <button>R$ 25</button>
-          <button>R$ 50</button>
-          <button>R$ 100</button>
-          <button>R$ 200</button>
-        </div> 
-        <div class="actions">
-          <button class="buy"> Comprar agora </button>
-          <button class="cart"> Adicionar ao carrinho </button>
-          <section class="container">
-            <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
-            <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"> 
-          </section>
+
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="gift-page.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="topbar">
+
+            <div class="logo">
+                RobotCard
+            </div>
+
+            <a href="../index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i>
+                Voltar
+            </a>
+
         </div>
-      </div> 
-    </section> 
-  </body> 
+    </header>
+
+    <!-- PRODUCT -->
+    <section class="product">
+
+        <!-- LEFT -->
+        <div class="left-side">
+
+            <div class="product-image netflix"></div>
+
+            <div class="text">
+                <h2>Sobre a Netflix</h2>
+
+                <p>
+                    Assista às séries e filmes mais comentados do momento.
+                    Aproveite conteúdos exclusivos, documentários,
+                    especiais de comédia e muito mais.
+                </p>
+
+                <p>
+                    A Netflix oferece suporte para diversos dispositivos,
+                    recomendações personalizadas e espaço infantil seguro.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="product-info">
+
+            <span class="tag">
+                ENTREGA IMEDIATA
+            </span>
+
+            <h1>Gift Card Netflix</h1>
+
+            <p class="description">
+                Assista filmes e séries ilimitadas.
+                Receba seu código automaticamente após a confirmação do pagamento.
+            </p>
+
+            <!-- BENEFITS -->
+            <div class="badges">
+
+                <span>
+                    <i class="fa-solid fa-bolt"></i>
+                    Instantâneo
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Seguro
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-headset"></i>
+                    Suporte 24h
+                </span>
+
+            </div>
+
+            <!-- PRICE -->
+            <h3>Escolha o valor</h3>
+
+            <div class="prices">
+
+                <button>R$ 25</button>
+                <button>R$ 50</button>
+                <button>R$ 100</button>
+                <button>R$ 200</button>
+
+            </div>
+
+            <!-- BUTTONS -->
+            <div class="actions">
+
+                <button class="buy">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    Comprar Agora
+                </button>
+
+                <button class="cart">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    Carrinho
+                </button>
+
+            </div>
+
+            <!-- SECURITY -->
+            <div class="security">
+
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
+
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
 </html>
