@@ -1,285 +1,412 @@
-body {
-    margin: 0;
-    font-family: Arial;
-    background: #121212;
-    color: white;
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* TOPO */
+body{
+    font-family:'Poppins',sans-serif;
 
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background:
+    radial-gradient(circle at top,#1a1a1a,#050505 70%);
 
-    padding: 20px;
+    color:white;
 
-    background: #1f1f1f;
+    min-height:100vh;
 }
 
-.topbar a {
-    color: #00ffcc;
-    text-decoration: none;
+/* BACKGROUND EFFECT */
+
+body::before{
+    content:"";
+
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,204,.08),transparent 20%),
+    radial-gradient(circle at 80% 40%,rgba(0,153,255,.08),transparent 20%),
+    radial-gradient(circle at 50% 80%,rgba(255,0,140,.08),transparent 20%);
+
+    pointer-events:none;
+    z-index:-1;
 }
 
-/* PRODUTO */
+/* HEADER */
 
-.product {
-    display: flex;
-    gap: 40px;
+header{
+    position:sticky;
+    top:0;
 
-    padding: 40px;
+    backdrop-filter:blur(18px);
 
-    align-items: flex-start;
+    background:rgba(5,5,5,.75);
 
-    flex-wrap: wrap;
+    border-bottom:
+    1px solid rgba(255,255,255,.07);
+
+    padding:20px 40px;
 }
 
-/* COLUNA ESQUERDA */
+.topbar{
+    max-width:1400px;
 
-.left-side {
-    display: flex;
-    flex-direction: column;
+    margin:auto;
 
-    max-width: 320px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-/* IMAGEM */
+.logo{
+    font-size:2rem;
+    font-weight:900;
 
-.product-image {
-    width: 320px;
-    height: 320px;
+    background:
+    linear-gradient(90deg,#00ffcc,#00a2ff);
 
-    border-radius: 20px;
-
-    background-size: cover;
-    background-position: center;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
 }
 
-/* TEXTO EMBAIXO DA IMAGEM */
+.back-btn{
+    color:white;
 
-.text {
-    margin-top: 20px;
+    text-decoration:none;
 
-    line-height: 1.6;
+    padding:12px 18px;
 
-    text-align: left;
+    border-radius:12px;
 
-    color: #ddd;
+    background:rgba(255,255,255,.06);
+
+    transition:.3s;
 }
 
-/* COLUNA DIREITA */
-
-.product-info {
-    flex: 1;
-
-    min-width: 300px;
-
-    max-width: 500px;
+.back-btn:hover{
+    background:#00ffcc;
+    color:black;
 }
 
-/* DESCRIÇÃO */
+/* PRODUCT */
 
-.description {
-    opacity: 0.8;
+.product{
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:60px 30px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+}
+
+/* LEFT SIDE */
+
+.left-side{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* IMAGE */
+
+.product-image{
+    width:100%;
+    height:500px;
+
+    border-radius:30px;
+
+    background-size:cover;
+    background-position:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.5);
+
+    transition:.4s;
+}
+
+.product-image:hover{
+    transform:scale(1.02);
+}
+
+/* NETFLIX IMAGE */
+
+.netflix{
+    background-image:url("https://popculture.com/wp-content/uploads/sites/5/2021/09/181646c7-5126-4cd3-81cd-3cad7ea899b8.png?w=1024");
+}
+
+/* TEXT */
+
+.text{
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    padding:30px;
+
+    border-radius:25px;
+
+    line-height:1.8;
+
+    color:#d6d6d6;
+}
+
+.text h2{
+    margin-bottom:15px;
+
+    color:white;
+}
+
+/* PRODUCT INFO */
+
+.product-info{
+    background:
+    linear-gradient(
+        145deg,
+        rgba(255,255,255,.06),
+        rgba(255,255,255,.03)
+    );
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    backdrop-filter:blur(20px);
+}
+
+/* TAG */
+
+.tag{
+    display:inline-block;
+
+    margin-bottom:20px;
+
+    padding:8px 14px;
+
+    border-radius:12px;
+
+    background:
+    linear-gradient(90deg,#00ffcc,#00a2ff);
+
+    color:black;
+
+    font-size:.8rem;
+    font-weight:700;
+}
+
+/* TITLE */
+
+.product-info h1{
+    font-size:3rem;
+
+    margin-bottom:20px;
+}
+
+/* DESCRIPTION */
+
+.description{
+    color:#cfcfcf;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
 }
 
 /* BADGES */
 
-.badges {
-    display: flex;
-    gap: 10px;
+.badges{
+    display:flex;
+    flex-wrap:wrap;
 
-    flex-wrap: wrap;
+    gap:15px;
 
-    margin: 20px 0;
+    margin-bottom:35px;
 }
 
-.badges span {
-    background: #222;
+.badges span{
+    background:rgba(255,255,255,.06);
 
-    padding: 8px 12px;
+    border:
+    1px solid rgba(255,255,255,.08);
 
-    border-radius: 8px;
+    padding:12px 16px;
+
+    border-radius:14px;
+
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-/* PREÇOS */
+/* PRICES */
 
-.prices {
-    display: flex;
+.prices{
+    display:flex;
+    gap:15px;
 
-    gap: 10px;
+    flex-wrap:wrap;
 
-    margin: 20px 0;
-
-    flex-wrap: wrap;
+    margin:25px 0;
 }
 
-.prices button {
-    padding: 12px;
+.prices button{
+    padding:16px 22px;
 
-    border: none;
+    border:none;
 
-    border-radius: 8px;
+    border-radius:16px;
 
-    background: #333;
+    background:#111;
 
-    color: white;
+    color:white;
 
-    cursor: pointer;
+    font-weight:700;
 
-    transition: 0.3s;
+    cursor:pointer;
+
+    transition:.3s;
 }
 
-.prices button:hover {
-    background: #00ffcc;
-    color: black;
+.prices button:hover{
+    background:
+    linear-gradient(90deg,#00ffcc,#00a2ff);
+
+    color:black;
+
+    transform:translateY(-3px);
 }
 
-/* BOTÕES */
+/* BUTTONS */
 
-.actions {
-    display: flex;
-    gap: 10px;
+.actions{
+    display:flex;
+    gap:15px;
 
-    margin-top: 20px;
+    margin-top:30px;
 
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
 .buy,
-.cart {
-    padding: 14px 20px;
+.cart{
+    flex:1;
 
-    border: none;
+    padding:18px;
 
-    border-radius: 10px;
+    border:none;
 
-    cursor: pointer;
+    border-radius:16px;
 
-    font-weight: bold;
+    font-weight:700;
 
-    transition: 0.3s;
+    cursor:pointer;
+
+    transition:.4s;
 }
 
-.buy {
-    background: #00ffcc;
-    color: black;
+.buy{
+    background:
+    linear-gradient(90deg,#00ffcc,#00a2ff);
+
+    color:black;
 }
 
-.buy:hover {
-    transform: scale(1.05);
+.buy:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(0,255,204,.25);
 }
 
-.cart {
-    background: #333;
-    color: white;
+.cart{
+    background:rgba(255,255,255,.06);
+
+    color:white;
+
+    border:
+    1px solid rgba(255,255,255,.08);
 }
 
-.cart:hover {
-    background: #444;
+.cart:hover{
+    background:rgba(255,255,255,.12);
 }
 
-/* IMAGENS INFERIORES */
+/* SECURITY */
 
-.container {
-    display: flex;
-    gap: 15px;
+.security{
+    display:flex;
+    gap:20px;
 
-    margin-top: 25px;
+    margin-top:35px;
 
-    flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
-.container img {
-    max-width: 180px;
+.security img{
+    width:180px;
 
-    width: 100%;
-
-    height: auto;
-
-    border-radius: 10px;
+    border-radius:14px;
 }
 
-/* IMAGENS DOS GIFTS */
+/* RESPONSIVE */
 
-.netflix {
-    background-image: url("https://popculture.com/wp-content/uploads/sites/5/2021/09/181646c7-5126-4cd3-81cd-3cad7ea899b8.png?w=1024");
-}
+@media(max-width:980px){
 
-.xbox {
-    background-image: url("https://assets.xboxservices.com/assets/5c/55/5c554715-fac4-4c09-8006-d8e62d355157.jpg");
-}
-
-.roblox {
-    background-image: url("https://i.pinimg.com/originals/b6/f4/2a/b6f42a199afddb797150104841ae31b4.jpg");
-}
-
-.uber {
-    background-image: url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
-}
-
-.microsoft {
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.KoXP2pIwAJPg3EWTNpWykgHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3");
-}
-
-.lol {
-    background-image: url("https://wallpapers.com/images/hd/illustration-of-league-of-legends-logo-7zbgxnhjkphhcwb3.jpg");
-}
-
-.overwatch {
-    background-image: url("https://i1.sndcdn.com/artworks-000173076152-q5gpvq-t500x500.jpg");
-}
-
-.sea {
-    background-image: url("https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK");
-}
-
-.netshoes {
-    background-image: url("https://assets-global.website-files.com/63c088cd8d60b70caca3fcc3/63e04c596af00b23845faef1_b009417-300w-326ppi.png");
-}
-
-.centauro {
-    background-image: url("https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa");
-}
-
-.decathlon {
-    background-image: url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
-}
-
-.kopenhagen {
-    background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 768px) {
-
-    .product {
-        padding: 20px;
-
-        flex-direction: column;
+    .product{
+        grid-template-columns:1fr;
     }
 
-    .left-side {
-        max-width: 100%;
+    .product-info h1{
+        font-size:2.3rem;
+    }
+}
+
+@media(max-width:768px){
+
+    header{
+        padding:20px;
     }
 
-    .product-image {
-        width: 100%;
-        height: 250px;
+    .topbar{
+        flex-direction:column;
+        gap:15px;
     }
 
-    .product-info {
-        max-width: 100%;
+    .product{
+        padding:30px 20px;
     }
 
-    .actions {
-        flex-direction: column;
+    .product-image{
+        height:350px;
+    }
+
+    .actions{
+        flex-direction:column;
     }
 
     .buy,
-    .cart {
-        width: 100%;
+    .cart{
+        width:100%;
     }
 }
