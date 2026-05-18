@@ -1,15 +1,9 @@
-/* =========================
-   RESET
-========================= */
+/* RESET */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
 }
 
 body{
@@ -21,13 +15,9 @@ body{
     color:white;
 
     min-height:100vh;
-
-    overflow-x:hidden;
 }
 
-/* =========================
-   BACKGROUND EFFECT
-========================= */
+/* BACKGROUND EFFECT */
 
 body::before{
     content:"";
@@ -44,14 +34,11 @@ body::before{
     z-index:-1;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* HEADER */
 
 header{
     position:sticky;
     top:0;
-    z-index:999;
 
     backdrop-filter:blur(18px);
 
@@ -103,9 +90,7 @@ header{
     color:black;
 }
 
-/* =========================
-   PRODUCT
-========================= */
+/* PRODUCT */
 
 .product{
     max-width:1400px;
@@ -123,9 +108,7 @@ header{
     align-items:center;
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
+/* LEFT SIDE */
 
 .left-side{
     display:flex;
@@ -133,9 +116,7 @@ header{
     gap:25px;
 }
 
-/* =========================
-   PRODUCT IMAGE
-========================= */
+/* IMAGE */
 
 .product-image{
     width:100%;
@@ -160,9 +141,13 @@ header{
     transform:scale(1.02);
 }
 
-/* =========================
-   INFO TEXT
-========================= */
+/* NETFLIX IMAGE */
+
+.netflix{
+    background-image:url("https://popculture.com/wp-content/uploads/sites/5/2021/09/181646c7-5126-4cd3-81cd-3cad7ea899b8.png?w=1024");
+}
+
+/* TEXT */
 
 .text{
     background:
@@ -190,9 +175,7 @@ header{
     color:white;
 }
 
-/* =========================
-   PRODUCT INFO
-========================= */
+/* PRODUCT INFO */
 
 .product-info{
     background:
@@ -212,9 +195,7 @@ header{
     backdrop-filter:blur(20px);
 }
 
-/* =========================
-   TAG
-========================= */
+/* TAG */
 
 .tag{
     display:inline-block;
@@ -234,9 +215,7 @@ header{
     font-weight:700;
 }
 
-/* =========================
-   TITLES
-========================= */
+/* TITLE */
 
 .product-info h1{
     font-size:3rem;
@@ -244,13 +223,7 @@ header{
     margin-bottom:20px;
 }
 
-.product-info h3{
-    margin-top:15px;
-}
-
-/* =========================
-   DESCRIPTION
-========================= */
+/* DESCRIPTION */
 
 .description{
     color:#cfcfcf;
@@ -260,9 +233,7 @@ header{
     margin-bottom:30px;
 }
 
-/* =========================
-   BADGES
-========================= */
+/* BADGES */
 
 .badges{
     display:flex;
@@ -288,9 +259,7 @@ header{
     gap:10px;
 }
 
-/* =========================
-   PRICES
-========================= */
+/* PRICES */
 
 .prices{
     display:flex;
@@ -328,9 +297,7 @@ header{
     transform:translateY(-3px);
 }
 
-/* =========================
-   ACTION BUTTONS
-========================= */
+/* BUTTONS */
 
 .actions{
     display:flex;
@@ -356,11 +323,6 @@ header{
     cursor:pointer;
 
     transition:.4s;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
 }
 
 .buy{
@@ -390,9 +352,7 @@ header{
     background:rgba(255,255,255,.12);
 }
 
-/* =========================
-   SECURITY IMAGES
-========================= */
+/* SECURITY */
 
 .security{
     display:flex;
@@ -409,127 +369,7 @@ header{
     border-radius:14px;
 }
 
-/* =========================
-   IMAGE BACKGROUNDS
-========================= */
-
-.netflix{
-    background-image:url("https://tse3.mm.bing.net/th/id/OIP.af85UIGhzdzgfIckakDGNwHaEK?w=760&h=428&rs=1&pid=ImgDetMain&o=7&rm=3");
-}
-
-.microsoft{
-    background-image:url("https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg");
-}
-
-.overwatch{
-    background-image:url("https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo");
-}
-
-.lol{
-    background-image:url("https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK");
-}
-
-.sea{
-    background-image:url("https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK");
-}
-
-.netshoes{
-    background-image:url("https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png");
-}
-
-.decathlon{
-    background-image:url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
-}
-
-.roblox{
-    background-image:url("https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg");
-}
-
-.uber{
-    background-image:url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
-}
-
-.centauro{
-    background-image:url("https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa");
-}
-
-.kopenhagen{
-    background-image:url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
-}
-
-/* =========================
-   HOVER GLOW EFFECTS
-========================= */
-
-.netflix:hover{
-    box-shadow:
-    0 0 15px rgba(255,0,0,.5),
-    0 0 40px rgba(255,0,0,.5);
-}
-
-.microsoft:hover{
-    box-shadow:
-    0 0 15px rgba(255,255,255,.5),
-    0 0 40px rgba(255,255,255,.4);
-}
-
-.overwatch:hover{
-    box-shadow:
-    0 0 15px rgba(255,166,0,.5),
-    0 0 40px rgba(255,166,0,.4);
-}
-
-.lol:hover{
-    box-shadow:
-    0 0 15px rgba(0,255,200,.5),
-    0 0 40px rgba(255,208,0,.3);
-}
-
-.sea:hover{
-    box-shadow:
-    0 0 15px rgba(0,183,255,.5),
-    0 0 40px rgba(255,230,0,.3);
-}
-
-.netshoes:hover{
-    box-shadow:
-    0 0 15px rgba(140,0,255,.5),
-    0 0 40px rgba(140,0,255,.4);
-}
-
-.decathlon:hover{
-    box-shadow:
-    0 0 15px rgba(0,119,255,.5),
-    0 0 40px rgba(0,119,255,.4);
-}
-
-.roblox:hover{
-    box-shadow:
-    0 0 15px rgba(255,0,0,.4),
-    0 0 40px rgba(255,255,255,.3);
-}
-
-.uber:hover{
-    box-shadow:
-    0 0 15px rgba(255,255,255,.4),
-    0 0 40px rgba(255,255,255,.2);
-}
-
-.centauro:hover{
-    box-shadow:
-    0 0 15px rgba(255,0,0,.4),
-    0 0 40px rgba(255,255,255,.3);
-}
-
-.kopenhagen:hover{
-    box-shadow:
-    0 0 15px rgba(255,217,0,.5),
-    0 0 40px rgba(255,217,0,.3);
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
+/* RESPONSIVE */
 
 @media(max-width:980px){
 
@@ -568,13 +408,5 @@ header{
     .buy,
     .cart{
         width:100%;
-    }
-
-    .product-info{
-        padding:25px;
-    }
-
-    .product-info h1{
-        font-size:2rem;
     }
 }
