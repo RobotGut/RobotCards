@@ -1,21 +1,76 @@
+// COMPRA
+
 function comprar(produto, valor) {
-  alert(`Você selecionou ${produto} no valor de R$ ${valor}`);
 
-  // Simulação de checkout
-  const confirmacao = confirm("Deseja continuar para o pagamento?");
+    alert(`Você selecionou ${produto} no valor de R$ ${valor}`);
 
-  if (confirmacao) {
-    alert("Redirecionando para pagamento...");
-    
-    // Aqui você integraria com pagamento real
-    // Ex: Mercado Pago, Stripe, Pix API
-  }
+    const confirmacao = confirm("Deseja continuar para o pagamento?");
+
+    if (confirmacao) {
+
+        alert("Redirecionando para pagamento...");
+
+    }
+
 }
-    // Captura o botão e a seção de destino
-    const btn = document.getElementById('btnDescer');
-    const destino = document.getElementById('destino');
 
-    btn.addEventListener('click', () => {
-        // Faz a rolagem suave até o elemento
-        destino.scrollIntoView({ behavior: 'smooth' });
-    });
+// MODAL
+
+const btnAbrir = document.querySelector('.btn-register');
+
+const modal = document.getElementById('modalConta');
+
+const fecharModal = document.getElementById('fecharModal');
+
+const btnEnviar = document.getElementById('btnEnviar');
+
+// ABRIR MODAL
+
+btnAbrir.addEventListener('click', () => {
+
+    modal.classList.add('active');
+
+});
+
+// FECHAR MODAL
+
+fecharModal.addEventListener('click', () => {
+
+    modal.classList.remove('active');
+
+});
+
+// FECHAR AO CLICAR FORA
+
+modal.addEventListener('click', (e) => {
+
+    if(e.target === modal){
+
+        modal.classList.remove('active');
+
+    }
+
+});
+
+// CADASTRO
+
+btnEnviar.addEventListener('click', () => {
+
+    const nome = document.getElementById('nome').value.trim();
+
+    const email = document.getElementById('email').value.trim();
+
+    const senha = document.getElementById('senha').value.trim();
+
+    if(!nome || !email || !senha){
+
+        alert('Preencha todos os campos.');
+
+        return;
+    }
+
+    alert(`Conta criada com sucesso!\nBem-vindo(a), ${nome}`);
+
+    modal.classList.remove('active');
+
+});
