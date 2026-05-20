@@ -600,6 +600,119 @@ footer{
 }
 
 /* =========================
+   COLORAÇÃO
+========================= */
+
+.netflix:hover {
+  box-shadow:
+    0 0 10px rgba(255, 0, 0, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 0, 0, 0.6);
+}
+
+.microsoft:hover {
+  box-shadow:
+    0 0 10px rgba(121, 121, 121, 0.6),
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 0 40px rgba(255, 255, 255, 0.6);
+}
+
+.roblox:hover {
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(255, 60, 0, 0.6),
+    0 0 40px rgba(0,255,150,0.6);
+}
+
+.uber:hover {
+  box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(253, 255, 254, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.xbox:hover {
+  box-shadow:
+    0 0 10px rgba(0,255,150,0.6),
+    0 0 20px rgba(0,255,150,0.6),
+    0 0 40px rgba(0,255,150,0.6);
+}
+
+.overwatch:hover {
+  box-shadow:
+    0 0 10px rgba(255, 230, 3, 0.6),
+    0 0 20px rgba(172, 172, 172, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+
+  border:
+  1px solid rgba(255,255,255,.08);
+
+  backdrop-filter:blur(20px);
+
+  border-radius:28px;
+
+  padding:35px;
+
+  position:relative;
+
+  animation:modalFade .4s ease;
+}
+
+.legueoflegends:hover {
+  box-shadow:
+    0 0 10px rgba(0,255,150,0.6),
+    0 0 20px rgba(255, 60, 0, 0.6),
+    0 0 40px rgba(219, 255, 61, 0.6);
+@keyframes modalFade{
+
+  from{
+    opacity:0;
+    transform:translateY(-20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.sea:hover {
+  box-shadow:
+    0 0 10px rgba(64, 95, 182, 0.6),
+    0 0 20px rgba(255, 251, 21, 0.6),
+    0 0 40px rgba(0, 0, 0, 0.6);
+}
+   
+.centauro:hover {
+  box-shadow:
+    0 0 10px rgba(255, 255, 255, 0.6),
+    0 0 20px rgba(255, 0, 0, 0.6),
+    0 0 40px rgba(255, 252, 252, 0.6);
+}
+
+.netshoes:hover {
+  box-shadow:
+    0 0 10px rgba(126, 45, 201, 0.6),
+    0 0 20px rgba(126, 45, 201, 0.6),
+    0 0 40px rgba(126, 45, 201, 0.6);
+}
+
+.decathlon:hover {
+  box-shadow:
+    0 0 10px rgba(8, 90, 197, 0.6),
+    0 0 20px rgba(8, 90, 197, 0.6),
+    0 0 40px rgba(8, 90, 197, 0.6);
+}
+
+.Kopenhagen:hover {
+  box-shadow:
+    0 0 10px rgba(223, 255, 44, 0.6),
+    0 0 20px rgba(197, 8, 8, 0.6),
+    0 0 40px rgba(219, 255, 56, 0.6);
+}
+                   
+/* =========================
    MODAL CONTA
 ========================= */
 
@@ -790,186 +903,3 @@ footer{
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-.netflix:hover {
-  box-shadow:
-    0 0 10px rgba(255, 0, 0, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 0, 0, 0.6);
-}
-.modal{
-  position:fixed;
-  inset:0;
-
-.microsoft:hover {.microsoft:hover {
-  box-shadow:
-    0 0 10px rgba(121, 121, 121, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.6),
-    0 0 40px rgba(255, 255, 255, 0.6);
-}
-  background:rgba(0,0,0,.7);
-
-.roblox:hover {.roblox:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(0,255,150,0.6);
-}
-  display:none;
-
-.uber:hover {.uber:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(253, 255, 254, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-  justify-content:center;
-  align-items:center;
-
-  z-index:9999;
-
-  padding:20px;
-}
-
-.xbox:hover {.xbox:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(0,255,150,0.6),
-    0 0 40px rgba(0,255,150,0.6);
-.modal.active{
-  display:flex;
-}
-
-.overwatch:hover {.overwatch:hover {
-  box-shadow:
-    0 0 10px rgba(255, 230, 3, 0.6),
-    0 0 20px rgba(172, 172, 172, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-.modal-box{
-  width:100%;
-  max-width:420px;
-
-  background:
-  linear-gradient(
-    145deg,
-    rgba(255,255,255,.08),
-    rgba(255,255,255,.03)
-  );
-
-  border:
-  1px solid rgba(255,255,255,.08);
-
-  backdrop-filter:blur(20px);
-
-  border-radius:28px;
-
-  padding:35px;
-
-  position:relative;
-
-  animation:modalFade .4s ease;
-}
-
-.legueoflegends:hover {.legueoflegends:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(219, 255, 61, 0.6);
-@keyframes modalFade{
-
-  from{
-    opacity:0;
-    transform:translateY(-20px);
-  }
-
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-}
-
-.sea:hover {.sea:hover {
-  box-shadow:
-    0 0 10px rgba(64, 95, 182, 0.6),
-    0 0 20px rgba(255, 251, 21, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
-.close-modal{
-  position:absolute;
-
-  top:15px;
-  right:15px;
-
-  width:40px;
-  height:40px;
-
-  border:none;
-
-  border-radius:50%;
-
-  background:rgba(255,255,255,.08);
-
-  color:white;
-
-  cursor:pointer;
-}
-
-.centauro:hover {.centauro:hover {
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 252, 252, 0.6);
-.modal-box h2{
-  margin-bottom:10px;
-}
-
-.netshoes:hover {.netshoes:hover {
-  box-shadow:
-    0 0 10px rgba(126, 45, 201, 0.6),
-    0 0 20px rgba(126, 45, 201, 0.6),
-    0 0 40px rgba(126, 45, 201, 0.6);
-.modal-box p{
-  color:#bbb;
-  margin-bottom:25px;
-}
-
-.decathlon:hover {.decathlon:hover {
-  box-shadow:
-    0 0 10px rgba(8, 90, 197, 0.6),
-    0 0 20px rgba(8, 90, 197, 0.6),
-    0 0 40px rgba(8, 90, 197, 0.6);
-.modal-box input{
-  width:100%;
-
-  padding:15px;
-
-  margin-bottom:15px;
-
-  border-radius:14px;
-
-  border:
-  1px solid rgba(255,255,255,.08);
-
-  background:rgba(255,255,255,.04);
-
-  color:white;
-
-  outline:none;
-}
-
-.Kopenhagen:hover {.Kopenhagen:hover {
-  box-shadow:
-    0 0 10px rgba(223, 255, 44, 0.6),
-    0 0 20px rgba(197, 8, 8, 0.6),
-    0 0 40px rgba(219, 255, 56, 0.6);
