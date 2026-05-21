@@ -1,76 +1,119 @@
-// COMPRA
 
-function comprar(produto, valor) {
+const btnEntrar = document.querySelector(".btn-login");
+const btnCriarConta = document.querySelector(".btn-register");
 
-    alert(`Você selecionou ${produto} no valor de R$ ${valor}`);
+const modal = document.getElementById("modalConta");
+const fecharModal = document.getElementById("fecharModal");
+const btnEnviar = document.getElementById("btnEnviar");
 
-    const confirmacao = confirm("Deseja continuar para o pagamento?");
+const tituloModal = document.querySelector(".modal-box h2");
+const textoModal = document.querySelector(".modal-box p");
 
-    if (confirmacao) {
+const inputNome = document.getElementById("nome");
+const inputEmail = document.getElementById("email");
+const inputSenha = document.getElementById("senha");
 
-        alert("Redirecionando para pagamento...");
+
+
+btnEntrar.addEventListener("click", () => {
+
+    modal.classList.add("active");
+
+    tituloModal.innerText = "Entrar";
+    textoModal.innerText = "Faça login para acessar sua conta.";
+
+    inputNome.style.display = "none";
+
+    btnEnviar.innerText = "Entrar";
+});
+
+
+
+btnCriarConta.addEventListener("click", () => {
+
+    modal.classList.add("active");
+
+    tituloModal.innerText = "Criar Conta";
+    textoModal.innerText = "Cadastre-se para comprar gift cards premium.";
+
+    inputNome.style.display = "block";
+
+    btnEnviar.innerText = "Criar Conta";
+});
+
+
+
+fecharModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+});
+
+
+modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+        modal.classList.remove("active");
+    }
+
+});
+
+==================
+
+btnEnviar.addEventListener("click", () => {
+
+    const nome = inputNome.value;
+    const email = inputEmail.value;
+    const senha = inputSenha.value;
+
+
+    if (btnEnviar.innerText === "Entrar") {
+
+        if (email === "" || senha === "") {
+
+            alert("Preencha todos os campos.");
+            return;
+
+        }
+
+        
+        if (email === "admin@robotcard.com" && senha === "123456") {
+
+            alert("Login realizado com sucesso!");
+
+            modal.classList.remove("active");
+
+        } else {
+
+            alert("E-mail ou senha incorretos.");
+
+        }
 
     }
+
+  
+    else {
+
+        if (nome === "" || email === "" || senha === "") {
+
+            alert("Preencha todos os campos.");
+            return;
+
+        }
+
+        alert("Conta criada com sucesso!");
+
+        modal.classList.remove("active");
+
+    }
+
+});
+
+
+function limparCampos() {
+
+    inputNome.value = "";
+    inputEmail.value = "";
+    inputSenha.value = "";
 
 }
 
-// MODAL
-
-const btnAbrir = document.querySelector('.btn-register');
-
-const modal = document.getElementById('modalConta');
-
-const fecharModal = document.getElementById('fecharModal');
-
-const btnEnviar = document.getElementById('btnEnviar');
-
-// ABRIR MODAL
-
-btnAbrir.addEventListener('click', () => {
-
-    modal.classList.add('active');
-
-});
-
-// FECHAR MODAL
-
-fecharModal.addEventListener('click', () => {
-
-    modal.classList.remove('active');
-
-});
-
-// FECHAR AO CLICAR FORA
-
-modal.addEventListener('click', (e) => {
-
-    if(e.target === modal){
-
-        modal.classList.remove('active');
-
-    }
-
-});
-
-// CADASTRO
-
-btnEnviar.addEventListener('click', () => {
-
-    const nome = document.getElementById('nome').value.trim();
-
-    const email = document.getElementById('email').value.trim();
-
-    const senha = document.getElementById('senha').value.trim();
-
-    if(!nome || !email || !senha){
-
-        alert('Preencha todos os campos.');
-
-        return;
-    }
-
-    alert(`Conta criada com sucesso!\nBem-vindo(a), ${nome}`);
-
-    modal.classList.remove('active');
-
-});
+fecharModal.addEventListener("click", limparCampos);
