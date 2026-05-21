@@ -552,15 +552,15 @@ transform:translateY(-5px);
 ========================= */
 
 .netflix{
-background-image:url('https://tse3.mm.bing.net/th/id/OIP.af85UIGhzdzgfIckakDGNwHaEK?w=760&h=428&rs=1&pid=ImgDetMain&o=7&rm=3');
+background-image:url('https://cdn.sortiraparis.com/images/1003/69688/1110737-logo-netflix.jpg');
 }
 
 .microsoft{
-background-image:url('https://static.vecteezy.com/system/resources/previews/020/336/718/original/microsoft-logo-microsoft-icon-free-free-vector.jpg');
+background-image:url('https://tse4.mm.bing.net/th/id/OIP.aF9CJymxJrVdxp_jqdjL3wHaE8?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
 
 .roblox{
-background-image:url('https://imgsrv2.voi.id/DtOnT-m4c_Z0W1jgi7vN7OSwIMWHObs_c0nFTNlTO24/auto/1200/675/sm/1/bG9jYWw6Ly8vcHVibGlzaGVycy81Mzk2NzgvMjAyNTEyMDQwOTM1LW1haW4uanBn.jpg');
+background-image:url('https://cdn.rcd.gg/PreMiD/websites/R/Roblox/assets/logo.png');
 }
 
 .uber{
@@ -576,11 +576,11 @@ background-image:url('https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQH
 }
 
 .legueoflegends{
-background-image:url('https://tse1.mm.bing.net/th/id/OIP.ia0meZfqPeL0rDP9v36kwgHaEK');
+background-image:url('https://wallpaperaccess.com/full/2379027.jpg');
 }
 
 .sea{
-background-image:url('https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK');
+background-image:url('https://tse2.mm.bing.net/th/id/OIP.GgrhyXRi6Gg41dnA4YYk9wAAAA?cb=thfc1falcon&w=322&h=460&rs=1&pid=ImgDetMain&o=7&rm=3');
 }
 
 .centauro{
@@ -588,7 +588,7 @@ background-image:url('https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwH
 }
 
 .netshoes{
-background-image:url('https://static.netshoes.com.br/bnn/l_netshoes/2024-10-07/9740_netshoes-share.png');
+background-image:url('https://www.oficinadanet.com.br/imagens/post/21990/capa-net.jpg');
 }
 
 .decathlon{
@@ -823,6 +823,120 @@ linear-gradient(90deg,#00ffcc,#00a2ff);
 color:black;
 }
 
+.categorias{
+  grid-column: 1 / -1;
+
+  margin-top: 50px;
+  margin-bottom: 1px;
+
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+
+  position:relative;
+  left:2px;
+}
+
+.categorias h3{
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.categorias p{
+  color:#bdbdbd;
+  font-size:1rem;
+}
+
+
+.cards-section .categorias:first-of-type{
+  margin-top: 0;
+}
+
+
+
+/* =========================
+  DROPDOWN CATEGORIAS
+========================= */
+
+.dropdown{
+position:relative;
+}
+
+.btn-categorias{
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.1);
+color:white;
+
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.btn-categorias:hover{
+background:rgba(255,255,255,.1);
+}
+
+.dropdown-menu{
+position:absolute;
+
+top:120%;
+left:0;
+
+min-width:220px;
+
+background:
+linear-gradient(
+145deg,
+rgba(20,20,20,.95),
+rgba(10,10,10,.95)
+);
+
+border:
+1px solid rgba(255,255,255,.08);
+
+border-radius:18px;
+
+padding:10px;
+
+display:flex;
+flex-direction:column;
+
+gap:8px;
+
+opacity:0;
+visibility:hidden;
+transform:translateY(10px);
+
+transition:.3s;
+
+backdrop-filter:blur(20px);
+
+z-index:999;
+}
+
+.dropdown:hover .dropdown-menu{
+opacity:1;
+visibility:visible;
+transform:translateY(0);
+}
+
+.dropdown-menu a{
+padding:14px 16px;
+
+border-radius:12px;
+
+font-weight:500;
+
+transition:.3s;
+
+color:#eee;
+}
+
+.dropdown-menu a:hover{
+background:rgba(255,255,255,.08);
+color:#00ffcc;
+padding-left:22px;
+}
 /* =========================
   RESPONSIVO
 ========================= */
@@ -884,16 +998,3 @@ text-align:center;
 }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
