@@ -336,7 +336,7 @@ grid-template-columns:
 repeat(auto-fit,minmax(380px,1fr));
 
 gap:35px;
-padding-left: 80px;
+padding-left: 5%;
 }
 
 /* =========================
