@@ -1,5 +1,5 @@
 /* =========================
-  RESET
+ RESET
 ========================= */
 
 *{
@@ -26,7 +26,7 @@ color:inherit;
 }
 
 /* =========================
-  BACKGROUND EFFECT
+ BACKGROUND EFFECT
 ========================= */
 
 body::before{
@@ -45,7 +45,7 @@ z-index:-1;
 }
 
 /* =========================
-  HEADER
+ HEADER
 ========================= */
 
 header{
@@ -166,7 +166,7 @@ box-shadow:0 10px 30px rgba(0,255,204,.2);
 }
 
 /* =========================
-  HERO
+ HERO
 ========================= */
 
 .hero{
@@ -303,7 +303,7 @@ border-radius:20px;
 }
 
 /* =========================
-  SECTION TITLE
+ SECTION TITLE
 ========================= */
 
 .section-title{
@@ -323,7 +323,7 @@ margin:auto;
 }
 
 /* =========================
-  GRID
+ GRID
 ========================= */
 
 .cards{
@@ -336,10 +336,12 @@ grid-template-columns:
 repeat(auto-fit,minmax(380px,1fr));
 
 gap:35px;
+padding-left: 2%;
+padding-left: 1%;
 }
 
 /* =========================
-  CARD
+ CARD
 ========================= */
 
 .card{
@@ -434,7 +436,7 @@ cursor:pointer;
 }
 
 /* =========================
-  BENEFITS
+ BENEFITS
 ========================= */
 
 .benefits{
@@ -497,7 +499,7 @@ line-height:1.7;
 }
 
 /* =========================
-  FOOTER
+ FOOTER
 ========================= */
 
 footer{
@@ -548,7 +550,7 @@ transform:translateY(-5px);
 }
 
 /* =========================
-  BACKGROUNDS CARDS
+ BACKGROUNDS CARDS
 ========================= */
 
 .netflix{
@@ -602,99 +604,99 @@ background-image:url('https://manualdofranchising.com/wp-content/uploads/2023/01
 
 
 /* =========================
-  BACKGROUNDS CARDS BORDAS
+ BACKGROUNDS CARDS BORDAS
 ========================= */
 
 .netflix:hover {
-  box-shadow:
-    0 0 10px rgba(255, 0, 0, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 0, 0, 0.6);
+box-shadow:
+0 0 10px rgba(255, 0, 0, 0.6),
+0 0 20px rgba(255, 0, 0, 0.6),
+0 0 40px rgba(255, 0, 0, 0.6);
 }
 
 .modal{
-  position:fixed;
-  inset:0;
+position:fixed;
+inset:0;
 }
 
 .microsoft:hover {
-  box-shadow:
-    0 0 10px rgba(121, 121, 121, 0.6),
-    0 0 20px rgba(255, 255, 255, 0.6),
-    0 0 40px rgba(255, 255, 255, 0.6);
+box-shadow:
+0 0 10px rgba(121, 121, 121, 0.6),
+0 0 20px rgba(255, 255, 255, 0.6),
+0 0 40px rgba(255, 255, 255, 0.6);
 }
 
 .roblox:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(0,255,150,0.6);
+box-shadow:
+0 0 10px rgba(0, 0, 0, 0.6),
+0 0 20px rgba(255, 60, 0, 0.6),
+0 0 40px rgba(0,255,150,0.6);
 }
 
 .uber:hover {
-  box-shadow:
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(253, 255, 254, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
+box-shadow:
+0 0 10px rgba(0, 0, 0, 0.6),
+0 0 20px rgba(253, 255, 254, 0.6),
+0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .xbox:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(0,255,150,0.6),
-    0 0 40px rgba(0,255,150,0.6);
+box-shadow:
+0 0 10px rgba(0,255,150,0.6),
+0 0 20px rgba(0,255,150,0.6),
+0 0 40px rgba(0,255,150,0.6);
 }
 
 .overwatch:hover {
-  box-shadow:
-    0 0 10px rgba(255, 230, 3, 0.6),
-    0 0 20px rgba(172, 172, 172, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
+box-shadow:
+0 0 10px rgba(255, 230, 3, 0.6),
+0 0 20px rgba(172, 172, 172, 0.6),
+0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .legueoflegends:hover {
-  box-shadow:
-    0 0 10px rgba(0,255,150,0.6),
-    0 0 20px rgba(255, 60, 0, 0.6),
-    0 0 40px rgba(219, 255, 61, 0.6);
+box-shadow:
+0 0 10px rgba(0,255,150,0.6),
+0 0 20px rgba(255, 60, 0, 0.6),
+0 0 40px rgba(219, 255, 61, 0.6);
 }
 
 .sea:hover {
-  box-shadow:
-    0 0 10px rgba(64, 95, 182, 0.6),
-    0 0 20px rgba(255, 251, 21, 0.6),
-    0 0 40px rgba(0, 0, 0, 0.6);
+box-shadow:
+0 0 10px rgba(64, 95, 182, 0.6),
+0 0 20px rgba(255, 251, 21, 0.6),
+0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .centauro:hover {
-  box-shadow:
-    0 0 10px rgba(255, 255, 255, 0.6),
-    0 0 20px rgba(255, 0, 0, 0.6),
-    0 0 40px rgba(255, 252, 252, 0.6);
+box-shadow:
+0 0 10px rgba(255, 255, 255, 0.6),
+0 0 20px rgba(255, 0, 0, 0.6),
+0 0 40px rgba(255, 252, 252, 0.6);
 }
 
 .netshoes:hover {
-  box-shadow:
-    0 0 10px rgba(126, 45, 201, 0.6),
-    0 0 20px rgba(126, 45, 201, 0.6),
-    0 0 40px rgba(126, 45, 201, 0.6);
+box-shadow:
+0 0 10px rgba(126, 45, 201, 0.6),
+0 0 20px rgba(126, 45, 201, 0.6),
+0 0 40px rgba(126, 45, 201, 0.6);
 }
 
 .decathlon:hover {
-  box-shadow:
-    0 0 10px rgba(8, 90, 197, 0.6),
-    0 0 20px rgba(8, 90, 197, 0.6),
-    0 0 40px rgba(8, 90, 197, 0.6);
+box-shadow:
+0 0 10px rgba(8, 90, 197, 0.6),
+0 0 20px rgba(8, 90, 197, 0.6),
+0 0 40px rgba(8, 90, 197, 0.6);
 }
 
 .Kopenhagen:hover {
-  box-shadow:
-    0 0 10px rgba(223, 255, 44, 0.6),
-    0 0 20px rgba(197, 8, 8, 0.6),
-    0 0 40px rgba(219, 255, 56, 0.6);
+box-shadow:
+0 0 10px rgba(223, 255, 44, 0.6),
+0 0 20px rgba(197, 8, 8, 0.6),
+0 0 40px rgba(219, 255, 56, 0.6);
 }    
 /* =========================
-  MODAL CONTA
+ MODAL CONTA
 ========================= */
 
 .modal{
@@ -824,38 +826,38 @@ color:black;
 }
 
 .categorias{
-  grid-column: 1 / -1;
+grid-column: 1 / -1;
 
-  margin-top: 50px;
-  margin-bottom: 1px;
+margin-top: 50px;
+margin-bottom: 1px;
 
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
 
-  position:relative;
-  left:2px;
+position:relative;
+left:2px;
 }
 
 .categorias h3{
-  font-size: 2rem;
-  margin-bottom: 5px;
+font-size: 2rem;
+margin-bottom: 5px;
 }
 
 .categorias p{
-  color:#bdbdbd;
-  font-size:1rem;
+color:#bdbdbd;
+font-size:1rem;
 }
 
 
 .cards-section .categorias:first-of-type{
-  margin-top: 0;
+margin-top: 0;
 }
 
 
 
 /* =========================
-  DROPDOWN CATEGORIAS
+ DROPDOWN CATEGORIAS
 ========================= */
 
 .dropdown{
@@ -938,7 +940,7 @@ color:#00ffcc;
 padding-left:22px;
 }
 /* =========================
-  RESPONSIVO
+ RESPONSIVO
 ========================= */
 
 @media(max-width:980px){
