@@ -2,579 +2,585 @@
    RESET
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
+body {
+    font-family: "Poppins", sans-serif;
 
-    background:
-    radial-gradient(circle at top,#1a1a1a,#050505 70%);
+    background: radial-gradient(circle at top, #1a1a1a, #050505 70%);
 
-    color:white;
+    color: white;
 
-    min-height:100vh;
+    min-height: 100vh;
 
-    overflow-x:hidden;
+    overflow-x: hidden;
 }
 
 /* =========================
    BACKGROUND EFFECT
 ========================= */
 
-body::before{
-    content:"";
+body::before {
+    content: "";
 
-    position:fixed;
-    inset:0;
+    position: fixed;
+    inset: 0;
 
     background:
-    radial-gradient(circle at 20% 20%,rgba(0,255,204,.08),transparent 20%),
-    radial-gradient(circle at 80% 40%,rgba(0,153,255,.08),transparent 20%),
-    radial-gradient(circle at 50% 80%,rgba(255,0,140,.08),transparent 20%);
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(0, 255, 204, 0.08),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(0, 153, 255, 0.08),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 50% 80%,
+            rgba(255, 0, 140, 0.08),
+            transparent 20%
+        );
 
-    pointer-events:none;
-    z-index:-1;
+    pointer-events: none;
+    z-index: -1;
 }
 
 /* =========================
    HEADER
 ========================= */
 
-header{
-    position:sticky;
-    top:0;
-    z-index:999;
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
 
-    backdrop-filter:blur(18px);
+    backdrop-filter: blur(18px);
 
-    background:rgba(5,5,5,.75);
+    background: rgba(5, 5, 5, 0.75);
 
-    border-bottom:
-    1px solid rgba(255,255,255,.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 
-    padding:20px 40px;
+    padding: 20px 40px;
 }
 
-.topbar{
-    max-width:1400px;
+.topbar {
+    max-width: 1400px;
 
-    margin:auto;
+    margin: auto;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo{
-    font-size:2rem;
-    font-weight:900;
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
 
-    background:
-    linear-gradient(90deg,#00ffcc,#00a2ff);
+    background: linear-gradient(90deg, #00ffcc, #00a2ff);
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.back-btn{
-    color:white;
+.back-btn {
+    color: white;
 
-    text-decoration:none;
+    text-decoration: none;
 
-    padding:12px 18px;
+    padding: 12px 18px;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    background:rgba(255,255,255,.06);
+    background: rgba(255, 255, 255, 0.06);
 
-    transition:.3s;
+    transition: 0.3s;
 }
 
-.back-btn:hover{
-    background:#00ffcc;
-    color:black;
+.back-btn:hover {
+    background: #00ffcc;
+    color: black;
 }
 
 /* =========================
    PRODUCT
 ========================= */
 
-.product{
-    max-width:1400px;
+.product {
+    max-width: 1400px;
 
-    margin:auto;
+    margin: auto;
 
-    padding:60px 30px;
+    padding: 60px 30px;
 
-    display:grid;
+    display: grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns: 1fr 1fr;
 
-    gap:50px;
+    gap: 50px;
 
-    align-items:center;
+    align-items: center;
 }
 
 /* =========================
    LEFT SIDE
 ========================= */
 
-.left-side{
-    display:flex;
-    flex-direction:column;
-    gap:25px;
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 /* =========================
    PRODUCT IMAGE
 ========================= */
 
-.product-image{
-    width:100%;
-    height:500px;
+.product-image {
+    width: 100%;
+    height: 500px;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    background-size:cover;
-    background-position:center;
+    background-size: cover;
+    background-position: center;
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.5);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 
-    transition:.4s;
+    transition: 0.4s;
 }
 
-.product-image:hover{
-    transform:scale(1.02);
+.product-image:hover {
+    transform: scale(1.02);
 }
 
 /* =========================
    INFO TEXT
 ========================= */
 
-.text{
-    background:
-    linear-gradient(
+.text {
+    background: linear-gradient(
         145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.03)
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.03)
     );
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    padding:30px;
+    padding: 30px;
 
-    border-radius:25px;
+    border-radius: 25px;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    color:#d6d6d6;
+    color: #d6d6d6;
 }
 
-.text h2{
-    margin-bottom:15px;
+.text h2 {
+    margin-bottom: 15px;
 
-    color:white;
+    color: white;
 }
 
 /* =========================
    PRODUCT INFO
 ========================= */
 
-.product-info{
-    background:
-    linear-gradient(
+.product-info {
+    background: linear-gradient(
         145deg,
-        rgba(255,255,255,.06),
-        rgba(255,255,255,.03)
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.03)
     );
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    padding:40px;
+    padding: 40px;
 
-    backdrop-filter:blur(20px);
+    backdrop-filter: blur(20px);
 }
 
 /* =========================
    TAG
 ========================= */
 
-.tag{
-    display:inline-block;
+.tag {
+    display: inline-block;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 
-    padding:8px 14px;
+    padding: 8px 14px;
 
-    border-radius:12px;
+    border-radius: 12px;
 
-    background:
-    linear-gradient(90deg,#00ffcc,#00a2ff);
+    background: linear-gradient(90deg, #00ffcc, #00a2ff);
 
-    color:black;
+    color: black;
 
-    font-size:.8rem;
-    font-weight:700;
+    font-size: 0.8rem;
+    font-weight: 700;
 }
 
 /* =========================
    TITLES
 ========================= */
 
-.product-info h1{
-    font-size:3rem;
+.product-info h1 {
+    font-size: 3rem;
 
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
-.product-info h3{
-    margin-top:15px;
+.product-info h3 {
+    margin-top: 15px;
 }
 
 /* =========================
    DESCRIPTION
 ========================= */
 
-.description{
-    color:#cfcfcf;
+.description {
+    color: #cfcfcf;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 /* =========================
    BADGES
 ========================= */
 
-.badges{
-    display:flex;
-    flex-wrap:wrap;
+.badges {
+    display: flex;
+    flex-wrap: wrap;
 
-    gap:15px;
+    gap: 15px;
 
-    margin-bottom:35px;
+    margin-bottom: 35px;
 }
 
-.badges span{
-    background:rgba(255,255,255,.06);
+.badges span {
+    background: rgba(255, 255, 255, 0.06);
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    padding:12px 16px;
+    padding: 12px 16px;
 
-    border-radius:14px;
+    border-radius: 14px;
 
-    display:flex;
-    align-items:center;
-    gap:10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 /* =========================
    PRICES
 ========================= */
 
-.prices{
-    display:flex;
-    gap:15px;
+.prices {
+    display: flex;
+    gap: 15px;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 
-    margin:25px 0;
+    margin: 25px 0;
 }
 
-.prices button{
-    padding:16px 22px;
+.prices button {
+    padding: 16px 22px;
 
-    border:none;
+    border: none;
 
-    border-radius:16px;
+    font-family: Poppins, sans-serif;
 
-    background:#111;
+    border-radius: 16px;
 
-    color:white;
+    background: #111;
 
-    font-weight:700;
+    color: white;
 
-    cursor:pointer;
+    font-weight: 700;
 
-    transition:.3s;
+    cursor: pointer;
+
+    transition: 0.3s;
 }
 
-.prices button:hover{
-    background:
-    linear-gradient(90deg,#00ffcc,#00a2ff);
+.prices button:hover {
+    background: linear-gradient(90deg, #00ffcc, #00a2ff);
 
-    color:black;
+    color: black;
 
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 }
 
 /* =========================
    ACTION BUTTONS
 ========================= */
 
-.actions{
-    display:flex;
-    gap:15px;
+.actions {
+    display: flex;
+    gap: 15px;
 
-    margin-top:30px;
+    margin-top: 30px;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .buy,
-.cart{
-    flex:1;
+.cart {
+    flex: 1;
 
-    padding:18px;
+    padding: 18px;
 
-    border:none;
+    border: none;
 
-    border-radius:16px;
+    border-radius: 16px;
 
-    font-weight:700;
+    font-weight: 700;
 
-    cursor:pointer;
+    font-family: Poppins, sans-serif;
 
-    transition:.4s;
+    cursor: pointer;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
+    transition: 0.4s;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
 }
 
-.buy{
-    background:
-    linear-gradient(90deg,#00ffcc,#00a2ff);
+.buy {
+    background: linear-gradient(90deg, #00ffcc, #00a2ff);
 
-    color:black;
+    color: black;
 }
 
-.buy:hover{
-    transform:translateY(-4px);
+.buy:hover {
+    transform: translateY(-4px);
 
-    box-shadow:
-    0 15px 35px rgba(0,255,204,.25);
+    box-shadow: 0 15px 35px rgba(0, 255, 204, 0.25);
 }
 
-.cart{
-    background:rgba(255,255,255,.06);
+.cart {
+    background: rgba(255, 255, 255, 0.06);
 
-    color:white;
+    color: white;
 
-    border:
-    1px solid rgba(255,255,255,.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.cart:hover{
-    background:rgba(255,255,255,.12);
+.cart:hover {
+    background: rgba(255, 255, 255, 0.12);
 }
 
 /* =========================
    SECURITY IMAGES
 ========================= */
 
-.security{
-    display:flex;
-    gap:20px;
+.security {
+    display: flex;
+    gap: 20px;
 
-    margin-top:35px;
+    margin-top: 35px;
 
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
-.security img{
-    width:180px;
+.security img {
+    width: 180px;
 
-    border-radius:14px;
+    border-radius: 14px;
 }
 
 /* =========================
    IMAGE BACKGROUNDS
 ========================= */
 
-.netflix{
-    background-image:url("https://popculture.com/wp-content/uploads/sites/5/2021/09/181646c7-5126-4cd3-81cd-3cad7ea899b8.png?w=1024");
+.netflix {
+    background-image: url("./imgs/netflix.png");
+    background-color: black;
 }
 
-.microsoft{
-    background-image:url("https://tse4.mm.bing.net/th/id/OIP.KoXP2pIwAJPg3EWTNpWykgHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3");
+.microsoft {
+    background-image: url("https://tse4.mm.bing.net/th/id/OIP.KoXP2pIwAJPg3EWTNpWykgHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3");
 }
 
-.overwatch{
-    background-image:url("https://i1.sndcdn.com/artworks-000173076152-q5gpvq-t500x500.jpg");
+.overwatch {
+    background-image: url("https://i1.sndcdn.com/artworks-000173076152-q5gpvq-t500x500.jpg");
 }
 
-.lol{
-    background-image:url("https://wallpapers.com/images/hd/illustration-of-league-of-legends-logo-7zbgxnhjkphhcwb3.jpg");
+.lol {
+    background-image: url("https://wallpapers.com/images/hd/illustration-of-league-of-legends-logo-7zbgxnhjkphhcwb3.jpg");
 }
 
-.sea{
-    background-image:url("https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK");
+.sea {
+    background-image: url("https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK");
 }
 
-.netshoes{
-    background-image:url("https://assets-global.website-files.com/63c088cd8d60b70caca3fcc3/63e04c596af00b23845faef1_b009417-300w-326ppi.png");
+.netshoes {
+    background-image: url("https://assets-global.website-files.com/63c088cd8d60b70caca3fcc3/63e04c596af00b23845faef1_b009417-300w-326ppi.png");
 }
 
-.decathlon{
-    background-image:url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
+.decathlon {
+    background-image: url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
 }
 
-.roblox{
-    background-image:url("https://i.pinimg.com/originals/b6/f4/2a/b6f42a199afddb797150104841ae31b4.jpg");
+.roblox {
+    background-image: url("https://i.pinimg.com/originals/b6/f4/2a/b6f42a199afddb797150104841ae31b4.jpg");
 }
 
-.uber{
-    background-image:url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
+.uber {
+    background-image: url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
 }
 
-.centauro{
-    background-image:url("https://thf.bing.com/th/id/OIP.FPNvoIMCmeJKWwLf4uEg3QHaHa?w=168&h=180&c=7&r=0&o=7&cb=thfc1falcon&pid=1.7&rm=3");
+.centauro {
+    background-image: url("https://thf.bing.com/th/id/OIP.FPNvoIMCmeJKWwLf4uEg3QHaHa?w=168&h=180&c=7&r=0&o=7&cb=thfc1falcon&pid=1.7&rm=3");
 }
 
-.kopenhagen{
-    background-image:url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
+.kopenhagen {
+    background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
 }
 
 /* =========================
    HOVER GLOW EFFECTS
 ========================= */
 
-.netflix:hover{
+.netflix:hover {
     box-shadow:
-    0 0 15px rgba(255,0,0,.5),
-    0 0 40px rgba(255,0,0,.5);
+        0 0 15px rgba(255, 0, 0, 0.5),
+        0 0 40px rgba(255, 0, 0, 0.5);
 }
 
-.microsoft:hover{
+.microsoft:hover {
     box-shadow:
-    0 0 15px rgba(255,255,255,.5),
-    0 0 40px rgba(255,255,255,.4);
+        0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 40px rgba(255, 255, 255, 0.4);
 }
 
-.overwatch:hover{
+.overwatch:hover {
     box-shadow:
-    0 0 15px rgba(255,166,0,.5),
-    0 0 40px rgba(255,166,0,.4);
+        0 0 15px rgba(255, 166, 0, 0.5),
+        0 0 40px rgba(255, 166, 0, 0.4);
 }
 
-.lol:hover{
+.lol:hover {
     box-shadow:
-    0 0 15px rgba(0,255,200,.5),
-    0 0 40px rgba(255,208,0,.3);
+        0 0 15px rgba(0, 255, 200, 0.5),
+        0 0 40px rgba(255, 208, 0, 0.3);
 }
 
-.sea:hover{
+.sea:hover {
     box-shadow:
-    0 0 15px rgba(0,183,255,.5),
-    0 0 40px rgba(255,230,0,.3);
+        0 0 15px rgba(0, 183, 255, 0.5),
+        0 0 40px rgba(255, 230, 0, 0.3);
 }
 
-.netshoes:hover{
+.netshoes:hover {
     box-shadow:
-    0 0 15px rgba(140,0,255,.5),
-    0 0 40px rgba(140,0,255,.4);
+        0 0 15px rgba(140, 0, 255, 0.5),
+        0 0 40px rgba(140, 0, 255, 0.4);
 }
 
-.decathlon:hover{
+.decathlon:hover {
     box-shadow:
-    0 0 15px rgba(0,119,255,.5),
-    0 0 40px rgba(0,119,255,.4);
+        0 0 15px rgba(0, 119, 255, 0.5),
+        0 0 40px rgba(0, 119, 255, 0.4);
 }
 
-.roblox:hover{
+.roblox:hover {
     box-shadow:
-    0 0 15px rgba(255,0,0,.4),
-    0 0 40px rgba(255,255,255,.3);
+        0 0 15px rgba(255, 0, 0, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.3);
 }
 
-.uber:hover{
+.uber:hover {
     box-shadow:
-    0 0 15px rgba(255,255,255,.4),
-    0 0 40px rgba(255,255,255,.2);
+        0 0 15px rgba(255, 255, 255, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.2);
 }
 
-.centauro:hover{
+.centauro:hover {
     box-shadow:
-    0 0 15px rgba(255,0,0,.4),
-    0 0 40px rgba(255,255,255,.3);
+        0 0 15px rgba(255, 0, 0, 0.4),
+        0 0 40px rgba(255, 255, 255, 0.3);
 }
 
-.kopenhagen:hover{
+.kopenhagen:hover {
     box-shadow:
-    0 0 15px rgba(255,217,0,.5),
-    0 0 40px rgba(255,217,0,.3);
+        0 0 15px rgba(255, 217, 0, 0.5),
+        0 0 40px rgba(255, 217, 0, 0.3);
 }
 
 /* =========================
    RESPONSIVE
 ========================= */
 
-@media(max-width:980px){
-
-    .product{
-        grid-template-columns:1fr;
+@media (max-width: 980px) {
+    .product {
+        grid-template-columns: 1fr;
     }
 
-    .product-info h1{
-        font-size:2.3rem;
+    .product-info h1 {
+        font-size: 2.3rem;
     }
 }
 
-@media(max-width:768px){
-
-    header{
-        padding:20px;
+@media (max-width: 768px) {
+    header {
+        padding: 20px;
     }
 
-    .topbar{
-        flex-direction:column;
-        gap:15px;
+    .topbar {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .product{
-        padding:30px 20px;
+    .product {
+        padding: 30px 20px;
     }
 
-    .product-image{
-        height:350px;
+    .product-image {
+        height: 350px;
     }
 
-    .actions{
-        flex-direction:column;
+    .actions {
+        flex-direction: column;
     }
 
     .buy,
-    .cart{
-        width:100%;
+    .cart {
+        width: 100%;
     }
 
-    .product-info{
-        padding:25px;
+    .product-info {
+        padding: 25px;
     }
 
-    .product-info h1{
-        font-size:2rem;
+    .product-info h1 {
+        font-size: 2rem;
     }
 }

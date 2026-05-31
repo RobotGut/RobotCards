@@ -1,713 +1,465 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
+        <title>RobotCard | Gift Cards Premium</title>
 
-<meta charset="UTF-8" />
+        <!-- GOOGLE FONT -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<title>RobotCard | Gift Cards Premium</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
 
-<!-- GOOGLE FONT -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+        <!-- FONT AWESOME -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+
+        <script src="script.js" defer></script>
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <!-- HEADER -->
+
+        <header>
+            <div class="topbar">
+                <div class="logo">RobotCard</div>
+
+                <nav>
+                    <ul>
+                        <div class="dropdown">
+                            <button class="btn btn-categorias">
+                                Categorias
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+
+                            <div class="dropdown-menu">
+                                <a href="#populares"> Populares </a>
+
+                                <a href="#jogos"> Jogos </a>
+
+                                <a href="#servicos"> Serviços </a>
+                            </div>
+                        </div>
+                        <li><a href="#cards">Gift Cards</a></li>
+
+                        <li><a href="#benefits">Benefícios</a></li>
+
+                        <li><a href="#support">Suporte</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-buttons">
+                    <button class="btn btn-login">Entrar</button>
+
+                    <button class="btn btn-register">Criar Conta</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- HERO -->
+
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>
+                        Os melhores
+
+                        <span class="gradient-text"> Gift Cards </span>
 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        do Brasil
+                    </h1>
+
+                    <p>
+                        Compre gift cards digitais com entrega instantânea,
+                        pagamentos seguros e suporte online 24 horas.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="#cards" class="btn-main"> Comprar Agora </a>
+
+                        <a href="#benefits" class="btn-outline"> Saiba Mais </a>
+                    </div>
+                </div>
+
+                <div class="hero-preview">
+                    <div class="floating-card">
+                        <img
+                            src="imgs/netflix.png"
+                            alt="Gift Card"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GIFT CARDS -->
+
+        <section class="cards-section" id="cards">
+            <div class="section-title">
+                <h2>Gift Cards</h2>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-rel="stylesheet">
+                <p>
+                    Escolha sua plataforma favorita e receba seu código
+                    imediatamente após a compra.
+                </p>
+            </div>
+
+            <div class="cards">
+                <div class="categorias" id="populares">
+                    <h3>Mais Populares</h3>
+                    <p>Os mais vendidos do momento</p>
+                </div>
+
+                <!-- NETFLIX -->
+
+                <div class="card netflix">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Netflix</div>
+                        </div>
+
+                        <a href="netflix" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- MICROSOFT -->
+
+                <div class="card microsoft">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Microsoft</div>
+                        </div>
+
+                        <a href="microsoft" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ROBLOX -->
+
+                <div class="card roblox">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Roblox</div>
+                        </div>
+
+                        <a href="roblox" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="categorias" id="jogos">
+                    <h3>Jogos</h3>
+                    <p>A diversão não pode parar</p>
+                </div>
+
+                <!-- OVERWATCH -->
+
+                <div class="card overwatch">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Overwatch</div>
+                        </div>
+
+                        <a href="overwatch" class="buy-btn">
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LEAGUE OF LEGENDS -->
+
+                <div class="card leagueoflegends">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">League Of Legends</div>
+                        </div>
+
+                        <a href="league-of-legends" class="buy-btn">
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SEA OF THIEVES -->
+
+                <div class="card sea">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Sea Of Thieves</div>
+                        </div>
+
+                        <a href="sea-of-thieves" class="buy-btn">
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ROBLOX -->
+
+                <div class="card roblox">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Roblox</div>
+                        </div>
+
+                        <a href="roblox" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <div class="categorias" id="servicos">
+                    <h3>Serviços</h3>
+                    <p>Ainda mais conteúdo para você</p>
+                </div>
+
+                <!-- NETSHOES -->
+
+                <div class="card netshoes">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Netshoes</div>
+                        </div>
+
+                        <a href="netshoes" class="buy-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- DECATHLON -->
+
+                <div class="card decathlon">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Decathlon</div>
+                        </div>
+
+                        <a href="decathlon" class="buy-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- XBOX -->
+                <div class="card xbox">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Xbox</div>
+                        </div>
+
+                        <a href="xbox" class="buy-btn">
+                            <i class="fa-solid fa-gamepad"></i>
+
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- UBER -->
+
+                <div class="card uber">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Uber</div>
+                        </div>
+
+                        <a href="uber" class="buy-btn">
+                            <i class="fa-solid fa-car"></i>
 
-<!-- FONT AWESOME -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CENTAURO -->
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
+                <div class="card centauro">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Centauro</div>
+                        </div>
 
-</head>
+                        <a href="centauro" class="buy-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
 
-<body>
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KOPENHAGEN -->
 
-<!-- HEADER -->
+                <div class="card kopenhagen">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Kopenhagen</div>
+                        </div>
+
+                        <a href="kopenhagen" class="buy-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
 
-<header>
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NETFLIX -->
+
+                <div class="card netflix">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Netflix</div>
+                        </div>
+
+                        <a href="netflix" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
 
-<div class="topbar">
+                            Comprar
+                        </a>
+                    </div>
+                </div>
 
-<div class="logo">
-RobotCard
-</div>
+                <!-- MICROSOFT -->
 
-<nav>
+                <div class="card microsoft">
+                    <div class="card-content">
+                        <div class="card-top">
+                            <div class="brand">Microsoft</div>
+                        </div>
 
-<ul>
-<div class="dropdown">
+                        <a href="microsoft" class="buy-btn">
+                            <i class="fa-solid fa-crown"></i>
 
-<button class="btn btn-categorias">
-Categorias
-<i class="fa-solid fa-chevron-down"></i>
-</button>
+                            Comprar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<div class="dropdown-menu">
+        <!-- BENEFITS -->
 
-<a href="#populares">
-Populares
-</a>
+        <section class="benefits" id="benefits">
+            <div class="section-title">
+                <h2>Por que escolher a RobotCard?</h2>
+            </div>
 
-<a href="#jogos">
-Jogos
-</a>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <i class="fa-solid fa-bolt"></i>
 
-<a href="#servicos">
-Serviços
-</a>
+                    <h3>Entrega Instantânea</h3>
 
-</div>
+                    <p>Receba seu código imediatamente.</p>
+                </div>
 
-</div>
-<li><a href="#cards">Gift Cards</a></li>
+                <div class="benefit">
+                    <i class="fa-solid fa-shield-halved"></i>
 
-<li><a href="#benefits">Benefícios</a></li>
+                    <h3>Pagamento Seguro</h3>
 
-<li><a href="#support">Suporte</a></li>
+                    <p>Plataforma protegida.</p>
+                </div>
 
-</ul>
+                <div class="benefit">
+                    <i class="fa-solid fa-headset"></i>
 
-</nav>
+                    <h3>Suporte 24 Horas</h3>
 
-<div class="header-buttons">
+                    <p>Atendimento rápido.</p>
+                </div>
+            </div>
+        </section>
 
-<button class="btn btn-login">
-Entrar
-</button>
+        <!-- FOOTER -->
 
-<button class="btn btn-register">
-Criar Conta
-</button>
+        <footer id="support">
+            <div class="footer-content">
+                <div>
+                    <h2 class="logo">RobotCard</h2>
 
-</div>
+                    <p style="margin-top: 10px; color: #aaa">
+                        © 2026 - Todos os direitos reservados
+                    </p>
+                </div>
 
-</div>
+                <div class="socials">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
 
-</header>
+                    <a href="#">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
 
-<!-- HERO -->
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
 
-<section class="hero">
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
 
-<div class="hero-content">
+        <!-- MODAL -->
 
-<div class="hero-text">
+        <div class="modal" id="modalConta">
+            <div class="modal-box">
+                <button class="close-modal" id="fecharModal">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
 
-<h1>
+                <h2>Criar Conta</h2>
 
-Os melhores
+                <p>Cadastre-se para comprar gift cards premium.</p>
 
-<span class="gradient-text">
-Gift Cards
-</span>
+                <input type="text" id="nome" placeholder="Nome completo" />
 
-do Brasil
+                <input type="email" id="email" placeholder="Seu e-mail" />
 
-</h1>
+                <input type="password" id="senha" placeholder="Sua senha" />
 
-<p>
-
-Compre gift cards digitais com entrega instantânea,
-pagamentos seguros e suporte online 24 horas.
-
-</p>
-
-<div class="hero-buttons">
-
-<a href="#cards" class="btn-main">
-Comprar Agora
-</a>
-
-<a href="#benefits" class="btn-outline">
-Saiba Mais
-</a>
-
-</div>
-
-</div>
-
-<div class="hero-preview">
-
-<div class="floating-card">
-
-<img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d1?q=80&w=1200"
-alt="Gift Card">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- GIFT CARDS -->
-
-<section class="cards-section" id="cards">
-
-<div class="section-title">
-
-<h2>Gift Cards</h2>
-
-<p>
-
-Escolha sua plataforma favorita e receba
-seu código imediatamente após a compra.
-
-</p>
-
-</div>
-
-
-
-<div class="cards">
-<div class="categorias" id="populares">
-<h3>Mais Populares</h3>
-<p>Os mais vendidos do momento</p>
-</div>
-
-<!-- NETFLIX -->
-
-<div class="card netflix">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Netflix
-</div>
-
-</div>
-
-<a href="netflix/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- MICROSOFT -->
-
-<div class="card microsoft">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Microsoft
-</div>
-
-</div>
-
-<a href="microsoft/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- ROBLOX -->
-
-<div class="card roblox">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Roblox
-</div>
-
-</div>
-
-<a href="roblox/index.html" class="buy-btn">
-
-<i class="fa-solid fa-crown"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<div class="categorias" id="jogos">
-<h3>Jogos</h3>
-<p>A diversão não pode parar</p>
-</div>
-
-<!-- OVERWATCH -->
-
-<div class="card overwatch">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Overwatch
-</div>
-
-</div>
-
-<a href="overwatch/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- LEAGUE OF LEGENDS -->
-
-<div class="card legueoflegends">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-League Of Legends
-</div>
-
-</div>
-
-<a href="league-of-legends/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- SEA OF THIEVES -->
-
-<div class="card sea">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Sea Of Thieves
-</div>
-
-</div>
-
-<a href="sea-of-thieves/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- ROBLOX -->
-
-<div class="card roblox">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Roblox
-</div>
-
-</div>
-
-<a href="roblox/index.html" class="buy-btn">
-
-<i class="fa-solid fa-crown"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<div class="categorias" id="servicos">
-<h3>Serviços</h3>
-<p>Ainda mais conteúdo para você</p>
-</div>
-
-<!-- NETSHOES -->
-
-<div class="card netshoes">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Netshoes
-</div>
-
-</div>
-
-<a href="netshoes/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- DECATHLON -->
-
-<div class="card decathlon">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Decathlon
-</div>
-
-</div>
-
-<a href="decathlon/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- XBOX -->
-
-<div class="card xbox">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Xbox
-</div>
-
-</div>
-
-<a href="xbox/index.html" class="buy-btn">
-
-<i class="fa-solid fa-gamepad"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- UBER -->
-
-<div class="card uber">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Uber
-</div>
-
-</div>
-
-<a href="uber/index.html" class="buy-btn">
-
-<i class="fa-solid fa-car"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- CENTAURO -->
-
-<div class="card centauro">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Centauro
-</div>
-
-</div>
-
-<a href="centauro/index.html" class="buy-btn">
-
-<i class="fa-solid fa-car"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- KOPENHAGEN -->
-
-<div class="card Kopenhagen">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Kopenhagen
-</div>
-
-</div>
-
-<a href="kopenhague/index.html" class="buy-btn">
-
-<i class="fa-solid fa-car"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- NETFLIX -->
-
-<div class="card netflix">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Netflix
-</div>
-
-</div>
-
-<a href="netflix/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-
-<!-- MICROSOFT -->
-
-<div class="card microsoft">
-
-<div class="card-content">
-
-<div class="card-top">
-
-<div class="brand">
-Microsoft
-</div>
-
-</div>
-
-<a href="microsoft/index.html" class="buy-btn">
-
-<i class="fa-solid fa-cart-shopping"></i>
-
-Comprar
-
-</a>
-
-</div>
-
-</div>
-</div>
-
-</section>
-
-<!-- BENEFITS -->
-
-<section class="benefits" id="benefits">
-
-<div class="section-title">
-
-<h2>Por que escolher a RobotCard?</h2>
-
-</div>
-
-<div class="benefits-grid">
-
-<div class="benefit">
-
-<i class="fa-solid fa-bolt"></i>
-
-<h3>Entrega Instantânea</h3>
-
-<p>
-Receba seu código imediatamente.
-</p>
-
-</div>
-
-<div class="benefit">
-
-<i class="fa-solid fa-shield-halved"></i>
-
-<h3>Pagamento Seguro</h3>
-
-<p>
-Plataforma protegida.
-</p>
-
-</div>
-
-<div class="benefit">
-
-<i class="fa-solid fa-headset"></i>
-
-<h3>Suporte 24 Horas</h3>
-
-<p>
-Atendimento rápido.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-
-<!-- FOOTER -->
-
-<footer id="support">
-
-<div class="footer-content">
-
-<div>
-
-<h2 class="logo">
-RobotCard
-</h2>
-
-<p style="margin-top:10px;color:#aaa;">
-© 2026 - Todos os direitos reservados
-</p>
-
-</div>
-
-<div class="socials">
-
-<a href="#">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-discord"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-x-twitter"></i>
-</a>
-
-<a href="#">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-</div>
-
-</div>
-
-</footer>
-
-<!-- MODAL -->
-
-<div class="modal" id="modalConta">
-
-<div class="modal-box">
-
-<button class="close-modal" id="fecharModal">
-
-<i class="fa-solid fa-xmark"></i>
-
-</button>
-
-<h2>Criar Conta</h2>
-
-<p> 
-Cadastre-se para comprar gift cards premium.
-</p>
-
-<input type="text" id="nome" placeholder="Nome completo">
-
-<input type="email" id="email" placeholder="Seu e-mail">
-
-<input type="password" id="senha" placeholder="Sua senha">
-
-<button class="submit-account" id="btnEnviar">
-Criar Conta
-</button>
-
-</div>
-
-</div>
-
-<!-- JS -->
-    <script src="GiftCard.js"></script>
-    <script src="script.js"></script>
-
-</body>
-
+                <button class="submit-account" id="btnEnviar">
+                    Criar Conta
+                </button>
+            </div>
+        </div>
+    </body>
 </html>
