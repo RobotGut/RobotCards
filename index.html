@@ -58,11 +58,16 @@
                         <li><a href="#support">Suporte</a></li>
                     </ul>
                 </nav>
+                <div id="header-btns-container">
+                    <div class="header-buttons">
+                        <button class="btn btn-login">Entrar</button>
 
-                <div class="header-buttons">
-                    <button class="btn btn-login">Entrar</button>
+                        <button class="btn btn-register">Criar Conta</button>
+                    </div>
 
-                    <button class="btn btn-register">Criar Conta</button>
+                    <button id="menu-btn">
+                        <img src="imgs/icons/menu.svg" alt="Menu" />
+                    </button>
                 </div>
             </div>
         </header>
@@ -94,10 +99,7 @@
 
                 <div class="hero-preview">
                     <div class="floating-card">
-                        <img
-                            src="imgs/netflix.png"
-                            alt="Gift Card"
-                        />
+                        <img src="imgs/netflix.png" alt="Gift Card" />
                     </div>
                 </div>
             </div>
@@ -450,11 +452,20 @@
 
                 <p>Cadastre-se para comprar gift cards premium.</p>
 
-                <input type="text" id="nome" placeholder="Nome completo" />
+                <div class="input-container">
+                    <label for="nome">Seu nome</label>
+                    <input type="text" id="nome" />
+                </div>
 
-                <input type="email" id="email" placeholder="Seu e-mail" />
+                <div class="input-container">
+                    <label for="email">Seu email</label>
+                    <input type="email" id="email" />
+                </div>
 
-                <input type="password" id="senha" placeholder="Sua senha" />
+                <div class="input-container">
+                    <label for="senha">Sua senha</label>
+                    <input type="password" id="senha" />
+                </div>
 
                 <button class="submit-account" id="btnEnviar">
                     Criar Conta

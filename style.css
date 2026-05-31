@@ -11,6 +11,7 @@
 html {
     scroll-behavior: smooth;
     -webkit-tap-highlight-color: transparent;
+    background: black;
 }
 
 body {
@@ -115,6 +116,7 @@ nav li a:hover {
     color: #00ffcc;
 }
 
+
 nav li a::after {
     content: "";
 
@@ -133,6 +135,33 @@ nav li a::after {
 
 nav a:hover::after {
     width: 100%;
+}
+
+#header-btns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 24px;
+    cursor: pointer;
+    padding: 0.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: 0.3s;
+    display: none;
+}
+
+#menu-btn:hover {
+    background: rgba(255,255,255, 0.03);
 }
 
 .header-buttons {
@@ -596,7 +625,7 @@ footer {
 }
 
 .centauro {
-    background-image: url("https://tse3.mm.bing.net/th/id/OIP.U48F6OEgB5ZXdfEhm5GLVwHaHa");
+    background-image: url("imgs/centauro.jpg");
 }
 
 .netshoes {
@@ -792,15 +821,38 @@ footer {
 
 .modal-box p {
     color: #bbb;
-    margin-bottom: 25px;
+    margin-bottom: 32px;
 }
 
-.modal-box input {
+.input-container {
+    position: relative;
+}
+
+.input-container label {
+    position: absolute;
+    font-size: 0.95rem;
+    top: 15%;
+    left: 5%;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.input-container:has(.focused) label{
+    top: -36%;
+    left: 0;
+    color: #fff;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+
+.input-container input {
     width: 100%;
 
     padding: 15px;
 
-    margin-bottom: 15px;
+    margin-bottom: 32px;
 
     border-radius: 14px;
 
@@ -966,6 +1018,10 @@ footer {
         display: none;
     }
 
+    #menu-btn {
+        display: block;
+    }
+
     .hero-text h1 {
         font-size: 3.5rem;
     }
@@ -974,10 +1030,6 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 18px 20px;
-    }
-
-    .topbar {
-        flex-direction: column;
     }
 
     .hero {
@@ -1007,4 +1059,11 @@ footer {
         flex-direction: column;
         text-align: center;
     }
+}
+
+@media (max-width: 560px) {
+    .header-buttons, .sidebar-header-buttons  {
+        display: none;
+    }
+
 }

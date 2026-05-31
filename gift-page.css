@@ -102,6 +102,14 @@ header {
 
     padding: 12px 18px;
 
+    width: 115px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
     border-radius: 12px;
 
     background: rgba(255, 255, 255, 0.06);
@@ -442,7 +450,7 @@ header {
 }
 
 .netshoes {
-    background-image: url("https://assets-global.website-files.com/63c088cd8d60b70caca3fcc3/63e04c596af00b23845faef1_b009417-300w-326ppi.png");
+    background-image: url("imgs/netshoes.png");
 }
 
 .decathlon {
@@ -458,7 +466,7 @@ header {
 }
 
 .centauro {
-    background-image: url("https://thf.bing.com/th/id/OIP.FPNvoIMCmeJKWwLf4uEg3QHaHa?w=168&h=180&c=7&r=0&o=7&cb=thfc1falcon&pid=1.7&rm=3");
+    background-image: url("imgs/centauro.jpg");
 }
 
 .kopenhagen {
