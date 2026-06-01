@@ -150,19 +150,13 @@ nav a:hover::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    border-radius: 24px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    padding: 0.4rem;
-    border: 1px solid rgba(255, 255, 255, 0.15);
     transition: 0.3s;
     display: none;
 }
 
-#menu-btn:hover {
-    background: rgba(255,255,255, 0.03);
-}
 
 .header-buttons {
     display: flex;
@@ -831,17 +825,17 @@ footer {
 .input-container label {
     position: absolute;
     font-size: 0.95rem;
-    top: 15%;
+    top: 18%;
     left: 5%;
     color: rgba(255, 255, 255, 0.5);
     transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .input-container:has(.focused) label{
-    top: -36%;
-    left: 0;
+    top: -27.5%;
+    left: 1%;
     color: #fff;
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.4px;
 }
@@ -859,6 +853,10 @@ footer {
     border: 1px solid rgba(255, 255, 255, 0.08);
 
     background: rgba(255, 255, 255, 0.04);
+
+    font-family: Poppins, sans-serif;
+
+    font-size: 1.02rem;
 
     color: white;
 
@@ -993,6 +991,23 @@ footer {
     color: #00ffcc;
     padding-left: 22px;
 }
+
+#sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(1.2px);
+    display: none;
+    justify-content: end;
+}
+
+#sidebar {
+    width: clamp(200px, 40%, 300px );
+    background-color: black;
+    height: 100%;
+}
+
 /* =========================
  RESPONSIVO
 ========================= */

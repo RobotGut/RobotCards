@@ -473,6 +473,10 @@ header {
     background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
 }
 
+.xbox {
+    background-image: url(imgs/xbox.png)
+}
+
 /* =========================
    HOVER GLOW EFFECTS
 ========================= */
