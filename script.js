@@ -16,8 +16,8 @@ inputsModal.forEach((input) => {
     });
 });
 
-const btnEntrar = document.querySelector(".btn-login");
-const btnCriarConta = document.querySelector(".btn-register");
+const btnsEntrar = document.querySelectorAll(".btn-login");
+const btnsCriarConta = document.querySelectorAll(".btn-register");
 const modal = document.getElementById("modalConta");
 const fecharModal = document.getElementById("fecharModal");
 const btnEnviar = document.getElementById("btnEnviar");
@@ -25,26 +25,30 @@ const btnEnviar = document.getElementById("btnEnviar");
 const tituloModal = document.querySelector(".modal-box h2");
 const textoModal = document.querySelector(".modal-box p");
 
-btnEntrar.addEventListener("click", () => {
-    modal.classList.add("active");
+btnsEntrar.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.classList.add("active");
 
-    tituloModal.innerText = "Entrar";
-    textoModal.innerText = "Faça login para acessar sua conta.";
+        tituloModal.innerText = "Entrar";
+        textoModal.innerText = "Faça login para acessar sua conta.";
 
-    inputContainerNome.style.display = "none";
+        inputContainerNome.style.display = "none";
 
-    btnEnviar.innerText = "Entrar";
+        btnEnviar.innerText = "Entrar";
+    });
 });
 
-btnCriarConta.addEventListener("click", () => {
-    modal.classList.add("active");
+btnsCriarConta.forEach((btn) => {
+    btn.addEventListener("click", () => {
+        modal.classList.add("active");
 
-    tituloModal.innerText = "Criar Conta";
-    textoModal.innerText = "Cadastre-se para comprar gift cards premium.";
+        tituloModal.innerText = "Criar Conta";
+        textoModal.innerText = "Cadastre-se para comprar gift cards premium.";
 
-    inputContainerNome.style.display = "block";
+        inputContainerNome.style.display = "block";
 
-    btnEnviar.innerText = "Criar Conta";
+        btnEnviar.innerText = "Criar Conta";
+    });
 });
 
 fecharModal.addEventListener("click", () => {
