@@ -1,13 +1,3 @@
-const btnEntrar = document.querySelector(".btn-login");
-const btnCriarConta = document.querySelector(".btn-register");
-
-const modal = document.getElementById("modalConta");
-const fecharModal = document.getElementById("fecharModal");
-const btnEnviar = document.getElementById("btnEnviar");
-
-const tituloModal = document.querySelector(".modal-box h2");
-const textoModal = document.querySelector(".modal-box p");
-
 const inputNome = document.getElementById("nome");
 const inputContainerNome = document.querySelector(
     ".input-container:has(#nome)",
@@ -25,6 +15,15 @@ inputsModal.forEach((input) => {
         if (input.value.length == 0) input.classList.remove("focused");
     });
 });
+
+const btnEntrar = document.querySelector(".btn-login");
+const btnCriarConta = document.querySelector(".btn-register");
+const modal = document.getElementById("modalConta");
+const fecharModal = document.getElementById("fecharModal");
+const btnEnviar = document.getElementById("btnEnviar");
+
+const tituloModal = document.querySelector(".modal-box h2");
+const textoModal = document.querySelector(".modal-box p");
 
 btnEntrar.addEventListener("click", () => {
     modal.classList.add("active");
@@ -93,9 +92,61 @@ function limparCampos() {
     inputEmail.value = "";
     inputSenha.value = "";
 
-    inputsModal.forEach(inp => {
+    inputsModal.forEach((inp) => {
         inp.classList.remove("focused");
-    })
+    });
 }
 
 fecharModal.addEventListener("click", limparCampos);
+
+const sidebarOverlay = document.getElementById("sidebar-overlay");
+const menuBtn = document.getElementById("menu-btn");
+
+menuBtn.addEventListener("click", () => {
+    sidebarOverlay.classList.toggle("show");
+});
+
+sidebarOverlay.addEventListener("click", (e) => {
+    if (e.target == sidebarOverlay) sidebarOverlay.classList.remove("show");
+});
+
+const sidebarNavLinks = document.querySelectorAll("#sidebar nav a");
+
+let isNavigating = false;
+
+sidebarNavLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+        isNavigating = true;
+        const activeElem = document.querySelector("a.active");
+        if (activeElem) activeElem.classList.remove("active");
+        e.currentTarget.classList.add("active");
+
+        setTimeout(() => (isNavigating = false), 500);
+    });
+});
+
+const sections = document.querySelectorAll(
+    "#cards, #populares, #jogos, #servicos, #benefits, #support",
+);
+
+const observer = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (isNavigating) return;
+            if (entry.isIntersecting) {
+                const activeElem = document.querySelector("a.active");
+                if (activeElem) activeElem.classList.remove("active");
+
+                const activeLink = document.querySelector(
+                    `#sidebar a[href="#${entry.target.id}"]`,
+                );
+                activeLink.classList.add("active");
+            }
+        });
+    },
+    {
+        threshold: 0.5,
+    },
+);
+
+sections.forEach((section) => observer.observe(section));

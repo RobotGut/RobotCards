@@ -26,7 +26,12 @@
         <script src="script.js" defer></script>
         <!-- CSS -->
         <link rel="stylesheet" href="style.css" />
-        <link rel="shortcut icon" href="imgs/icons/favicon.png" type="image/x-icon">
+
+        <link
+            rel="shortcut icon"
+            href="imgs/icons/favicon.png"
+            type="image/x-icon"
+        />
     </head>
 
     <body>
@@ -108,9 +113,9 @@
 
         <!-- GIFT CARDS -->
 
-        <section class="cards-section" id="cards">
+        <section class="cards-section">
             <div class="section-title">
-                <h2>Gift Cards</h2>
+                <h2 id="cards">Gift Cards</h2>
 
                 <p>
                     Escolha sua plataforma favorita e receba seu código
@@ -476,7 +481,45 @@
 
         <div id="sidebar-overlay">
             <div id="sidebar">
+                <div id="sidebar-header-buttons">
+                    <button class="btn btn-login">Entrar</button>
 
+                    <button class="btn btn-register">Criar Conta</button>
+                </div>
+
+                <nav>
+                    <a href="#cards">
+                        <i class="fa fa-cart-shopping"></i>
+                        Giftcards
+                    </a>
+                    <a href="#populares">
+                        <i class="fa fa-crown"></i>
+                        Populares
+                    </a>
+                    <a href="#jogos">
+                        <i class="fa fa-gamepad"></i>
+                        Jogos
+                    </a>
+                    <a href="#servicos">
+                        <i class="fa fa-gear"></i>
+                        Serviços
+                    </a>
+                    <a href="#benefits">
+                        <i class="fa fa-star"></i>
+                        Benefícios
+                    </a>
+                    <a href="#support">
+                        <i class="fa fa-headset"></i>
+                        Suporte
+                    </a>
+                </nav>
+
+                <div class="sidebar-logo-container">
+                    <span class="logo">RobotCard</span>
+                    <span class="logo-subtitle"
+                        >Sistema online. Gift card a caminho.</span
+                    >
+                </div>
             </div>
         </div>
     </body>
