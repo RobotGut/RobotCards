@@ -541,51 +541,127 @@ header {
 ========================= */
 
 footer {
-    border-top: 1px solid rgba(255, 255, 255, .08);
-
-    background: #050505;
-
-    padding: 60px 30px;
+    background: #0b0c10;
+    color: #fff;
+    padding: 60px 20px 30px;
+    border-top: 1px solid #1f2833;
 }
 
-.footer-content {
-    max-width: 1300px;
-    margin: auto;
-
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
+    align-items: flex-start;
+    gap: 40px;
     flex-wrap: wrap;
-    gap: 20px;
+}
+
+.footer-brand,
+.footer-links,
+.footer-contact,
+.footer-payments {
+    flex: 1;
+    min-width: 220px;
+}
+
+footer h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #00e5ff;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.footer-brand .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.logo-subtitle {
+    color: #858585;
+    font-size: .85rem;
+    margin: 10px 0 20px;
+    line-height: 1.5;
+}
+
+.copyright,
+.cnpj {
+    color: #454545;
+    font-size: .75rem;
+    margin-top: 5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links ul a {
+    color: #abb2bf;
+    font-size: .9rem;
+    transition: .2s;
+}
+
+.footer-links ul a:hover {
+    color: #00e5ff;
+    padding-left: 5px;
+}
+
+.footer-contact p {
+    color: #abb2bf;
+    font-size: .9rem;
+    margin-bottom: 20px;
+}
+
+.footer-contact p i {
+    margin-right: 8px;
+    color: #00e5ff;
 }
 
 .socials {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .socials a {
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-
+    color: #fff;
+    background: #1f2833;
+    font-size: 1.1rem;
+    width: 38px;
+    height: 38px;
     display: flex;
-    justify-content: center;
     align-items: center;
-
-    background: rgba(255, 255, 255, .06);
-
-    transition: .4s;
+    justify-content: center;
+    border-radius: 8px;
+    transition: .2s;
 }
 
 .socials a:hover {
-    background: #00ffcc;
-    color: black;
-    transform: translateY(-5px);
+    background: #00e5ff;
+    color: #0b0c10;
+    transform: translateY(-3px);
 }
 
+.payment-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: #454545;
+}
+
+.payment-icons i {
+    transition: .2s;
+    cursor: help;
+}
+
+.payment-icons i:hover {
+    color: #abb2bf;
+}
 /* =========================
  BACKGROUNDS CARDS
 ========================= */
@@ -1043,6 +1119,11 @@ height: auto;
     text-wrap: balance;
 }
 
+.icones{
+
+
+}
+
 #sidebar-overlay.show #sidebar {
     transform: translate(0);
 }
@@ -1110,6 +1191,7 @@ height: auto;
 #sidebar-header-buttons .btn-register {
     width: 60%;
 }
+
 
 /* =========================
  RESPONSIVO
