@@ -454,7 +454,7 @@ header {
 }
 
 .netshoes {
-    background-image: url("imgs/netshoes.png");
+    background-image: url("https://logowik.com/content/uploads/images/netshoes-202468058.logowik.com.webp");
 }
 
 .decathlon {
@@ -529,7 +529,7 @@ header {
 
 .roblox:hover {
     box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.4),
+        0 0 15px rgb(255, 255, 255),
         0 0 40px rgba(255, 255, 255, 0.3);
 }
 
@@ -602,6 +602,42 @@ header {
 }
 
 /* ==========================================================================
+   ACRÉSCIMO: botão de como funciona
+   ========================================================================== */
+
+.como-resgatar {
+    margin: 0 auto; 
+    width: 50%;
+    padding: 5px 5px;
+    margin-bottom: 25px;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+
+    font-family: "Poppins", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    transition: all 0.3s ease;
+}
+
+.como-resgatar:hover {
+    background: white;
+    color: rgb(0, 0, 0);
+
+}
+
+/* ==========================================================================
    ACRÉSCIMO: ESTILOS DO CARD MODAL DE TUTORIAL
    ========================================================================== */
 
@@ -627,19 +663,6 @@ header {
     pointer-events: auto;
 }
 
-.tutorial-card {
-    background: #0d0d0d;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 24px;
-    width: 90%;
-    max-width: 460px;
-    padding: 35px;
-    position: relative;
-    transform: scale(0.85);
-    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 25px 60px rgba(90, 0, 0, 0.8);
-    font-family: 'Poppins', sans-serif;
-}
 
 .tutorial-modal-overlay.active .tutorial-card {
     transform: scale(1);
@@ -667,15 +690,7 @@ header {
     margin-bottom: 28px;
 }
 
-.tutorial-header span {
-    color: #ff0000;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 6px;
-}
+
 
 .tutorial-header h2 {
     font-size: 24px;
@@ -695,21 +710,6 @@ header {
 
 .tutorial-step-item:last-child {
     margin-bottom: 0;
-}
-
-.tutorial-step-number {
-    background: linear-gradient(135deg, #000000, #000000);
-    color: rgb(255, 0, 0);
-    min-width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    font-size: 13px;
-    margin-right: 15px;
-    margin-top: 2px;
 }
 
 .tutorial-step-text {
@@ -742,35 +742,260 @@ header {
     box-shadow: 0 10px 25px rgba(0, 255, 204, 0.2);
 }
 
+/* ==========================================================================
+   ACRÉSCIMO: CRIAR VARIAÇÃO DAS SEGUINTES CLASSES PARA CADA UMA DAS PÁGINAS: 
+   ========================================================================== */
 
-.btn-tutorial-trigger {
-    margin: 0 auto; 
-    width: 50%;
-    padding: 5px 5px;
-    margin-bottom: 25px;
-
+.tutorial-card {
+    background: #0d0d0d;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 10px;
-
-    background: rgba(255, 255, 255, 0.06);
-    color: white;
-
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-
-    transition: all 0.3s ease;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 460px;
+    padding: 35px;
+    position: relative;
+    transform: scale(0.85);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    
+    font-family: 'Poppins', sans-serif;
 }
 
-.btn-tutorial-trigger:hover {
-    background: white;
-    color: rgb(0, 0, 0);
+.tutorial-step-number {
+    min-width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 13px;
+    margin-right: 15px;
+    margin-top: 2px;
+}
+.tutorial-header span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 6px;
+}
 
+/* ==========================================================================
+   VARIAÇÃO: TEMA NETFLIX 
+   ========================================================================== */
+
+.tutorial-card:has(.tema-netflix) {
+    box-shadow: 0 25px 60px rgba(229, 9, 20, 0.4);
+}
+
+.tema-netflix .tutorial-step-number {
+    background: linear-gradient(135deg, #141414, #000000);
+    color: rgb(255, 0, 0);
+}
+
+.tema-netflix .tutorial-header span {
+    color: #e50914; 
+}
+
+/* ==========================================================================
+   VARIAÇÃO: TEMA MICROSOFT 
+   ========================================================================== */
+
+.tutorial-card:has(.tema-microsoft) {
+    box-shadow:
+        0 0 5px rgba(0, 0, 0, .6),
+        0 0 10px rgba(255, 60, 0, .6),
+        0 0 20px rgba(0, 255, 150, .6);
+}
+
+.tema-microsoft .tutorial-step-number {
+    background: #1e1e1e;
+    color: #f2f2f2; 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tema-microsoft .tutorial-header span {
+    color: #00a4ef; 
+}
+/* ==========================================================================
+   VARIAÇÃO: TEMA ROBLOX 
+   ========================================================================== */
+
+.tutorial-card:has(.tema-roblox) {
+   box-shadow:
+        0 0 5px rgba(121, 121, 121, .6),
+        0 0 20px rgba(109, 109, 109, 0.6);
+}
+
+.tema-roblox .tutorial-step-number {
+    background: #1c1c1c;
+    color: #ffffff; 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tema-roblox .tutorial-header span {
+    color: #aaaaaa; 
+}
+/* ==========================================================================
+   VARIAÇÃO: TEMA OVERWATCH (Laranja Vibrante / Aço)
+   ========================================================================== */
+.tutorial-card:has(.tema-overwatch) {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
+                0 0 35px rgba(249, 156, 25, 0.3); 
+}
+
+.tema-overwatch .tutorial-step-number {
+    background: linear-gradient(135deg, #404a54, #21272c); 
+    color: #f99c19; 
+    border: 1px solid rgba(249, 156, 25, 0.4);
+}
+
+.tema-overwatch .tutorial-header span {
+    color: #f99c19;
+}
+
+/* ==========================================================================
+   VARIAÇÃO: TEMA LEAGUE OF LEGENDS (Dourado Hextech / Azul Runas)
+   ========================================================================== */
+.tutorial-card:has(.tema-lol) {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
+                0 0 35px rgba(194, 143, 36, 0.25); /* Brilho Dourado Hextech */
+}
+
+.tema-lol .tutorial-step-number {
+    background: linear-gradient(135deg, #091420, #0a1428); /* Fundo Azul Escuro do Client */
+    color: #c28f24; /* Número Dourado */
+    border: 1px solid rgba(194, 143, 36, 0.5);
+}
+
+.tema-lol .tutorial-header span {
+    color: #c28f24;
+}
+
+/* ==========================================================================
+   VARIAÇÃO: TEMA SEA OF THIEVES (Verde Água Pirata / Brilho de Fantasma)
+   ========================================================================== */
+.tutorial-card:has(.tema-sea) {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
+                0 0 35px rgba(0, 204, 153, 0.25); 
+}
+
+.tema-sea .tutorial-step-number {
+    background: linear-gradient(135deg, #041a16, #010a08); 
+    color: #00ffcc; 
+    border: 1px solid rgba(0, 255, 204, 0.3);
+}
+
+.tema-sea .tutorial-header span {
+    color: #00cc99;
+}
+/* ==========================================================================
+   VINCULAÇÃO DE NOVOS TEMAS EM CSS (MODAIS CUSTOMIZADOS)
+   ========================================================================== */
+
+.tutorial-card:has(.tema-netshoes) {
+    box-shadow:
+     0 25px 60px rgba(0, 0, 0, 0.8),
+      0 0 35px rgba(111, 0, 255, 0.507);
+}
+.tema-netshoes .tutorial-step-number {
+    background: linear-gradient(135deg, #1b003a, #0b001a);
+    color: #8c00ff;
+    border: 1px solid rgba(140, 0, 255, 0.4);
+}
+.tema-netshoes .tutorial-header span { 
+    color: #8c00ff; 
+}
+
+/* ==========================================================================
+    VARIAÇÃO: TEMA DECATHLON
+   ========================================================================== */
+
+.tutorial-card:has(.tema-decathlon) {
+    box-shadow: 
+    0 25px 60px rgba(0, 0, 0, 0.8),
+     0 0 35px rgba(0, 119, 255, 0.438);
+}
+.tema-decathlon .tutorial-step-number {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #0077ff;
+    border: 1px solid rgba(0, 119, 255, 0.4);
+}
+.tema-decathlon .tutorial-header span { 
+    color: #0077ff; 
+}
+
+/* ==========================================================================
+     VARIAÇÃO: TEMA DECATHLON 
+    ========================================================================== */
+
+.tutorial-card:has(.tema-xbox) {
+    box-shadow:
+     0 25px 60px rgba(0, 0, 0, 0.8),
+     0 0 35px rgba(16, 124, 16, 0.35);
+}
+.tema-xbox .tutorial-step-number {
+    background: linear-gradient(135deg, #083a08, #001100);
+    color: #107c10;
+    border: 1px solid rgba(16, 124, 16, 0.4);
+}
+.tema-xbox .tutorial-header span {
+     color: #107c10;
+     }
+
+/* ==========================================================================
+     VARIAÇÃO: TEMA UBER
+   ========================================================================== */
+
+.tutorial-card:has(.tema-uber) {
+    box-shadow:
+     0 25px 60px rgba(0, 0, 0, 0.8),
+     0 0 30px rgb(255, 255, 255);
+}
+.tema-uber .tutorial-step-number {
+    background: #1f1f1f;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.tema-uber .tutorial-header span {
+     color: #ffffff; 
+    }
+
+/* ==========================================================================
+   VARIAÇÃO: TEMA CENTAURO
+   ========================================================================== */
+
+.tutorial-card:has(.tema-centauro) {
+    box-shadow:
+     0 25px 60px rgba(0, 0, 0, 0.8),
+      0 0 35px rgba(255, 0, 0, 0.25);
+}
+
+.tema-centauro .tutorial-step-number {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    color: #e50000;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+}
+.tema-centauro .tutorial-header span { 
+    color: #ffffff;
+ }
+/* ==========================================================================
+   VARIAÇÃO: TEMA KOPENHAGEN
+   ========================================================================== */
+
+.tutorial-card:has(.tema-kopenhagen) {
+    box-shadow:
+        0 0 10px rgba(197, 8, 8, .6),
+        0 0 20px rgba(250, 246, 37, 0.6);
+}
+
+.tema-kopenhagen .tutorial-step-number {
+    background: linear-gradient(135deg, #2b2100, #141000);
+    color: #ffd900;
+    border: 1px solid rgba(255, 217, 0, 0.3);
+}
+
+.tema-kopenhagen .tutorial-header span { 
+    color: #ffd900; 
 }
