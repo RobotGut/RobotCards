@@ -1,117 +1,100 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     
-    // ==========================================================================
-    // 1. SISTEMA DE SELEÇÃO DE PRODUTOS E BOTÃO DE COMPRA
-    // ==========================================================================
-    const produtos = [
-        { nome: "Netflix R$ 150", preco: "149,99" },
-        { nome: "Netflix R$ 250", preco: "249,99" },
-        { nome: "Netflix R$ 120", preco: "119,99" },
-        { nome: "Netflix R$ 100", preco: "99,99" },
-        { nome: "Netflix R$ 90", preco: "89,99" },
-        { nome: "Netflix R$ 70", preco: "69,99" }
-    ];
+    /* ==========================================================================
+       1. CONTROLE UNIVERSAL DOS MODAIS (COMO RESGATAR)
+       ========================================================================== */
+    const botoesResgatar = document.querySelectorAll(".como-resgatar");
+    const modais = document.querySelectorAll(".tutorial-modal-overlay");
 
-    const container = document.getElementById("products");
-    const productName = document.getElementById("productName");
-    const productPrice = document.getElementById("productPrice");
-    const buyBtn = document.getElementById("buyBtn");
-
-    let selecionado = produtos[0];
-
-    // Só executa a geração de produtos se o container existir na página atual
-    if (container) {
-        produtos.forEach((p, index) => {
-            const div = document.createElement("div");
-            div.classList.add("card");
-            if (index === 0) div.classList.add("active");
-
-            div.innerHTML = `
-                <img src="https://lojadosgifts.com.br/images/products/netflix-categoria-c6d0b91236b7f980.webp">
-                <div>
-                    <p>${p.nome}</p>
-                    <span class="price">R$ ${p.preco}</span>
-                </div>
-            `;
-
-            div.onclick = () => {
-                document.querySelectorAll(".card").forEach(c => c.classList.remove("active"));
-                div.classList.add("active");
-
-                selecionado = p;
-                
-                // Atualiza os textos se os elementos existirem na página
-                if (productName) productName.innerText = p.nome;
-                if (productPrice) productPrice.innerText = "R$ " + p.preco;
-            };
-
-            container.appendChild(div);
-        });
-    }
-
-    // Ação do Botão Comprar (WhatsApp)
-    if (buyBtn) {
-        buyBtn.onclick = () => {
-            // Substitua pelo seu número com DDD (Ex: 5511999999999)
-            const numeroWhats = "SEUNUMERO"; 
-            const msg = `Quero comprar ${selecionado.nome} por R$ ${selecionado.preco}`;
-            window.open(`https://wa.me/${numeroWhats}?text=${encodeURIComponent(msg)}`);
-        };
-    }
-
-
-    // ==========================================================================
-    // 2. SISTEMA DE CONTROLE MODULAR DO MODAL DE TUTORIAL
-    // ==========================================================================
-    
-    // Captura todos os botões de gatilho do tutorial na página (que usam a classe ou ID correto)
-    const tutorialButtons = document.querySelectorAll('.resgatar, .btn-tutorial-trigger');
-
-    tutorialButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Pega o ID do modal alvo através do atributo data-target
-            const targetId = button.getAttribute('data-target');
-            const modal = document.getElementById(targetId);
-
-            if (modal) {
-                openModal(modal);
+    // Configura o evento de clique para cada botão de resgate encontrado
+    botoesResgatar.forEach(botao => {
+        botao.addEventListener("click", () => {
+            const targetId = botao.getAttribute("data-target");
+            const modalTarget = document.getElementById(targetId);
+            
+            if (modalTarget) {
+                modalTarget.classList.add("active"); // Abre o modal específico
+                document.body.style.overflow = "hidden"; // Trava o scroll da página
             }
         });
     });
 
-    // Função para abrir o Modal
-    function openModal(modal) {
-        modal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Remove o scroll do site ao fundo
+    // Configura o fechamento para todos os modais da página
+    modais.forEach(modal => {
+        const btnFechar = modal.querySelector(".tutorial-close-btn");
 
-        const closeBtn = modal.querySelector('.tutorial-close-btn');
-        
-        // Remove ouvintes antigos para evitar duplicações e fecha no botão X
-        if (closeBtn) {
-            closeBtn.addEventListener('click', () => closeModal(modal), { once: true });
+        // Fecha ao clicar no botão 'X'
+        if (btnFechar) {
+            btnFechar.addEventListener("click", () => fecharModal(modal));
         }
 
-        // Fecha se o usuário clicar na área borrada de fora do card
-        modal.addEventListener('click', (e) => {
+        // Fecha ao clicar do lado fora do card (no fundo escuro)
+        modal.addEventListener("click", (e) => {
             if (e.target === modal) {
-                closeModal(modal);
+                fecharModal(modal);
             }
         });
-    }
+    });
 
-    // Função para fechar o Modal
-    function closeModal(modal) {
-        modal.classList.remove('active');
-        document.body.style.overflow = ''; // Restaura o scroll da página
-    }
-
-    // Atalho global: Pressionar 'ESC' fecha qualquer modal que esteja aberto
-    window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') {
-            const activeModal = document.querySelector('.tutorial-modal-overlay.active');
-            if (activeModal) {
-                closeModal(activeModal);
-            }
+    // Função interna para fechar o modal
+    function fecharModal(modalEspecifico) {
+        modalEspecifico.classList.remove("active");
+        
+        // Só libera o scroll do corpo se não houver nenhum outro modal ativo na tela
+        const algumModalAberto = Array.from(modais).some(m => m.classList.contains("active"));
+        if (!algumModalAberto) {
+            document.body.style.overflow = "";
         }
+    }
+
+    /* ==========================================================================
+       2. SELEÇÃO DE VALORES (BOTÕES DE PREÇO)
+       ========================================================================== */
+    const containersPrecos = document.querySelectorAll(".prices");
+
+    containersPrecos.forEach(container => {
+        const botoesPreco = container.querySelectorAll("button");
+        
+        botoesPreco.forEach(botao => {
+            botao.addEventListener("click", () => {
+                // Remove a classe ativa de todos os botões DESTE produto
+                botoesPreco.forEach(b => b.classList.remove("active"));
+                // Adiciona a classe ativa no botão clicado
+                botao.classList.add("active");
+            });
+        });
+    });
+
+    /* ==========================================================================
+       3. ANIMAÇÕES DE FEEDBACK (BOTÕES DE COMPRA E CARRINHO)
+       ========================================================================== */
+    const botoesAcao = document.querySelectorAll(".actions button");
+
+    botoesAcao.forEach(botao => {
+        botao.addEventListener("click", function() {
+            // Cria um leve efeito de clique físico (escala)
+            this.style.transform = "scale(0.95)";
+            setTimeout(() => {
+                this.style.transform = "";
+            }, 100);
+
+            // Se o botão for o de "Comprar Agora"
+            if (this.classList.contains("buy")) {
+                console.log("Redirecionando para o checkout...");
+                // Aqui você pode adicionar a lógica de abrir o carrinho ou redirecionar
+            }
+            
+            // Se o botão for o de "Carrinho"
+            if (this.classList.contains("cart")) {
+                const iconeOriginal = this.innerHTML;
+                this.innerHTML = '<i class="fa-solid fa-check"></i> Adicionado!';
+                this.style.backgroundColor = "#2ecc71"; // Muda para verde temporariamente
+                
+                setTimeout(() => {
+                    this.innerHTML = iconeOriginal;
+                    this.style.backgroundColor = ""; // Resgata a cor original do CSS
+                }, 2000);
+            }
+        });
     });
 });
