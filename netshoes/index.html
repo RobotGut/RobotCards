@@ -1,109 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Netshoes Gift Card</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netshoes Gift Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="gift-page.css">
+    <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="logo">RobotCard</div>
+            <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+        </div>
+    </header>
 
-        <link rel="stylesheet" href="../gift-page.css" />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-        />
-
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        />
-        <link
-            rel="shortcut icon"
-            href="../imgs/icons/favicon.png"
-            type="image/x-icon"
-        />
-    </head>
-
-    <body>
-        <header>
-            <div class="topbar">
-                <div class="logo">RobotCard</div>
-
-                <a href="../index.html" class="back-btn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Voltar
-                </a>
+    <section class="product">
+        <div class="left-side">
+            <div class="product-image netshoes"></div>
+            <div class="text">
+                <h2>Sobre a Netshoes</h2>
+                <p>A Netshoes é a maior plataforma de e-commerce de artigos esportivos da América Latina, oferecendo uma variedade gigantesca de tênis, roupas esportivas, suplementos e equipamentos.</p>
+                <p>O Vale-Presente Netshoes é a escolha perfeita para quem quer liberdade de escolha entre milhares de produtos das principais marcas globais como Nike, Adidas, Puma e Mizuno.</p>
             </div>
-        </header>
-
-        <section class="product">
-            <div class="left-side">
-                <div class="product-image netshoes"></div>
-
-                <div class="text">
-                    <h2>Sobre a Netshoes</h2>
-
-                    <p>
-                        Utilize seu gift card para comprar tênis, roupas e
-                        acessórios esportivos.
-                    </p>
-
-                    <p>
-                        Grandes marcas com entrega rápida e experiência premium.
-                    </p>
-                </div>
+        </div>
+        <div class="product-info">
+            <span class="tag">ENTREGA IMEDIATA</span>
+            <h1>Gift Card Netshoes</h1>
+            <p class="description">Encontre os melhores tênis, roupas esportivas e acessórios. Receba seu código digital automaticamente e use em todo o site.</p>
+            <div class="badges">
+                <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
+                <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
             </div>
-
-            <div class="product-info">
-                <span class="tag"> ENTREGA IMEDIATA </span>
-
-                <h1>Netshoes Gift Card</h1>
-
-                <p class="description">
-                    Compre produtos esportivos e aproveite ofertas exclusivas na
-                    Netshoes.
-                </p>
-
-                <div class="badges">
-                    <span>
-                        <i class="fa-solid fa-bolt"></i>
-                        Instantâneo
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-shield-halved"></i>
-                        Seguro
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-headset"></i>
-                        Suporte 24h
-                    </span>
-                </div>
-
-                <h3>Escolha o valor</h3>
-
-                <div class="prices">
-                    <button>R$ 50</button>
-                    <button>R$ 100</button>
-                    <button>R$ 150</button>
-                    <button>R$ 250</button>
-                </div>
-
-                <div class="actions">
-                    <button class="buy">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Comprar Agora
-                    </button>
-
-                    <button class="cart">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        Carrinho
-                    </button>
-                </div>
+            <h3>Escolha o valor</h3>
+            <div class="prices">
+                <button>R$ 50</button><button>R$ 100</button><button>R$ 150</button><button>R$ 200</button>
             </div>
-        </section>
-    </body>
+            <div class="actions">
+                <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
+                <button class="cart"><i class="fa-solid fa-bag-shopping"></i> Carrinho</button>
+            </div>
+            <div class="security">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+            </div>
+             <button class="como-resgatar" data-target="modal-netshoes">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
+        </div>
+    </section>
+
+    <div class="tutorial-modal-overlay" id="modal-netshoes">
+        <div class="tutorial-card">
+            <button class="tutorial-close-btn">&times;</button>
+            <div class="tema-netshoes">
+                 <div class="tutorial-header">
+                        <span>Passo a Passo</span>
+                       <h2>Resgatar Gift Card</h2>
+                 </div>
+                 <ul class="tutorial-steps">
+                       <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">1</div>
+                         <div class="tutorial-step-text">Navegue no site da Netshoes e adicione os produtos desejados ao seu carrinho de compras.</div>
+                       </li>
+                       <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">2</div>
+                            <div class="tutorial-step-text">Siga para a página de finalização do pedido e vá até a seção de <strong>Formas de Pagamento</strong>.</div>
+                       </li>
+                       <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">3</div>
+                         <div class="tutorial-step-text">Selecione o campo <strong>"Vale-Presente"</strong> ou "Cupom", digite o código recebido e clique em aplicar.</div>
+                       </li>
+                        <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">4</div>
+                         <div class="tutorial-step-text">O saldo será deduzido do total da compra. Caso sobre saldo, ele ficará atrelado à sua conta para compras futuras.</div>
+                       </li>
+                 </ul>
+            </div>
+            <a href="https://www.netshoes.com.br" target="_blank" class="tutorial-action-btn">Ir para a Netshoes</a>
+        </div>
+    </div>
+    <script src="gift-page.js"></script>
+</body>
 </html>
