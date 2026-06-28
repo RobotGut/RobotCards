@@ -3,15 +3,13 @@ let carrinho = [];
 
 // 2. Seleção dos elementos do HTML que vamos manipular
 const botoesAdicionar = document.querySelectorAll('.add-to-cart');
-const listaCarrinho = document.getElementById('itens-carrinho');
+const listaCarrinho = document.getElementById('itens-carrinho'); // Agora aponta para o tbody
 const elementoTotal = document.getElementById('valor-total');
 
 // 3. Função para adicionar o produto ao array do carrinho
 function adicionarAoCarrinho(evento) {
-    // Garante que pegamos o elemento do botão caso clique no ícone interno dele
-    const botao = evento.target.closest('.add-to-cart');
-    if (!botao) return;
-
+    const botao = evento.currentTarget; 
+    
     const id = botao.getAttribute('data-id');
     const nome = botao.getAttribute('data-nome');
     const preco = parseFloat(botao.getAttribute('data-preco'));
@@ -38,18 +36,23 @@ function adicionarAoCarrinho(evento) {
 
 // 4. Função para atualizar o HTML do carrinho e recalcular o total
 function atualizarInterfaceCarrinho() {
-    // Limpa o carrinho visualmente antes de redesenhar
+    // Limpa o carrinho antes de redesenhar
     listaCarrinho.innerHTML = '';
 
+    // Se o carrinho estiver vazio, mostra a linha informativa correspondente
     if (carrinho.length === 0) {
-        listaCarrinho.innerHTML = '<tr><td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td></tr>';
-        elementoTotal.textContent = '0,00';
+        listaCarrinho.innerHTML = `
+            <tr id="carrinho-vazio">
+                <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+            </tr>
+        `;
+        elementoTotal.textContent = '0.00';
         return;
     }
 
     let valorTotalCarrinho = 0;
 
-    // Percorre o array do carrinho e cria o HTML estruturado em tabela
+    // Percorre o array do carrinho e cria uma LINHA DE TABELA (tr) para cada item
     carrinho.forEach(item => {
         const subtotal = item.preco * item.quantidade;
         valorTotalCarrinho += subtotal;
@@ -57,7 +60,7 @@ function atualizarInterfaceCarrinho() {
         const tr = document.createElement('tr');
         tr.innerHTML = `
             <td>${item.nome}</td>
-            <td style="text-align: center;">${item.quantidade}</td>
+            <td>x${item.quantidade}</td>
             <td>R$ ${subtotal.toFixed(2).replace('.', ',')}</td>
         `;
         listaCarrinho.appendChild(tr);
@@ -67,9 +70,14 @@ function atualizarInterfaceCarrinho() {
     elementoTotal.textContent = valorTotalCarrinho.toFixed(2).replace('.', ',');
 }
 
-// 5. Adiciona o evento de clique em todos os botões "Adicionar ao Carrinho"
-botoesAdicionar.forEach(botao => {
-    botao.addEventListener('click', adicionarAoCarrinho);
+// 5. Executa as configurações assim que a página carregar
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("Script JavaScript carregado com sucesso!");
+
+    // Adiciona o evento de clique em todos os botões "Adicionar ao Carrinho"
+    botoesAdicionar.forEach(botao => {
+        botao.addEventListener('click', adicionarAoCarrinho);
+    });
 });
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -120,27 +128,20 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* ==========================================================================
-       2. SELEÇÃO DE VALORES (MENU SELECT ATUALIZANDO DADOS DO CARRINHO)
+       2. SELEÇÃO DE VALORES (BOTÕES DE PREÇO)
        ========================================================================== */
-    const selectValor = document.getElementById('valor-gift');
-    const botaoCarrinhoMain = document.getElementById('btn-carrinho-main') || document.querySelector('.add-to-cart');
+    const containersPrecos = document.querySelectorAll(".prices");
 
-    if (selectValor && botaoCarrinhoMain) {
-        function atualizarDadosDoBotao() {
-            const valorSelecionado = selectValor.value;
-            
-            // Modifica dinamicamente os metadados do botão do carrinho antes do clique de compra
-            botaoCarrinhoMain.setAttribute('data-id', `ow_gift_${valorSelecionado}`);
-            botaoCarrinhoMain.setAttribute('data-nome', `Overwatch`);
-            botaoCarrinhoMain.setAttribute('data-preco', parseFloat(valorSelecionado).toFixed(2));
-        }
-
-        // Altera sempre que o usuário escolher um valor diferente
-        selectValor.addEventListener('change', atualizarDadosDoBotao);
+    containersPrecos.forEach(container => {
+        const botoesPreco = container.querySelectorAll("button");
         
-        // Roda uma vez no início para garantir que o valor inicial (padrão) esteja correto
-        atualizarDadosDoBotao();
-    }
+        botoesPreco.forEach(botao => {
+            botao.addEventListener("click", () => {
+                botoesPreco.forEach(b => b.classList.remove("active"));
+                botao.classList.add("active");
+            });
+        });
+    });
 
     /* ==========================================================================
        3. ANIMAÇÕES DE FEEDBACK (BOTÕES DE COMPRA E CARRINHO)
@@ -179,3 +180,53 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+ document.addEventListener("DOMContentLoaded", function() {
+            const selectGift = document.getElementById("valor-gift");
+            const btnCarrinho = document.getElementById("btn-carrinho-main");
+
+            function atualizarBotaoCarrinho() {
+                // Pega a opção selecionada atual
+                const opcaoSelecionada = selectGift.options[selectGift.selectedIndex];
+                
+                const preco = parseFloat(opcaoSelecionada.value).toFixed(2);
+                const qtdMoedas = opcaoSelecionada.getAttribute("data-moedas");
+                
+                // Monta o nome dinâmico ex: "Overwatch 500 Moedas"
+                const nomeProduto = `Overwatch ${qtdMoedas} Moedas`;
+                const idProduto = `ow_gift_${opcaoSelecionada.value}`;
+
+                // Atualiza os atributos HTML do botão do carrinho
+                btnCarrinho.setAttribute("data-id", idProduto);
+                btnCarrinho.setAttribute("data-nome", nomeProduto);
+                btnCarrinho.setAttribute("data-preco", preco);
+            }
+
+            // Monitora a mudança de opção no select
+            selectGift.addEventListener("change", atualizarBotaoCarrinho);
+
+            // Executa uma vez ao carregar a página para garantir o estado inicial correto (R$ 50)
+            atualizarBotaoCarrinho();
+        });
+        
+                document.addEventListener("DOMContentLoaded", function() {
+            const selectGift = document.getElementById("valor-gift");
+            const btnCarrinho = document.getElementById("btn-carrinho-main");
+
+            function atualizarBotaoCarrinho() {
+                const opcaoSelecionada = selectGift.options[selectGift.selectedIndex];
+                
+                const preco = parseFloat(opcaoSelecionada.value).toFixed(2);
+                const saldoTexto = opcaoSelecionada.getAttribute("data-saldo");
+                
+                const nomeProduto = `Gift Card Xbox ${saldoTexto}`;
+                const idProduto = `xbox_gift_${opcaoSelecionada.value}`;
+
+                btnCarrinho.setAttribute("data-id", idProduto);
+                btnCarrinho.setAttribute("data-nome", nomeProduto);
+                btnCarrinho.setAttribute("data-preco", preco);
+            }
+
+            selectGift.addEventListener("change", atualizarBotaoCarrinho);
+            atualizarBotaoCarrinho();
+        });

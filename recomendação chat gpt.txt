@@ -1,0 +1,18 @@
+meta description, favicon, Open Graph, keywords, títulos melhores.
+
+login, carrinho, checkout, Pix automático, painel admin, envio automático, estoque, API.
+
+design moderno, responsivo premium, animações, SEO, UX.
+
+O que eu faria para vender mais caro 1. Fazer versão premium Uma versão MUITO bonita. 2. Hospedar online No: Vercel Netlify
+GSAP Framer Motion
+
+ReactNext.js
+
+Algumas: estão esticadas, outras cortadas, algumas têm texto, outras logo, algumas são banner, outras quadradas. Se você padronizar: todas em 16:9, mesma qualidade, mesma iluminação, mesma composição, o site sobe MUITO de nível.
+
+logo maior, menos padding, sticky navbar, blur no fundo. Exemplo: header {   position: sticky;   top: 0;   backdrop-filter: blur(12px);   background: rgba(15,15,15,.75);   border-bottom:   1px solid rgba(255,255,255,.08); }
+
+O problema é que: minmax(20%, 1fr) não foi feito pra esse caso. O correto é controlar o tamanho mínimo REAL do card. Exemplo: grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); Isso mantém: proporcional, responsivo, sem cards gigantes.
+
+1. Front-End visual consistente, responsividade, identidade visual. 2. Estrutura páginas individuais, layout padrão, organização. 3. Banco de dados avaliações, produtos, estoque. 4. Backend login, painel, pedidos.

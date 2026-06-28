@@ -93,6 +93,7 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
 .back-btn {
@@ -383,7 +384,6 @@ header {
     align-items: center;
 
     gap: 10px;
-    
 }
 
 .buy {
@@ -550,6 +550,12 @@ header {
     box-shadow:
         0 0 15px rgba(255, 217, 0, 0.5),
         0 0 40px rgba(255, 217, 0, 0.3);
+}
+
+.xbox:hover {
+    box-shadow:
+        0 0 15px rgba(67, 153, 9, 0.5),
+        0 0 40px rgba(179, 255, 0, 0.3);
 }
 
 /* =========================
@@ -1003,36 +1009,9 @@ header {
 
 
 
-.produtos {
-    display: flex;
-    gap: 20px;
-    margin-bottom: 40px;
-}
 
-.produto {
-    border: 1px solid #ccc;
-    padding: 15px;
-    border-radius: 5px;
-    text-align: center;
-}
 
-button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 3px;
-}
 
-button:hover {
-    background-color: #218838;
-}
-
-.carrinho {
-    border-top: 2px solid #333;
-    padding-top: 20px;
-}
 
 #itens-carrinho {
     list-style: none;
@@ -1043,5 +1022,153 @@ button:hover {
     display: flex;
     justify-content: space-between;
     padding: 10px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #7a1010;
 }
+
+
+
+.carrinho {
+  position: absolute; 
+    right: 32px; 
+    width: 22px;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 2; 
+    color: rgb(0, 0, 0);
+}
+.carrinho :hover {
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  /* Tamanho controlado para a imagem do seu ícone SVG */
+.carrinho-icone img {
+    width: 32px; /* Defina um tamanho fixo adequado para o ícone */
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+/* Quando passar o mouse no container, o dropdown aparece */
+.carrinho:hover .carrinho-dropdown {
+  display: block;
+}
+
+
+
+
+
+
+
+
+.badge {
+  background-color: #ff4757;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+/* Estado inicial da Mini Tabela (Escondida) */
+.carrinho-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%; /* Coloca logo abaixo do botão */
+  right: 0;  /* Alinha com a direita do botão */
+  background-color: white;
+  min-width: 280px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 15px;
+  z-index: 100;
+  margin-top: 5px; /* Pequeno espaçamento do botão */
+
+}
+
+/* Evita que o modal feche se o mouse passar pelo vão entre o ícone e o modal */
+.carrinho-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+}
+
+/* Prodtuso, valoes e quantidades */
+.mini-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  color: #333;
+}
+
+/*categorias(Como Quantidade)*/
+.mini-tabela th {
+  text-align: left;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 8px;
+  color: #777;
+}
+
+/*divisor para lista*/
+.mini-tabela td {
+    padding: 10px 0;
+    border-bottom: 1px solid #f5f5f5;
+    vertical-align: middle;
+}
+
+/* Rodapé do dropdown/valor final */
+.carrinho-total {
+    text-align: right;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #111111;
+}
+
+
+/*botão finalizar*/
+.btn-finalizar {
+display: inline-block; /* OBRIGATÓRIO para o link aceitar tamanhos corretamente */
+  width: 100%;          /* Define a largura exata do botão */
+  text-align: center;    /* Centraliza o texto dentro do botão largo */
+  background-color: #28a765;
+  color: white;
+  border: none;
+  padding: 8px 5px;      
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/*botão finalizar quando o mouse estive em cima*/
+.btn-finalizar:hover {
+  background-color: #26af5f;
+}
+
+
+
+
+.prices select {
+    flex: 1;
+    background: #1a1a1a;
+    border: 1px solid #3b485c;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    outline: none;
+
+    text-align: center;
+    text-align-last: center;
+}
+
