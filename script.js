@@ -154,6 +154,7 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+<<<<<<< HEAD
 
 document.addEventListener("DOMContentLoaded", () => {
     const inputBusca = document.getElementById("busca-produtos");
@@ -181,3 +182,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+=======
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b

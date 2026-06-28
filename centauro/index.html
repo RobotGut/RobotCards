@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centauro Gift Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../gift-page.css">
+    <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <div class="logo">RobotCard</div>
+            <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+        </div>
+    </header>
+
+    <section class="product">
+        <div class="left-side">
+            <div class="product-image centauro"></div>
+            <div class="text">
+                <h2>Sobre a Centauro</h2>
+                <p>A Centauro é a maior rede multicanal de produtos esportivos da América Latina, oferecendo uma experiência fantástica integrada entre suas megalojas físicas e sua loja online.</p>
+                <p>Compre camisas oficiais do seu time do coração, vestuário fitness de alta costura, acessórios e tênis de alta performance utilizando o seu Vale-Presente digital unificado.</p>
+            </div>
+        </div>
+        <div class="product-info">
+            <span class="tag">ENTREGA IMEDIATA</span>
+            <h1>Gift Card Centauro</h1>
+            <p class="description">A maior rede de produtos esportivos do Brasil. Utilize em compras online ou apresente em qualquer loja física da marca.</p>
+            <div class="badges">
+                <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
+                <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
+                <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
+            </div>
+            <h3>Escolha o valor</h3>
+            <div class="prices">
+                <button>R$ 50</button><button>R$ 100</button><button>R$ 150</button><button>R$ 200</button>
+            </div>
+            <div class="actions">
+                <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
+                <button class="cart"><i class="fa-solid fa-bag-shopping"></i> Carrinho</button>
+            </div>
+            <button class="como-resgatar" data-target="modal-centauro">
+               <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+           </button>
+            <div class="security">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+            </div>
+        </div>
+    </section>
+
+    <div class="tutorial-modal-overlay" id="modal-centauro">
+        <div class="tutorial-card">
+            <button class="tutorial-close-btn">&times;</button>
+            <div class="tema-centauro">
+                 <div class="tutorial-header">
+                        <span>Passo a Passo</span>
+                       <h2>Resgatar Gift Card</h2>
+                 </div>
+                 <ul class="tutorial-steps">
+                       <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">1</div>
+                         <div class="tutorial-step-text">Acesse o e-commerce da Centauro e escolha os produtos de esporte que deseja adquirir.</div>
+                       </li>
+                       <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">2</div>
+                            <div class="tutorial-step-text">Prossiga até a tela de Checkout do carrinho e selecione a aba de pagamentos <strong>"Vale-Troca / Vale-Presente"</strong>.</div>
+                       </li>
+                       <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">3</div>
+                         <div class="tutorial-step-text">Insira a numeração completa fornecida no campo indicado e confirme o resgate.</div>
+                       </li>
+                        <li class="tutorial-step-item">
+                         <div class="tutorial-step-number">4</div>
+                         <div class="tutorial-step-text">O valor será subtraído do total da compra. Se for em loja física, o operador de caixa poderá bipar diretamente o código de barras gerado.</div>
+                       </li>
+                 </ul>
+            </div>
+            <a href="https://www.centauro.com.br" target="_blank" class="tutorial-action-btn">Ir para o site Centauro</a>
+            </div>
+        </div>
+
+        <script src="../gift-page.js"></script>
+    </body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 1. Array que vai guardar os itens do carrinho
 let carrinho = [];
 
@@ -85,30 +86,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* ==========================================================================
        1. CONTROLE UNIVERSAL DOS MODAIS
+=======
+document.addEventListener("DOMContentLoaded", () => {
+    
+    /* ==========================================================================
+       1. CONTROLE UNIVERSAL DOS MODAIS (COMO RESGATAR)
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
        ========================================================================== */
     const botoesResgatar = document.querySelectorAll(".como-resgatar");
     const modais = document.querySelectorAll(".tutorial-modal-overlay");
 
+<<<<<<< HEAD
+=======
+    // Configura o evento de clique para cada botão de resgate encontrado
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
     botoesResgatar.forEach(botao => {
         botao.addEventListener("click", () => {
             const targetId = botao.getAttribute("data-target");
             const modalTarget = document.getElementById(targetId);
             
             if (modalTarget) {
+<<<<<<< HEAD
                 modalTarget.classList.add("active");
+=======
+                modalTarget.classList.add("active"); // Abre o modal específico
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
                 document.body.style.overflow = "hidden"; // Trava o scroll da página
             }
         });
     });
 
+<<<<<<< HEAD
     modais.forEach(modal => {
         const btnFechar = modal.querySelector(".tutorial-close-btn");
 
+=======
+    // Configura o fechamento para todos os modais da página
+    modais.forEach(modal => {
+        const btnFechar = modal.querySelector(".tutorial-close-btn");
+
+        // Fecha ao clicar no botão 'X'
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
         if (btnFechar) {
             btnFechar.addEventListener("click", () => fecharModal(modal));
         }
 
+<<<<<<< HEAD
         // Fecha ao clicar fora do card (no fundo escuro)
+=======
+        // Fecha ao clicar do lado fora do card (no fundo escuro)
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
         modal.addEventListener("click", (e) => {
             if (e.target === modal) {
                 fecharModal(modal);
@@ -116,11 +143,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+<<<<<<< HEAD
     function fecharModal(modalEspecifico) {
         if (!modalEspecifico) return;
         modalEspecifico.classList.remove("active");
         
         // Só libera o scroll se não houver mais nenhum modal aberto
+=======
+    // Função interna para fechar o modal
+    function fecharModal(modalEspecifico) {
+        modalEspecifico.classList.remove("active");
+        
+        // Só libera o scroll do corpo se não houver nenhum outro modal ativo na tela
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
         const algumModalAberto = Array.from(modais).some(m => m.classList.contains("active"));
         if (!algumModalAberto) {
             document.body.style.overflow = "";
@@ -137,7 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
         
         botoesPreco.forEach(botao => {
             botao.addEventListener("click", () => {
+<<<<<<< HEAD
                 botoesPreco.forEach(b => b.classList.remove("active"));
+=======
+                // Remove a classe ativa de todos os botões DESTE produto
+                botoesPreco.forEach(b => b.classList.remove("active"));
+                // Adiciona a classe ativa no botão clicado
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
                 botao.classList.add("active");
             });
         });
@@ -150,12 +191,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     botoesAcao.forEach(botao => {
         botao.addEventListener("click", function() {
+<<<<<<< HEAD
             // Efeito de clique físico
+=======
+            // Cria um leve efeito de clique físico (escala)
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
             this.style.transform = "scale(0.95)";
             setTimeout(() => {
                 this.style.transform = "";
             }, 100);
 
+<<<<<<< HEAD
             // Checkout
             if (this.classList.contains("buy")) {
                 console.log("Redirecionando para o checkout...");
@@ -175,11 +221,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     this.style.backgroundColor = ""; 
                     this.style.color = "";
                     this.classList.remove("adicionado");
+=======
+            // Se o botão for o de "Comprar Agora"
+            if (this.classList.contains("buy")) {
+                console.log("Redirecionando para o checkout...");
+                // Aqui você pode adicionar a lógica de abrir o carrinho ou redirecionar
+            }
+            
+            // Se o botão for o de "Carrinho"
+            if (this.classList.contains("cart")) {
+                const iconeOriginal = this.innerHTML;
+                this.innerHTML = '<i class="fa-solid fa-check"></i> Adicionado!';
+                this.style.backgroundColor = "#2ecc71"; // Muda para verde temporariamente
+                
+                setTimeout(() => {
+                    this.innerHTML = iconeOriginal;
+                    this.style.backgroundColor = ""; // Resgata a cor original do CSS
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b
                 }, 2000);
             }
         });
     });
 });
+<<<<<<< HEAD
 
  document.addEventListener("DOMContentLoaded", function() {
             const selectGift = document.getElementById("valor-gift");
@@ -230,3 +294,5 @@ document.addEventListener("DOMContentLoaded", () => {
             selectGift.addEventListener("change", atualizarBotaoCarrinho);
             atualizarBotaoCarrinho();
         });
+=======
+>>>>>>> 93a3f0b8286e09adf94c130b5c101d9c2c2fbb6b

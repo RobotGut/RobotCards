@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>League of Legends Gift Card</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../gift-page.css" />
+        <link
+            rel="shortcut icon"
+            href="../imgs/icons/favicon.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="topbar">
+                <div class="logo">RobotCard</div>
+                <a href="../index.html" class="back-btn"
+                    ><i class="fa-solid fa-arrow-left"></i> Voltar</a
+                >
+            </div>
+        </header>
+
+        <section class="product">
+            <div class="left-side">
+                <div class="product-image lol"></div>
+                <div class="text">
+                    <h2>Sobre o League of Legends</h2>
+                    <p>
+                        League of Legends é um jogo de estratégia focado em
+                        equipe no qual duas equipes de cinco campeões poderosos
+                        se enfrentam para destruir a base uma da outra.
+                    </p>
+                    <p>
+                        Com os cartões pré-pagos de RP (Riot Points), você pode
+                        desbloquear novos campeões, skins cosméticas incríveis,
+                        cromas extras e participar de passes de eventos
+                        sazonais.
+                    </p>
+                </div>
+            </div>
+            <div class="product-info">
+                <span class="tag">ENTREGA IMEDIATA</span>
+                <h1>Gift Card LoL</h1>
+                <p class="description">
+                    Abasteça sua conta com Riot Points para comprar skins,
+                    campeões e passes. Receba seu código automaticamente após o
+                    pagamento.
+                </p>
+                <div class="badges">
+                    <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
+                    <span
+                        ><i class="fa-solid fa-shield-halved"></i> Seguro</span
+                    >
+                    <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
+                </div>
+                <h3>Escolha o valor</h3>
+                <div class="prices">
+                    <button>R$ 25</button><button>R$ 50</button
+                    ><button>R$ 100</button><button>R$ 200</button>
+                </div>
+                <div class="actions">
+                    <button class="buy">
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar Agora
+                    </button>
+                    <button class="cart">
+                        <i class="fa-solid fa-bag-shopping"></i> Carrinho
+                    </button>
+                </div>
+                <button class="como-resgatar" data-target="modal-lol">
+                    <i class="fa-solid fa-circle-question"></i> Como resgatar
+                    este Gift Card?
+                </button>
+                <div class="security">
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp"
+                    />
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <div class="tutorial-modal-overlay" id="modal-lol">
+            <div class="tutorial-card">
+                <button class="tutorial-close-btn">&times;</button>
+                <div class="tema-lol">
+                    <div class="tutorial-header">
+                        <span>Passo a Passo</span>
+                        <h2>Resgatar Gift Card</h2>
+                    </div>
+                    <ul class="tutorial-steps">
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">1</div>
+                            <div class="tutorial-step-text">
+                                Abra o cliente do jogo de League of Legends e
+                                faça login na sua conta.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">2</div>
+                            <div class="tutorial-step-text">
+                                Clique no botão da <strong>Loja</strong> (ícone
+                                de moedas) e depois clique em
+                                <strong>"Comprar RP"</strong>.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">3</div>
+                            <div class="tutorial-step-text">
+                                Selecione o método de pagamento
+                                <strong>"Cartões e Códigos Pré-pagos"</strong>.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">4</div>
+                            <div class="tutorial-step-text">
+                                Insira o código pin exatamente como recebido,
+                                sem espaços, e clique em
+                                <strong>"Enviar"</strong>.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a
+                    href="#"
+                    onclick="
+                        alert(
+                            'Abra o inicializador do jogo da Riot para efetuar o resgate.',
+                        );
+                        return false;
+                    "
+                    class="tutorial-action-btn"
+                    >Resgate feito dentro do jogo</a
+                >
+            </div>
+        </div>
+        <script src="../gift-page.js"></script>
+    </body>
+</html>
