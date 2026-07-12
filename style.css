@@ -3,34 +3,30 @@ RESET
 =========================*/
 
 * {
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 html {
+    scroll-behavior: smooth;
 
-scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
 
--webkit-tap-highlight-color: transparent;
-
-background: black;
-
+    background: black;
 }
 
 body {
-font-family: "Poppins", sans-serif;
-background: radial-gradient(circle at top, #1a1a1a, #050505 70%);
-color: white;
-overflow-x: hidden;
-position: relative;
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at top, #1a1a1a, #050505 70%);
+    color: white;
+    overflow-x: hidden;
+    position: relative;
 }
 
 a {
-text-decoration: none;
-color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 /* =========================
@@ -44,9 +40,9 @@ header {
 
     backdrop-filter: blur(18px);
 
-    background: rgba(5, 5, 5, .75);
+    background: rgba(5, 5, 5, 0.75);
 
-    border-bottom: 1px solid rgba(255, 255, 255, .07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 
     padding: 18px 40px;
 }
@@ -85,7 +81,7 @@ header {
     color: #eee;
     font-weight: 500;
     position: relative;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .topbar nav li a:hover {
@@ -105,7 +101,7 @@ header {
 
     background: #00ffcc;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .topbar nav a:hover::after {
@@ -128,12 +124,12 @@ header {
     width: 45px;
     height: 45px;
     cursor: pointer;
-    transition: .08s;
+    transition: 0.08s;
     display: none;
 }
 
 #menu-btn:active {
-    scale: .85;
+    scale: 0.85;
 }
 
 .header-buttons {
@@ -150,7 +146,7 @@ header {
 
     font-weight: 600;
 
-    transition: .3s;
+    transition: 0.3s;
 
     border: none;
 
@@ -159,12 +155,12 @@ header {
 
 .btn-login {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
     color: white;
 }
 
 .btn-login:hover {
-    background: rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .btn-register {
@@ -175,7 +171,7 @@ header {
 
 .btn-register:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 255, 204, .2);
+    box-shadow: 0 10px 30px rgba(0, 255, 204, 0.2);
 }
 
 /* =========================
@@ -199,7 +195,7 @@ header {
     width: 100%;
 
     display: grid;
-    grid-template-columns: 1.1fr .9fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 50px;
 
     align-items: center;
@@ -249,26 +245,26 @@ header {
 
     font-weight: 700;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .btn-main:hover {
     transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(0, 255, 204, .25);
+    box-shadow: 0 15px 35px rgba(0, 255, 204, 0.25);
 }
 
 .btn-outline {
-    border: 1px solid rgba(255, 255, 255, .12);
+    border: 1px solid rgba(255, 255, 255, 0.12);
 
     padding: 16px 30px;
 
     border-radius: 16px;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .btn-outline:hover {
-    background: rgba(255, 255, 255, .05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 /* HERO CARD */
@@ -278,9 +274,9 @@ header {
 }
 
 .floating-card {
-    background: rgba(0,0, 16);
+    background: rgba(0, 0, 16);
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 28px;
 
@@ -288,7 +284,7 @@ header {
 
     backdrop-filter: blur(20px);
 
-    box-shadow: 0 25px 60px rgba(0, 0, 0, .4);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
 
     animation: float 5s ease-in-out infinite;
 }
@@ -301,7 +297,6 @@ header {
     50% {
         transform: translateY(-12px);
         filter: brightness(1);
-        
     }
     100% {
         transform: translateY(0px);
@@ -339,7 +334,7 @@ header {
 ========================= */
 
 .cards-section {
-    padding: 0 clamp(.75rem, 2.8vw, 1.25rem);
+    padding: 0 clamp(0.75rem, 2.8vw, 1.25rem);
 }
 
 .cards {
@@ -371,9 +366,9 @@ header {
 
     background-position: center;
 
-    transition: .5s all;
+    transition: 0.5s all;
 
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card::before {
@@ -384,16 +379,16 @@ header {
 
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, .95),
-        rgba(0, 0, 0, .35)
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.35)
     );
 }
 
 .card:hover::before {
     background: linear-gradient(
         to top,
-        rgba(0, 0, 0, .95),
-        rgba(0, 0, 0, .2)
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.2)
     );
 }
 
@@ -438,12 +433,12 @@ header {
 
     color: black;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .buy-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 25px rgba(0, 255, 204, .25);
+    box-shadow: 0 12px 25px rgba(0, 255, 204, 0.25);
 }
 
 .card:hover {
@@ -474,11 +469,11 @@ header {
 .benefit {
     background: linear-gradient(
         145deg,
-        rgba(255, 255, 255, .06),
-        rgba(255, 255, 255, .03)
+        rgba(255, 255, 255, 0.06),
+        rgba(255, 255, 255, 0.03)
     );
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 24px;
 
@@ -486,12 +481,12 @@ header {
 
     text-align: center;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .benefit:hover {
     transform: translateY(-8px);
-    border-color: rgba(0, 255, 204, .35);
+    border-color: rgba(0, 255, 204, 0.35);
 }
 
 .benefit i {
@@ -547,7 +542,7 @@ footer h3 {
     margin-bottom: 20px;
     color: #00e5ff;
     text-transform: uppercase;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
 }
 
 .footer-brand .logo {
@@ -558,7 +553,7 @@ footer h3 {
 
 .logo-subtitle {
     color: #858585;
-    font-size: .85rem;
+    font-size: 0.85rem;
     margin: 10px 0 20px;
     line-height: 1.5;
 }
@@ -566,7 +561,7 @@ footer h3 {
 .copyright,
 .cnpj {
     color: #454545;
-    font-size: .75rem;
+    font-size: 0.75rem;
     margin-top: 5px;
 }
 
@@ -579,8 +574,8 @@ footer h3 {
 
 .footer-links ul a {
     color: #abb2bf;
-    font-size: .9rem;
-    transition: .2s;
+    font-size: 0.9rem;
+    transition: 0.2s;
 }
 
 .footer-links ul a:hover {
@@ -590,7 +585,7 @@ footer h3 {
 
 .footer-contact p {
     color: #abb2bf;
-    font-size: .9rem;
+    font-size: 0.9rem;
     margin-bottom: 20px;
 }
 
@@ -614,7 +609,7 @@ footer h3 {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 .socials a:hover {
@@ -631,7 +626,7 @@ footer h3 {
 }
 
 .payment-icons i {
-    transition: .2s;
+    transition: 0.2s;
     cursor: help;
 }
 
@@ -698,9 +693,9 @@ footer h3 {
 
 .netflix:hover {
     box-shadow:
-        0 0 5px rgba(255, 0, 0, .6),
-        0 0 10 rgba(255, 0, 0, .6),
-        0 0 40px rgba(255, 0, 0, .6);
+        0 0 5px rgba(255, 0, 0, 0.6),
+        0 0 10 rgba(255, 0, 0, 0.6),
+        0 0 40px rgba(255, 0, 0, 0.6);
 }
 
 .modal {
@@ -710,79 +705,79 @@ footer h3 {
 
 .microsoft:hover {
     box-shadow:
-        0 0 5px rgba(121, 121, 121, .6),
-        0 0 10px rgba(255, 255, 255, .6),
-        0 0 20px rgba(255, 255, 255, .6);
+        0 0 5px rgba(121, 121, 121, 0.6),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.6);
 }
 
 .roblox:hover {
     box-shadow:
-        0 0 5px rgba(0, 0, 0, .6),
-        0 0 10px rgba(255, 60, 0, .6),
-        0 0 20px rgba(0, 255, 150, .6);
+        0 0 5px rgba(0, 0, 0, 0.6),
+        0 0 10px rgba(255, 60, 0, 0.6),
+        0 0 20px rgba(0, 255, 150, 0.6);
 }
 
 .uber:hover {
     box-shadow:
-        0 0 5px rgba(0, 0, 0, .6),
-        0 0 10px rgba(253, 255, 254, .6),
-        0 0 20px rgba(0, 0, 0, .6);
+        0 0 5px rgba(0, 0, 0, 0.6),
+        0 0 10px rgba(253, 255, 254, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .xbox:hover {
     box-shadow:
-        0 0 5px rgba(0, 255, 150, .6),
-        0 0 10px rgba(0, 255, 150, .6),
-        0 0 20px rgba(0, 255, 150, .6);
+        0 0 5px rgba(0, 255, 150, 0.6),
+        0 0 10px rgba(0, 255, 150, 0.6),
+        0 0 20px rgba(0, 255, 150, 0.6);
 }
 
 .overwatch:hover {
     box-shadow:
-        0 0 5px rgba(255, 230, 3, .6),
-        0 0 10px rgba(172, 172, 172, .6),
-        0 0 20px rgba(0, 0, 0, .6);
+        0 0 5px rgba(255, 230, 3, 0.6),
+        0 0 10px rgba(172, 172, 172, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .leagueoflegends:hover {
     box-shadow:
-        0 0 5px rgba(0, 255, 150, .6),
-        0 0 10px rgba(255, 60, 0, .6),
-        0 0 20px rgba(219, 255, 61, .6);
+        0 0 5px rgba(0, 255, 150, 0.6),
+        0 0 10px rgba(255, 60, 0, 0.6),
+        0 0 20px rgba(219, 255, 61, 0.6);
 }
 
 .sea:hover {
     box-shadow:
-        0 0 5px rgba(64, 95, 182, .6),
-        0 0 10px rgba(255, 251, 21, .6),
-        0 0 20px rgba(0, 0, 0, .6);
+        0 0 5px rgba(64, 95, 182, 0.6),
+        0 0 10px rgba(255, 251, 21, 0.6),
+        0 0 20px rgba(0, 0, 0, 0.6);
 }
 
 .centauro:hover {
     box-shadow:
-        0 0 5px rgba(255, 255, 255, .6),
-        0 0 10px rgba(255, 0, 0, .6),
-        0 0 20px rgba(255, 252, 252, .6);
+        0 0 5px rgba(255, 255, 255, 0.6),
+        0 0 10px rgba(255, 0, 0, 0.6),
+        0 0 20px rgba(255, 252, 252, 0.6);
 }
 
 .netshoes:hover {
     box-shadow:
-        0 0 5px rgba(126, 45, 201, .6),
-        0 0 10px rgba(126, 45, 201, .6),
-        0 0 20px rgba(126, 45, 201, .6);
+        0 0 5px rgba(126, 45, 201, 0.6),
+        0 0 10px rgba(126, 45, 201, 0.6),
+        0 0 20px rgba(126, 45, 201, 0.6);
 }
 
 .decathlon:hover {
     box-shadow:
-        0 0 5px rgba(8, 90, 197, .6),
-        0 0 10px rgba(8, 90, 197, .6),
-        0 0 20px rgba(8, 90, 197, .6);
+        0 0 5px rgba(8, 90, 197, 0.6),
+        0 0 10px rgba(8, 90, 197, 0.6),
+        0 0 20px rgba(8, 90, 197, 0.6);
 }
 
 .kopenhagen:hover {
     box-shadow:
-        0 0 5px rgba(223, 255, 44, .6),
-        0 0 10px rgba(197, 8, 8, .6),
-        0 0 20px rgba(219, 255, 56, .6);
+        0 0 5px rgba(223, 255, 44, 0.6),
+        0 0 10px rgba(197, 8, 8, 0.6),
+        0 0 20px rgba(219, 255, 56, 0.6);
 }
 
 /* =========================
@@ -793,7 +788,7 @@ footer h3 {
     position: fixed;
     inset: 0;
 
-    background: rgba(0, 0, 0, .75);
+    background: rgba(0, 0, 0, 0.75);
 
     display: none;
 
@@ -816,11 +811,11 @@ footer h3 {
 
     background: linear-gradient(
         145deg,
-        rgba(255, 255, 255, .08),
-        rgba(255, 255, 255, .03)
+        rgba(255, 255, 255, 0.08),
+        rgba(255, 255, 255, 0.03)
     );
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     backdrop-filter: blur(20px);
 
@@ -830,7 +825,7 @@ footer h3 {
 
     position: relative;
 
-    animation: modalFade .4s cubic-bezier(.175, .885, .32, 1.275);
+    animation: modalFade 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 @keyframes modalFade {
@@ -860,7 +855,7 @@ footer h3 {
 
     border-radius: 50%;
 
-    background: rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, 0.08);
 
     color: white;
 
@@ -882,11 +877,11 @@ footer h3 {
 
 .input-container label {
     position: absolute;
-    font-size: .95rem;
+    font-size: 0.95rem;
     top: 18%;
     left: 5%;
-    color: rgba(255, 255, 255, .5);
-    transition: .4s cubic-bezier(.175, .885, .32, 1.275);
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .input-container:has(.focused) label {
@@ -895,7 +890,7 @@ footer h3 {
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
-    letter-spacing: .4px;
+    letter-spacing: 0.4px;
 }
 
 .input-container input {
@@ -907,9 +902,9 @@ footer h3 {
 
     border-radius: 14px;
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-    background: rgba(255, 255, 255, .04);
+    background: rgba(255, 255, 255, 0.04);
 
     font-family: Poppins, sans-serif;
 
@@ -965,8 +960,8 @@ footer h3 {
 }
 
 .categorias img {
- width: 80px;
-height: auto;
+    width: 80px;
+    height: auto;
 }
 
 .cards-section .categorias:first-of-type {
@@ -978,18 +973,42 @@ height: auto;
 ========================= */
 
 /* Registrando as variáveis para permitir a animação suave dos gradientes */
-@property --glow-x1 { syntax: '<percentage>'; inherits: false; initial-value: 15%; }
-@property --glow-y1 { syntax: '<percentage>'; inherits: false; initial-value: 20%; }
-@property --glow-x2 { syntax: '<percentage>'; inherits: false; initial-value: 85%; }
-@property --glow-y2 { syntax: '<percentage>'; inherits: false; initial-value: 40%; }
-@property --glow-x3 { syntax: '<percentage>'; inherits: false; initial-value: 50%; }
-@property --glow-y3 { syntax: '<percentage>'; inherits: false; initial-value: 85%; }
+@property --glow-x1 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 15%;
+}
+@property --glow-y1 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 20%;
+}
+@property --glow-x2 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 85%;
+}
+@property --glow-y2 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 40%;
+}
+@property --glow-x3 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 50%;
+}
+@property --glow-y3 {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 85%;
+}
 
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    
+
     /* Combinação de Mesh Gradients com opacidade reduzida para um efeito elegante */
     background:
         radial-gradient(
@@ -1018,41 +1037,52 @@ body::after {
     content: "";
     position: fixed;
     inset: 0;
-    
+
     /* Cria linhas finas de 1px simulando uma grade de desenvolvimento */
-    background-image: 
+    background-image:
         linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
-    
+
     background-size: 60px 60px; /* Tamanho dos quadrados da grade */
     pointer-events: none;
     z-index: -1;
-    
+
     /* Máscara para fazer o grid sumir suavemente nas bordas da tela */
-    -webkit-mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
+    -webkit-mask-image: radial-gradient(
+        circle at 50% 50%,
+        black 40%,
+        transparent 90%
+    );
     mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%);
 }
 
 /* Animação que move os focos de luz suavemente pelo fundo */
 @keyframes ambientGlow {
     0% {
-        --glow-x1: 15%; --glow-y1: 20%;
-        --glow-x2: 85%; --glow-y2: 40%;
-        --glow-x3: 50%; --glow-y3: 85%;
+        --glow-x1: 15%;
+        --glow-y1: 20%;
+        --glow-x2: 85%;
+        --glow-y2: 40%;
+        --glow-x3: 50%;
+        --glow-y3: 85%;
     }
     50% {
-        --glow-x1: 30%; --glow-y1: 35%;
-        --glow-x2: 70%; --glow-y2: 20%;
-        --glow-x3: 60%; --glow-y3: 70%;
+        --glow-x1: 30%;
+        --glow-y1: 35%;
+        --glow-x2: 70%;
+        --glow-y2: 20%;
+        --glow-x3: 60%;
+        --glow-y3: 70%;
     }
     100% {
-        --glow-x1: 10%; --glow-y1: 50%;
-        --glow-x2: 90%; --glow-y2: 55%;
-        --glow-x3: 40%; --glow-y3: 90%;
+        --glow-x1: 10%;
+        --glow-y1: 50%;
+        --glow-x2: 90%;
+        --glow-y2: 55%;
+        --glow-x3: 40%;
+        --glow-y3: 90%;
     }
 }
-
-
 
 /* =========================
  DROPDOWN CATEGORIAS
@@ -1063,8 +1093,8 @@ body::after {
 }
 
 .btn-categorias {
-    background: rgba(255, 255, 255, .05);
-    border: 1px solid rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     color: white;
     display: flex;
     align-items: center;
@@ -1072,7 +1102,7 @@ body::after {
 }
 
 .btn-categorias:hover {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .dropdown-menu {
@@ -1085,11 +1115,11 @@ body::after {
 
     background: linear-gradient(
         145deg,
-        rgba(20, 20, 20, .95),
-        rgba(10, 10, 10, .95)
+        rgba(20, 20, 20, 0.95),
+        rgba(10, 10, 10, 0.95)
     );
 
-    border: 1px solid rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 18px;
 
@@ -1104,7 +1134,7 @@ body::after {
     visibility: hidden;
     transform: translateY(10px);
 
-    transition: .3s;
+    transition: 0.3s;
 
     backdrop-filter: blur(20px);
 
@@ -1124,13 +1154,13 @@ body::after {
 
     font-weight: 500;
 
-    transition: .3s;
+    transition: 0.3s;
 
     color: #eee;
 }
 
 .dropdown-menu a:hover {
-    background: rgba(255, 255, 255, .08);
+    background: rgba(255, 255, 255, 0.08);
     color: #00ffcc;
     padding-left: 22px;
 }
@@ -1139,13 +1169,13 @@ body::after {
     position: fixed;
     inset: 0;
     z-index: 999;
-    background-color: rgba(0, 0, 0, .55);
+    background-color: rgba(0, 0, 0, 0.55);
     display: none;
     backdrop-filter: blur(1.2px);
     justify-content: end;
     pointer-events: none;
     opacity: 0;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 #sidebar-overlay.show {
@@ -1159,21 +1189,21 @@ body::after {
     background: rgb(0, 0, 10);
     display: flex;
     flex-direction: column;
-    justify-content:  space-between;
+    justify-content: space-between;
     height: 100%;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .sidebar-logo-container {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: .75rem 2rem;
+    padding: 0.75rem 2rem;
 }
 
 .logo-subtitle {
     color: rgb(200, 200, 200);
-    font-size: .92rem;
+    font-size: 0.92rem;
     text-wrap: balance;
 }
 
@@ -1186,26 +1216,26 @@ body::after {
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: .5rem;
+    gap: 0.5rem;
 }
 
 #sidebar nav a {
-    padding: .9rem;
+    padding: 0.9rem;
     border-radius: 10px;
     font-weight: 500;
     position: relative;
     display: flex;
     align-items: center;
-    gap: .5rem;
-    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+    gap: 0.5rem;
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #sidebar nav a:hover:not(.active) {
     i {
-        transition: .4s;
+        transition: 0.4s;
         transform: rotate(360deg);
+        padding-left: 12%;
     }
-    padding-left: 12%;
 }
 
 #sidebar nav a::before {
@@ -1215,10 +1245,10 @@ body::after {
     width: 100%;
     border-radius: 10px;
     height: 100%;
-    background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, 0.08);
     scale: 0;
     opacity: 0;
-    transition: .3s cubic-bezier(.175, .885, .32, 1.275);
+    transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #sidebar nav a:hover:not(#sidebar nav a.active)::before {
@@ -1229,7 +1259,7 @@ body::after {
 #sidebar nav a.active {
     padding-left: 12%;
     color: rgb(0, 230, 184);
-    background-color: rgba(255, 255, 255, .08);
+    background-color: rgba(255, 255, 255, 0.08);
     font-weight: 600;
 }
 
@@ -1238,13 +1268,12 @@ body::after {
     justify-content: center;
     flex-wrap: wrap;
     padding: 1.5rem 0.75rem;
-    gap: .75rem;
+    gap: 0.75rem;
 }
 
 #sidebar-header-buttons .btn-register {
     width: 60%;
 }
-
 
 /* =========================
  RESPONSIVO
@@ -1323,7 +1352,6 @@ body::after {
         justify-content: start;
     }
 
-
     .header-buttons {
         display: none;
     }
@@ -1341,8 +1369,6 @@ body::after {
     }
 }
 
-
-
 /*=========================
 
 COMPONENTE DE PESQUISA (Modificado)
@@ -1352,29 +1378,29 @@ COMPONENTE DE PESQUISA (Modificado)
 /*Lupa*/
 
 .lupa {
-
-position: absolute; 
-right: 1000px; 
-width: 22px;
-height: 22px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-cursor: pointer;
-z-index: 2;
+    position: absolute;
+    right: 1000px;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
+    cursor: pointer;
+    z-index: 2;
 }
 
 .lupa img {
-width: 100%;
-height: 100%;
-object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-
 .lupa:hover {
-opacity: 0.8;
-transform: scale(1.05); 
+    opacity: 0.8;
+    transform: scale(1.05);
 }
 
 /*Pesquisador*/
@@ -1423,19 +1449,20 @@ transform: scale(1.05);
     border-bottom: 1px solid #7a1010;
 }
 .carrinho {
-    position: absolute; 
-    right: 32px; 
+    position: absolute;
+    right: 32px;
     width: 22px;
     height: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+    transition:
+        opacity 0.2s ease-in-out,
+        transform 0.2s ease-in-out;
     cursor: pointer;
-    z-index: 2; 
+    z-index: 2;
     color: rgb(0, 0, 0);
 }
-
 
 .carrinho:hover {
     transform: scale(1.05);
@@ -1480,7 +1507,7 @@ transform: scale(1.05);
 }
 
 .carrinho-dropdown::before {
-    content: '';
+    content: "";
     position: absolute;
     top: -10px;
     left: 0;
@@ -1491,7 +1518,6 @@ transform: scale(1.05);
 .carrinho:hover .carrinho-dropdown {
     display: block;
 }
-
 
 /* ==================== Mini tabela ==================== */
 
@@ -1531,7 +1557,7 @@ transform: scale(1.05);
     background-color: #28a765;
     color: white;
     border: none;
-    padding: 8px 5px;      
+    padding: 8px 5px;
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
