@@ -35,6 +35,35 @@
                 Voltar
             </a>
 
+            <div class="carrinho">
+                <a href="../Carrinho de Compra.html" class="carrinho-icone">
+                    <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+                </a>
+
+                <div class="carrinho-dropdown">
+                    <table class="mini-tabela">
+                        <thead>
+                            <tr>
+                                <th>Prod.</th>
+                                <th>Qtd.</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itens-carrinho">
+                            <tr id="carrinho-vazio">
+                                <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="carrinho-total">
+                        <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                    </div>
+                    
+                    <a href="../Carrinho de Compra.html" class="btn-finalizar">Finalizar Compra</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
@@ -48,7 +77,7 @@
                 <h2>Sobre o Roblox</h2>
 
                 <p>
-                    Roblox é o universo virtual definitivo que permite que você jogue, crie e seja qualquer coisa que sua imaginação mandar. 
+                    Roblox é o universo virtual definitivo que permite que você jague, crie e seja qualquer coisa que sua imaginação mandar. 
                     Junte-se a milhões de jogadores e descubra uma variedade infinita de mundos imersivos criados por uma comunidade global.
                 </p>
 
@@ -64,14 +93,14 @@
         <div class="product-info">
 
             <span class="tag">
-                ENTREGA IMEDIATA
+                ENTREGA EM ATÉ 24H
             </span>
 
             <h1>Gift Card Roblox</h1>
 
             <p class="description">
                 Adquira Robux ou uma assinatura Premium.
-                Receba seu código automaticamente após a confirmação do pagamento.
+                Receba seu código automaticamente após a confirmation do pagamento.
             </p>
 
             <div class="badges">
@@ -96,12 +125,12 @@
             <h3>Escolha o valor</h3>
 
             <div class="prices">
-
-                <button>R$ 25</button>
-                <button>R$ 50</button>
-                <button>R$ 100</button>
-                <button>R$ 200</button>
-
+                <select id="valor-gift">
+                    <option value="25" data-moedas="">R$ 25</option>
+                    <option value="50" data-moedas="" selected>R$ 50</option>
+                    <option value="100" data-moedas="">R$ 100</option>
+                    <option value="200" data-moedas="">R$ 200</option>
+                </select>
             </div>
 
             <div class="actions">
@@ -111,7 +140,7 @@
                     Comprar Agora
                 </button>
 
-                <button class="cart">
+                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="roblox_gift_50" data-nome="Gift Card Roblox R$ 50" data-preco="50.00">
                     <i class="fa-solid fa-bag-shopping"></i>
                     Carrinho
                 </button>
@@ -119,9 +148,6 @@
             </div>
 
 
-            <button class="como-resgatar" data-target="modal-roblox">
-                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
-            </button>
             <div class="security">
 
                 <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
@@ -130,6 +156,9 @@
 
             </div>
             
+            <button class="como-resgatar" data-target="modal-roblox">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
         </div>
 
     </section>
@@ -162,14 +191,14 @@
                          <div class="tutorial-step-number">4</div>
                          <div class="tutorial-step-text">Pronto! Uma mensagem de sucesso aparecerá e o saldo em Robux ou Crédito será adicionado imediatamente à sua conta.</div>
                        </li>
-                    </ul>
+                 </ul>
             </div>
             
             <a href="https://www.roblox.com/redeem" target="_blank" class="tutorial-action-btn">Ir para a página de resgate</a>
         </div>
     </div>
 
-    <script src="../gift-page.js"></script>
+<script type="module" src="../js/main.js"></script>
 </body>
 
 </html>

@@ -1,182 +1,199 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Microsoft Gift Card</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microsoft Gift Card</title>
 
-        <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
-        />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 
-        <link rel="stylesheet" href="../gift-page.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-        <link
-            rel="shortcut icon"
-            href="../imgs/icons/favicon.png"
-            type="image/x-icon"
-        />
-    </head>
+    <link rel="stylesheet" href="../gift-page.css">
 
-    <body>
-        <header>
-            <div class="topbar">
-                <div class="logo">RobotCard</div>
+    <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
+</head>
 
-                <a href="../index.html" class="back-btn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Voltar
-                </a>
-            </div>
-        </header>
+<body>
 
-        <section class="product">
-            <div class="left-side">
-                <div class="product-image microsoft"></div>
+<header>
+    <div class="topbar">
 
-                <div class="text">
-                    <h2>Sobre a Microsoft</h2>
+        <div class="logo">
+            RobotCard
+        </div>
 
-                    <p>
-                        Use seu gift card Microsoft para comprar jogos,
-                        assinaturas Xbox, aplicativos, filmes e muito mais.
-                    </p>
+        <a href="../index.html" class="back-btn">
+            <i class="fa-solid fa-arrow-left"></i>
+            Voltar
+        </a>
 
-                    <p>
-                        Compatível com Xbox e Microsoft Store com entrega
-                        digital instantânea.
-                    </p>
+        <div class="carrinho">
+            <a href="../Carrinho de Compra.html" class="carrinho-icone">
+                <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+            </a>
+
+            <div class="carrinho-dropdown">
+                <table class="mini-tabela">
+                    <thead>
+                        <tr>
+                            <th>Prod.</th>
+                            <th>Qtd.</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itens-carrinho">
+                        <tr id="carrinho-vazio">
+                            <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="carrinho-total">
+                    <strong>Total: R$ <span id="valor-total">0.00</span></strong>
                 </div>
-            </div>
-
-            <div class="product-info">
-                <span class="tag"> ENTREGA IMEDIATA </span>
-
-                <h1>Microsoft Gift Card</h1>
-
-                <p class="description">
-                    Compre jogos, apps e serviços Microsoft com pagamento seguro
-                    e ativação rápida.
-                </p>
-
-                <div class="badges">
-                    <span>
-                        <i class="fa-solid fa-bolt"></i>
-                        Instantâneo
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-shield-halved"></i>
-                        Seguro
-                    </span>
-
-                    <span>
-                        <i class="fa-solid fa-headset"></i>
-                        Suporte 24h
-                    </span>
-                </div>
-
-                <h3>Escolha o valor</h3>
-
-                <div class="prices">
-                    <button>R$ 30</button>
-                    <button>R$ 60</button>
-                    <button>R$ 100</button>
-                    <button>R$ 200</button>
-                </div>
-
-                <div class="actions">
-                    <button class="buy">
-                        <i class="fa-solid fa-cart-shopping"></i>
-                        Comprar Agora
-                    </button>
-
-                    <button class="cart">
-                        <i class="fa-solid fa-bag-shopping"></i>
-                        Carrinho
-                    </button>
-                </div>
-                <button class="como-resgatar" data-target="modal-microsoft">
-                    <i class="fa-solid fa-circle-question"></i> Como resgatar
-                    este Gift Card?
-                </button>
-                <div class="security">
-                    <img
-                        src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp"
-                    />
-
-                    <img
-                        src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"
-                    />
-                </div>
-            </div>
-        </section>
-
-        <div class="tutorial-modal-overlay" id="modal-microsoft">
-            <div class="tutorial-card">
-                <button class="tutorial-close-btn">&times;</button>
-                <div class="tema-microsoft">
-                    <div class="tutorial-header">
-                        <span>Passo a Passo</span>
-                        <h2>Resgatar Gift Card</h2>
-                    </div>
-
-                    <ul class="tutorial-steps">
-                        <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">1</div>
-                            <div class="tutorial-step-text">
-                                Localize o
-                                <strong
-                                    >código de ativação de 25 caracteres</strong
-                                >
-                                enviado para o seu e-mail após a compra.
-                            </div>
-                        </li>
-                        <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">2</div>
-                            <div class="tutorial-step-text">
-                                Acesse o link oficial de resgate de contas da
-                                Microsoft em seu navegador:
-                                <strong>redeem.microsoft.com</strong>.
-                            </div>
-                        </li>
-                        <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">3</div>
-                            <div class="tutorial-step-text">
-                                Faça login com a mesma conta Microsoft/Xbox que
-                                você usa e insira o código sem os traços. Clique
-                                em <strong>"Avançar"</strong>.
-                            </div>
-                        </li>
-                        <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">4</div>
-                            <div class="tutorial-step-text">
-                                Confirme o resgate. O saldo ou conteúdo será
-                                vinculado permanentemente ao seu perfil para
-                                usar no console, PC ou Windows Store.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-
-                <a
-                    href="https://redeem.microsoft.com"
-                    target="_blank"
-                    class="tutorial-action-btn"
-                    >Ir para a página de resgate</a
-                >
+                
+                <a href="../Carrinho de Compra.html" class="btn-finalizar">Finalizar Compra</a>
             </div>
         </div>
 
-        <script src="../gift-page.js"></script>
-    </body>
+    </div>
+</header>
+
+<section class="product">
+
+    <div class="left-side">
+
+        <div class="product-image microsoft"></div>
+
+        <div class="text">
+
+            <h2>Sobre a Microsoft</h2>
+
+            <p>
+                Use seu gift card Microsoft para comprar jogos,
+                assinaturas Xbox, aplicativos, filmes e muito mais.
+            </p>
+
+            <p>
+                Compatível com Xbox e Microsoft Store
+                com entrega digital em até 24H.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="product-info">
+
+        <span class="tag">
+            ENTREGA EM ATÉ 24H
+        </span>
+
+        <h1>Microsoft Gift Card</h1>
+
+        <p class="description">
+            Compre jogos, apps e serviços Microsoft
+            com pagamento seguro e ativação rápida.
+        </p>
+
+        <div class="badges">
+
+            <span>
+                <i class="fa-solid fa-bolt"></i>
+                Instantâneo
+            </span>
+
+            <span>
+                <i class="fa-solid fa-shield-halved"></i>
+                Seguro
+            </span>
+
+            <span>
+                <i class="fa-solid fa-headset"></i>
+                Suporte 24h
+            </span>
+
+        </div>
+
+        <h3>Escolha o valor</h3>
+
+        <div class="prices">
+            <select id="valor-gift">
+                <option value="30" data-moembed="">R$ 30</option>
+                <option value="60" data-moembed="" selected>R$ 60</option>
+                <option value="100" data-moembed="">R$ 100</option>
+                <option value="200" data-moembed="">R$ 200</option>
+            </select>
+        </div>
+
+        <div class="actions">
+
+            <button class="buy">
+                <i class="fa-solid fa-cart-shopping"></i>
+                Comprar Agora
+            </button>
+
+            <button class="add-to-cart cart" id="btn-carrinho-main" data-id="microsoft_gift_60" data-nome="Gift Card Microsoft R$ 60" data-preco="60.00">
+                <i class="fa-solid fa-bag-shopping"></i>
+                Carrinho
+            </button>
+
+        </div>
+         <div class="security">
+
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
+
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+
+            </div>
+             <button class="como-resgatar" data-target="modal-microsoft">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
+    </div>
+
+</section>
+
+<div class="tutorial-modal-overlay" id="modal-microsoft">
+    <div class="tutorial-card">
+        <button class="tutorial-close-btn">&times;</button>
+        <div class="tema-microsoft">
+        <div class="tutorial-header">
+            <span>Passo a Passo</span>
+            <h2>Resgatar Gift Card</h2>
+        </div>
+
+        <ul class="tutorial-steps">
+            <li class="tutorial-step-item">
+                <div class="tutorial-step-number">1</div>
+                <div class="tutorial-step-text">Localize o <strong>código de ativação de 25 caracteres</strong> enviado para o seu e-mail após a compra.</div>
+            </li>
+            <li class="tutorial-step-item">
+                <div class="tutorial-step-number">2</div>
+                <div class="tutorial-step-text">Acesse o link oficial de resgate de contas da Microsoft em seu navegador: <strong>redeem.microsoft.com</strong>.</div>
+            </li>
+            <li class="tutorial-step-item">
+                <div class="tutorial-step-number">3</div>
+                <div class="tutorial-step-text">Faça login com a mesma conta Microsoft/Xbox que você usa e insira o código sem os traços. Clique em <strong>"Avançar"</strong>.</div>
+            </li>
+            <li class="tutorial-step-item">
+                <div class="tutorial-step-number">4</div>
+                <div class="tutorial-step-text">Confirme o resgate. O saldo ou conteúdo será vinculado permanentemente ao seu perfil para usar no console, PC ou Windows Store.</div>
+            </li>
+        </ul>
+        </div>
+
+        <a href="https://redeem.microsoft.com" target="_blank" class="tutorial-action-btn">Ir para a página de resgate</a>
+    </div>
+</div>
+
+<script type="module" src="../js/main.js"></script>
+</body>
+
 </html>

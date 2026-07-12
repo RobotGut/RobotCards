@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Uber Gift Card</title>
+    <title>Valorant Gift Card</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,80 +12,119 @@
     <link rel="stylesheet" href="../gift-page.css">
     <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
 </head>
+
 <body>
     <header>
         <div class="topbar">
             <div class="logo">RobotCard</div>
             <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            <div class="carrinho">
+                <a href="../Carrinho de Compra.html" class="carrinho-icone">
+                    <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+                </a>
+                <div class="carrinho-dropdown">
+                    <table class="mini-tabela">
+                        <thead>
+                            <tr>
+                                <th>Prod.</th>
+                                <th>Qtd.</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itens-carrinho">
+                            <tr id="carrinho-vazio">
+                                <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="carrinho-total">
+                        <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                    </div>
+                    <a href="../Carrinho de Compra.html" class="btn-finalizar">Finalizar Compra</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <section class="product">
         <div class="left-side">
-            <div class="product-image uber"></div>
+            <div class="product-image valorant"></div>
             <div class="text">
-                <h2>Sobre a Uber</h2>
-                <p>A Uber facilita o seu deslocamento diário por meio de corridas confiáveis e rápidas, além de permitir o pedido de refeições e compras de mercados incríveis direto no app **Uber Eats**.</p>
-                <p>O Gift Card Uber insere créditos na sua carteira digital Uber Cash, sendo uma das melhores opções para planejar seus gastos mensais de transporte ou presentear amigos sem precisar expor cartões de crédito.</p>
+                <h2>Sobre o Valorant</h2>
+                <p>VALORANT é um jogo de tiro tático 5v5 focado em personagens, ambientado em um cenário global. Supere seus adversários combinando habilidades táticas, pontaria precisa e estratégia em equipe.</p>
+                <p>Com os VALORANT Points (VP), a moeda virtual do jogo, você pode adquirir skins de armas exclusivas na loja rotativa, desbloquear novos agentes rapidamente e garantir o Passe de Batalha da temporada atual.</p>
             </div>
         </div>
         <div class="product-info">
-            <span class="tag">ENTREGA IMEDIATA</span>
-            <h1>Gift Card Uber</h1>
-            <p class="description">Adicione saldo ao Uber Cash. Válido para viagens de transporte e pedidos no Uber Eats de forma 100% digital.</p>
+            <span class="tag">ENTREGA EM ATÉ 24H</span>
+            <h1>Gift Card Valorant</h1>
+            <p class="description">Adquira VALORANT Points para comprar skins de armas e Passes de Batalha. Receba seu código digital automaticamente.</p>
             <div class="badges">
                 <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
                 <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
                 <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
             </div>
+            
             <h3>Escolha o valor</h3>
+            
             <div class="prices">
-                <button>R$ 25</button><button>R$ 50</button><button>R$ 100</button><button>R$ 150</button>
+                <select id="valor-gift">
+                    <option value="25" data-moedas="">R$ 25</option>
+                    <option value="50" data-moedas="" selected>R$ 50</option>
+                    <option value="100" data-moedas="">R$ 100</option>
+                    <option value="200" data-moedas="">R$ 200</option>
+                </select>
             </div>
+            
             <div class="actions">
                 <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
-                <button class="cart"><i class="fa-solid fa-bag-shopping"></i> Carrinho</button>
+                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="val_gift_50" data-nome="Gift Card Valorant R$ 50" data-preco="50.00">
+                    <i class="fa-solid fa-bag-shopping"></i> Carrinho
+                </button>
             </div>
-            <button class="como-resgatar" data-target="modal-uber">
-               <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
-           </button>
+            
             <div class="security">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
             </div>
+            <button class="como-resgatar" data-target="modal-valorant">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
         </div>
     </section>
 
-    <div class="tutorial-modal-overlay" id="modal-uber">
+    <div class="tutorial-modal-overlay" id="modal-valorant">
         <div class="tutorial-card">
             <button class="tutorial-close-btn">&times;</button>
-            <div class="tema-uber">
-                 <div class="tutorial-header">
-                        <span>Passo a Passo</span>
-                       <h2>Resgatar Gift Card</h2>
-                 </div>
-                 <ul class="tutorial-steps">
-                       <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">1</div>
-                         <div class="tutorial-step-text">Abra o aplicativo da Uber (ou Uber Eats) no seu celular Android ou iOS.</div>
-                       </li>
-                       <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">2</div>
-                            <div class="tutorial-step-text">Acesse o menu lateral e toque na aba <strong>"Conta"</strong> e depois na opção <strong>"Carteira / Wallet"</strong>.</div>
-                       </li>
-                       <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">3</div>
-                         <div class="tutorial-step-text">Toque no botão <strong>"+ Adicionar saldo"</strong>, escolha a opção <strong>"Cartão de presente"</strong>.</div>
-                       </li>
-                        <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">4</div>
-                         <div class="tutorial-step-text">Digite o código pin gerado e toque em Salvar. Pronto, os créditos já serão elegíveis para abater sua próxima corrida!</div>
-                       </li>
-                 </ul>
+            <div class="tema-valorant">
+                <div class="tutorial-header">
+                    <span>Passo a Passo</span>
+                    <h2>Resgatar Gift Card</h2>
+                </div>
+                <ul class="tutorial-steps">
+                    <li class="tutorial-step-item">
+                        <div class="tutorial-step-number">1</div>
+                        <div class="tutorial-step-text">Abra o cliente do jogo VALORANT no seu computador e faça login na sua conta Riot Games.</div>
+                    </li>
+                    <li class="tutorial-step-item">
+                        <div class="tutorial-step-number">2</div>
+                        <div class="tutorial-step-text">Clique no ícone de <strong>VALORANT Points (VP)</strong> localizado no canto superior direito, ao lado das abas principais.</div>
+                    </li>
+                    <li class="tutorial-step-item">
+                        <div class="tutorial-step-number">3</div>
+                        <div class="tutorial-step-text">Selecione a opção de pagamento marcada como <strong>"Cartões Pré-pagos e Códigos"</strong>.</div>
+                    </li>
+                    <li class="tutorial-step-item">
+                        <div class="tutorial-step-number">4</div>
+                        <div class="tutorial-step-text">Digite com atenção o código de ativação fornecido, clique em "Enviar" e os pontos serão creditados na hora.</div>
+                    </li>
+                </ul>
             </div>
-            <a href="#" onclick="alert('Abra o aplicativo Uber em seu aparelho mobile para fazer o resgate.'); return false;" class="tutorial-action-btn">Resgatar via Aplicativo</a>
+            <a href="https://playvalorant.com/pt-br/" target="_blank" class="tutorial-action-btn">Ir para o site do Valorant</a>
         </div>
     </div>
-    <script src="../gift-page.js"></script>
+    
+    <script type="module" src="../js/main.js"></script>
 </body>
+
 </html>

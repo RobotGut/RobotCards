@@ -15,7 +15,38 @@
     <header>
         <div class="topbar">
             <div class="logo">RobotCard</div>
-            <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            
+            <a href="/index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+            
+            <!-- Carrinho Dropdown integrado e padronizado -->
+            <div class="carrinho">
+                <a href="/Carrinho de Compra.html" class="carrinho-icone">
+                    <img src="./imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+                </a>
+
+                <div class="carrinho-dropdown">
+                    <table class="mini-tabela">
+                        <thead>
+                            <tr>
+                                <th>Prod.</th>
+                                <th>Qtd.</th>
+                                <th>Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody id="itens-carrinho">
+                            <tr id="carrinho-vazio">
+                                <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="carrinho-total">
+                        <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                    </div>
+                    
+                    <a href="../Carrinho de Compra.html" class="btn-finalizar">Finalizar Compra</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -29,7 +60,7 @@
             </div>
         </div>
         <div class="product-info">
-            <span class="tag">ENTREGA IMEDIATA</span>
+            <span class="tag">ENTREGA EM ATÉ 24H</span>
             <h1>Gift Card Decathlon</h1>
             <p class="description">Equipamentos e vestuários completos para mais de 65 esportes. Válido para compras online e lojas físicas em todo o Brasil.</p>
             <div class="badges">
@@ -37,21 +68,35 @@
                 <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
                 <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
             </div>
+            
             <h3>Escolha o valor</h3>
+            
+            <!-- Menu select isolado (sem texto do lado) e preparado para centralização -->
             <div class="prices">
-                <button>R$ 50</button><button>R$ 100</button><button>R$ 150</button><button>R$ 200</button>
+                <select id="valor-gift">
+                    <option value="50" data-saldo="R$ 50" selected>R$ 50</option>
+                    <option value="100" data-saldo="R$ 100">R$ 100</option>
+                    <option value="150" data-saldo="R$ 150">R$ 150</option>
+                    <option value="200" data-saldo="R$ 200">R$ 200</option>
+                </select>
             </div>
+            
             <div class="actions">
                 <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
-                <button class="cart"><i class="fa-solid fa-bag-shopping"></i> Carrinho</button>
+                
+                <!-- Botão de carrinho unificado com a classe add-to-cart e ID principal -->
+                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="decathlon_gift_50" data-nome="Gift Card Decathlon R$ 50" data-preco="50.00">
+                    <i class="fa-solid fa-bag-shopping"></i> Carrinho
+                </button>
             </div>
-            <button class="como-resgatar" data-target="modal-decathlon">
-               <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
-           </button>
+            
             <div class="security">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
             </div>
+             <button class="como-resgatar" data-target="modal-decathlon">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
         </div>
     </section>
 
@@ -82,12 +127,10 @@
                        </li>
                  </ul>
             </div>
-            <a href="https://www.decathlon.com.br"
-             target="_blank" 
-             class="tutorial-action-btn">Ir para o site Decathlon</a>
-            </div>
+            <a href="https://www.decathlon.com.br" target="_blank" class="tutorial-action-btn">Ir para o site Decathlon</a>
         </div>
-
-        <script src="../gift-page.js"></script>
-    </body>
+    </div>
+    
+    <script src="../gift-page.js"></script>
+</body>
 </html>

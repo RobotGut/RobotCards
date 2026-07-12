@@ -12,12 +12,42 @@
     <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <header>
-        <div class="topbar">
-            <div class="logo">RobotCard</div>
-            <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+<header>
+    <div class="topbar">
+        <div class="logo">RobotCard</div>  
+        
+        <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+        
+        <div class="carrinho">
+            <a href="../Carrinho de Compra.html" class="carrinho-icone">
+                <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+            </a>
+
+            <div class="carrinho-dropdown">
+                <table class="mini-tabela">
+                    <thead>
+                        <tr>
+                            <th>Prod.</th>
+                            <th>Qtd.</th>
+                            <th>Preço</th>
+                        </tr>
+                    </thead>
+                    <tbody id="itens-carrinho">
+                        <tr id="carrinho-vazio">
+                            <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="carrinho-total">
+                    <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                </div>
+                
+                <a href="../Carrinho de Compra.html" class="btn-finalizar">Finalizar Compra</a>
+            </div>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="product">
         <div class="left-side">
@@ -29,7 +59,7 @@
             </div>
         </div>
         <div class="product-info">
-            <span class="tag">ENTREGA IMEDIATA</span>
+            <span class="tag">ENTREGA EM ATÉ 24H</span>
             <h1>Gift Card Overwatch</h1>
             <p class="description">Adquira Moedas virtuais para comprar Passes de Batalha e skins. Receba seu código automaticamente após a confirmação do pagamento.</p>
             <div class="badges">
@@ -37,21 +67,32 @@
                 <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
                 <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
             </div>
-            <h3>Escolha o valor</h3>
+            <h3>Opções de giftcard Overwatch</h3>
+
             <div class="prices">
-                <button>R$ 25</button><button>R$ 50</button><button>R$ 100</button><button>R$ 200</button>
+                <select id="valor-gift">
+                    <option value="25" data-moedas="250">250 moedas R$ 25</option>
+                    <option value="50" data-moedas="500" selected>500 moedas R$ 50</option>
+                    <option value="100" data-moedas="1000">1000 moedas R$ 100</option>
+                    <option value="200" data-moedas="2000">2000 moedas R$ 200</option>
+                </select>
             </div>
+            
             <div class="actions">
                 <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
-                <button class="cart"><i class="fa-solid fa-bag-shopping"></i> Carrinho</button>
+
+                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="ow_gift_50" data-nome="Overwatch 500 Moedas" data-preco="50.00">
+                    <i class="fa-solid fa-bag-shopping"></i> Carrinho
+                </button>
             </div>
-            <button class="como-resgatar" data-target="modal-overwatch">
-               <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
-           </button>
+            
             <div class="security">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
                 <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
             </div>
+             <button class="como-resgatar" data-target="modal-overwatch">
+                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+            </button>
         </div>
     </section>
 
@@ -85,6 +126,7 @@
             <a href="https://account.battle.net/overview" target="_blank" class="tutorial-action-btn">Ir para a página de resgate</a>
         </div>
     </div>
-    <script src="../gift-page.js"></script>
+
+<script type="module" src="../js/main.js"></script>
 </body>
 </html>
