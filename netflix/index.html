@@ -7,18 +7,21 @@
         <title>Netflix Gift Card</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
             href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"/>
+            rel="stylesheet"
+        />
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
         <link rel="stylesheet" href="../gift-page.css" />
         <link
             rel="shortcut icon"
             href="../imgs/icons/favicon.png"
-            type="image/x-icon"/>
+            type="image/x-icon"
+        />
     </head>
 
     <body>
@@ -26,37 +29,57 @@
             <div class="topbar">
                 <div class="logo">RobotCard</div>
 
-                <a href="../index.html" class="back-btn">
-                    <i class="fa-solid fa-arrow-left"></i>
-                    Voltar
-                </a>
+                <div class="links-container">
+                    <a href="../index.html" class="back-btn"
+                        ><i class="fa-solid fa-arrow-left"></i> Voltar</a
+                    >
 
-                <div class="carrinho">
-                    <a href="../CarrinhoCompra.html" class="carrinho-icone">
-                        <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
-                    </a>
+                    <div class="carrinho">
+                        <a href="../CarrinhoCompra.html" class="carrinho-icone">
+                            <img
+                                src="../imgs/icons/Carrinho.svg"
+                                alt="carrinho-de-compra"
+                            />
+                        </a>
 
-                    <div class="carrinho-dropdown">
-                        <table class="mini-tabela">
-                            <thead>
-                                <tr>
-                                    <th>Prod.</th>
-                                    <th>Qtd.</th>
-                                    <th>Preço</th>
-                                </tr>
-                            </thead>
-                            <tbody id="itens-carrinho">
-                                <tr id="carrinho-vazio">
-                                    <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        
-                        <div class="carrinho-total">
-                            <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                        <div class="carrinho-dropdown">
+                            <table class="mini-tabela">
+                                <thead>
+                                    <tr>
+                                        <th>Prod.</th>
+                                        <th>Qtd.</th>
+                                        <th>Preço</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="itens-carrinho">
+                                    <tr id="carrinho-vazio">
+                                        <td
+                                            colspan="3"
+                                            style="
+                                                text-align: center;
+                                                padding: 15px;
+                                                color: #777;
+                                            "
+                                        >
+                                            O carrinho está vazio.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="carrinho-total">
+                                <strong
+                                    >Total: R$
+                                    <span id="valor-total">0.00</span></strong
+                                >
+                            </div>
+
+                            <a
+                                href="../CarrinhoCompra.html"
+                                class="btn-finalizar"
+                                >Finalizar Compra</a
+                            >
                         </div>
-                        
-                        <a href="../CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
                     </div>
                 </div>
             </div>
@@ -68,7 +91,7 @@
 
                 <div class="text">
                     <h2>Sobre a Netflix</h2>
-                    
+
                     <p>
                         Assista às séries e filmes mais comentados do momento.
                         Aproveite conteúdos exclusivos, documentários, especiais
@@ -114,7 +137,9 @@
                 <div class="prices">
                     <select id="valor-gift">
                         <option value="25" data-moedas="">R$ 25</option>
-                        <option value="50" data-moedas="" selected>R$ 50</option>
+                        <option value="50" data-moedas="" selected>
+                            R$ 50
+                        </option>
                         <option value="100" data-moedas="">R$ 100</option>
                         <option value="200" data-moedas="">R$ 200</option>
                     </select>
@@ -126,18 +151,29 @@
                         Comprar Agora
                     </button>
 
-                    <button class="add-to-cart cart" id="btn-carrinho-main" data-id="netflix_gift_50" data-nome="Gift Card Netflix R$ 50" data-preco="50.00">
+                    <button
+                        class="add-to-cart cart"
+                        id="btn-carrinho-main"
+                        data-id="netflix_gift_50"
+                        data-nome="Gift Card Netflix R$ 50"
+                        data-preco="50.00"
+                    >
                         <i class="fa-solid fa-bag-shopping"></i>
                         Carrinho
                     </button>
                 </div>
 
                 <div class="security">
-                    <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp"/>
-                    <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"/>
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp"
+                    />
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"
+                    />
                 </div>
                 <button class="como-resgatar" data-target="modal-netflix">
-                    <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
+                    <i class="fa-solid fa-circle-question"></i> Como resgatar
+                    este Gift Card?
                 </button>
             </div>
         </section>
@@ -190,7 +226,9 @@
                 <a
                     href="https://www.netflix.com/redeem"
                     target="_blank"
-                    class="tutorial-action-btn">Ir para a página de resgate</a>
+                    class="tutorial-action-btn"
+                    >Ir para a página de resgate</a
+                >
             </div>
         </div>
 

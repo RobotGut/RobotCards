@@ -644,35 +644,35 @@ footer h3 {
 }
 
 .microsoft {
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.aF9CJymxJrVdxp_jqdjL3wHaE8?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-image: url("imgs/microsoft.png");
 }
 
 .roblox {
-    background-image: url("https://cdn.rcd.gg/PreMiD/websites/R/Roblox/assets/logo.png");
+    background-image: url("imgs/roblox.png");
 }
 
 .uber {
-    background-image: url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
+    background-image: url("imgs/uber.png");
 }
 
 .xbox {
-    background-image: url("https://www.xboxuser.de/categories/2/page.jpg?1454154908");
+    background-image: url("imgs/xbox.png");
 }
 
 .overwatch {
-    background-image: url("https://tse1.mm.bing.net/th/id/OIP.VFFV8JybVj0NpYSDSEZ6GQHaEo");
+    background-image: url("imgs/overwatch.png");
 }
 
 .leagueoflegends {
-    background-image: url("https://wallpaperaccess.com/full/2379027.jpg");
+    background-image: url("imgs/league-of-legends.png");
 }
 
 .sea {
-    background-image: url("https://tse2.mm.bing.net/th/id/OIP.GgrhyXRi6Gg41dnA4YYk9wAAAA?cb=thfc1falcon&w=322&h=460&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-image: url("imgs/sea-of-thieves.png");
 }
 
 .centauro {
-    background-image: url("imgs/centauro.jpg");
+    background-image: url("imgs/centauro.png");
 }
 
 .netshoes {
@@ -680,11 +680,11 @@ footer h3 {
 }
 
 .decathlon {
-    background-image: url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
+    background-image: url("imgs/decathlon.png");
 }
 
 .kopenhagen {
-    background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
+    background-image: url("imgs/kopenhagen.png");
 }
 
 /* =========================
@@ -1347,7 +1347,7 @@ body::after {
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 615px) {
     #sidebar {
         justify-content: start;
     }
@@ -1377,9 +1377,13 @@ COMPONENTE DE PESQUISA (Modificado)
 
 /*Lupa*/
 
+.icons-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .lupa {
-    position: absolute;
-    right: 1000px;
     width: 22px;
     height: 22px;
     display: flex;
@@ -1448,9 +1452,9 @@ COMPONENTE DE PESQUISA (Modificado)
     padding: 10px 0;
     border-bottom: 1px solid #7a1010;
 }
+
 .carrinho {
-    position: absolute;
-    right: 32px;
+    position: relative;
     width: 22px;
     height: 10px;
     display: flex;

@@ -1,136 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Decathlon Gift Card</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="../gift-page.css">
-    <link rel="shortcut icon" href="../imgs/icons/favicon.png" type="image/x-icon">
-</head>
-<body>
-    <header>
-        <div class="topbar">
-            <div class="logo">RobotCard</div>
-            
-            <a href="/index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-            
-            <!-- Carrinho Dropdown integrado e padronizado -->
-            <div class="carrinho">
-                <a href="/Carrinho de Compra.html" class="carrinho-icone">
-                    <img src="./imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
-                </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Decathlon Gift Card</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="../gift-page.css" />
+        <link
+            rel="shortcut icon"
+            href="../imgs/icons/favicon.png"
+            type="image/x-icon"
+        />
+    </head>
+    <body>
+        <header>
+            <div class="topbar">
+                <div class="logo">RobotCard</div>
 
-                <div class="carrinho-dropdown">
-                    <table class="mini-tabela">
-                        <thead>
-                            <tr>
-                                <th>Prod.</th>
-                                <th>Qtd.</th>
-                                <th>Preço</th>
-                            </tr>
-                        </thead>
-                        <tbody id="itens-carrinho">
-                            <tr id="carrinho-vazio">
-                                <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <div class="carrinho-total">
-                        <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                <div class="links-container">
+                    <a href="../index.html" class="back-btn"
+                        ><i class="fa-solid fa-arrow-left"></i> Voltar</a
+                    >
+
+                    <div class="carrinho">
+                        <a href="../CarrinhoCompra.html" class="carrinho-icone">
+                            <img
+                                src="../imgs/icons/Carrinho.svg"
+                                alt="carrinho-de-compra"
+                            />
+                        </a>
+
+                        <div class="carrinho-dropdown">
+                            <table class="mini-tabela">
+                                <thead>
+                                    <tr>
+                                        <th>Prod.</th>
+                                        <th>Qtd.</th>
+                                        <th>Preço</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="itens-carrinho">
+                                    <tr id="carrinho-vazio">
+                                        <td
+                                            colspan="3"
+                                            style="
+                                                text-align: center;
+                                                padding: 15px;
+                                                color: #777;
+                                            "
+                                        >
+                                            O carrinho está vazio.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="carrinho-total">
+                                <strong
+                                    >Total: R$
+                                    <span id="valor-total">0.00</span></strong
+                                >
+                            </div>
+
+                            <a
+                                href="../CarrinhoCompra.html"
+                                class="btn-finalizar"
+                                >Finalizar Compra</a
+                            >
+                        </div>
                     </div>
-                    
-                    <a href="../CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <section class="product">
-        <div class="left-side">
-            <div class="product-image decathlon"></div>
-            <div class="text">
-                <h2>Sobre a Decathlon</h2>
-                <p>A Decathlon é a maior varejista de artigos esportivos do mundo, reconhecida por produzir e distribuir equipamentos de alta qualidade para mais de 65 modalidades esportivas.</p>
-                <p>Seja para camping, ciclismo, corrida, natação ou musculação, o Gift Card Decathlon pode ser usado tanto na loja virtual quanto em qualquer unidade física da rede.</p>
+        <section class="product">
+            <div class="left-side">
+                <div class="product-image decathlon"></div>
+                <div class="text">
+                    <h2>Sobre a Decathlon</h2>
+                    <p>
+                        A Decathlon é a maior varejista de artigos esportivos do
+                        mundo, reconhecida por produzir e distribuir
+                        equipamentos de alta qualidade para mais de 65
+                        modalidades esportivas.
+                    </p>
+                    <p>
+                        Seja para camping, ciclismo, corrida, natação ou
+                        musculação, o Gift Card Decathlon pode ser usado tanto
+                        na loja virtual quanto em qualquer unidade física da
+                        rede.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="product-info">
-            <span class="tag">ENTREGA EM ATÉ 24H</span>
-            <h1>Gift Card Decathlon</h1>
-            <p class="description">Equipamentos e vestuários completos para mais de 65 esportes. Válido para compras online e lojas físicas em todo o Brasil.</p>
-            <div class="badges">
-                <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
-                <span><i class="fa-solid fa-shield-halved"></i> Seguro</span>
-                <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
-            </div>
-            
-            <h3>Escolha o valor</h3>
-            
-            <!-- Menu select isolado (sem texto do lado) e preparado para centralização -->
-            <div class="prices">
-                <select id="valor-gift">
-                    <option value="50" data-saldo="R$ 50" selected>R$ 50</option>
-                    <option value="100" data-saldo="R$ 100">R$ 100</option>
-                    <option value="150" data-saldo="R$ 150">R$ 150</option>
-                    <option value="200" data-saldo="R$ 200">R$ 200</option>
-                </select>
-            </div>
-            
-            <div class="actions">
-                <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
-                
-                <!-- Botão de carrinho unificado com a classe add-to-cart e ID principal -->
-                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="decathlon_gift_50" data-nome="Gift Card Decathlon R$ 50" data-preco="50.00">
-                    <i class="fa-solid fa-bag-shopping"></i> Carrinho
+            <div class="product-info">
+                <span class="tag">ENTREGA EM ATÉ 24H</span>
+                <h1>Gift Card Decathlon</h1>
+                <p class="description">
+                    Equipamentos e vestuários completos para mais de 65
+                    esportes. Válido para compras online e lojas físicas em todo
+                    o Brasil.
+                </p>
+                <div class="badges">
+                    <span><i class="fa-solid fa-bolt"></i> Instantâneo</span>
+                    <span
+                        ><i class="fa-solid fa-shield-halved"></i> Seguro</span
+                    >
+                    <span><i class="fa-solid fa-headset"></i> Suporte 24h</span>
+                </div>
+
+                <h3>Escolha o valor</h3>
+
+                <!-- Menu select isolado (sem texto do lado) e preparado para centralização -->
+                <div class="prices">
+                    <select id="valor-gift">
+                        <option value="50" data-saldo="R$ 50" selected>
+                            R$ 50
+                        </option>
+                        <option value="100" data-saldo="R$ 100">R$ 100</option>
+                        <option value="150" data-saldo="R$ 150">R$ 150</option>
+                        <option value="200" data-saldo="R$ 200">R$ 200</option>
+                    </select>
+                </div>
+
+                <div class="actions">
+                    <button class="buy">
+                        <i class="fa-solid fa-cart-shopping"></i> Comprar Agora
+                    </button>
+
+                    <!-- Botão de carrinho unificado com a classe add-to-cart e ID principal -->
+                    <button
+                        class="add-to-cart cart"
+                        id="btn-carrinho-main"
+                        data-id="decathlon_gift_50"
+                        data-nome="Gift Card Decathlon R$ 50"
+                        data-preco="50.00"
+                    >
+                        <i class="fa-solid fa-bag-shopping"></i> Carrinho
+                    </button>
+                </div>
+
+                <div class="security">
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp"
+                    />
+                    <img
+                        src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp"
+                    />
+                </div>
+                <button class="como-resgatar" data-target="modal-decathlon">
+                    <i class="fa-solid fa-circle-question"></i> Como resgatar
+                    este Gift Card?
                 </button>
             </div>
-            
-            <div class="security">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
-            </div>
-             <button class="como-resgatar" data-target="modal-decathlon">
-                <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
-            </button>
-        </div>
-    </section>
+        </section>
 
-    <div class="tutorial-modal-overlay" id="modal-decathlon">
-        <div class="tutorial-card">
-            <button class="tutorial-close-btn">&times;</button>
-            <div class="tema-decathlon">
-                 <div class="tutorial-header">
+        <div class="tutorial-modal-overlay" id="modal-decathlon">
+            <div class="tutorial-card">
+                <button class="tutorial-close-btn">&times;</button>
+                <div class="tema-decathlon">
+                    <div class="tutorial-header">
                         <span>Passo a Passo</span>
-                       <h2>Resgatar Gift Card</h2>
-                 </div>
-                 <ul class="tutorial-steps">
-                       <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">1</div>
-                         <div class="tutorial-step-text">Para compras online, adicione seus itens de esporte favoritos na sacola do site.</div>
-                       </li>
-                       <li class="tutorial-step-item">
-                            <div class="tutorial-step-number">2</div>
-                            <div class="tutorial-step-text">Na etapa de pagamento, selecione a caixinha correspondente a <strong>"Cartão Presente Decathlon"</strong>.</div>
-                       </li>
-                       <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">3</div>
-                         <div class="tutorial-step-text">Digite o número do cartão enviado e a senha/PIN de segurança fornecida no seu comprovante.</div>
-                       </li>
+                        <h2>Resgatar Gift Card</h2>
+                    </div>
+                    <ul class="tutorial-steps">
                         <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">4</div>
-                         <div class="tutorial-step-text">Caso prefira usar em lojas físicas, basta apresentar o código e o PIN direto na tela do seu celular para o operador de caixa.</div>
-                       </li>
-                 </ul>
+                            <div class="tutorial-step-number">1</div>
+                            <div class="tutorial-step-text">
+                                Para compras online, adicione seus itens de
+                                esporte favoritos na sacola do site.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">2</div>
+                            <div class="tutorial-step-text">
+                                Na etapa de pagamento, selecione a caixinha
+                                correspondente a
+                                <strong>"Cartão Presente Decathlon"</strong>.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">3</div>
+                            <div class="tutorial-step-text">
+                                Digite o número do cartão enviado e a senha/PIN
+                                de segurança fornecida no seu comprovante.
+                            </div>
+                        </li>
+                        <li class="tutorial-step-item">
+                            <div class="tutorial-step-number">4</div>
+                            <div class="tutorial-step-text">
+                                Caso prefira usar em lojas físicas, basta
+                                apresentar o código e o PIN direto na tela do
+                                seu celular para o operador de caixa.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <a
+                    href="https://www.decathlon.com.br"
+                    target="_blank"
+                    class="tutorial-action-btn"
+                    >Ir para o site Decathlon</a
+                >
             </div>
-            <a href="https://www.decathlon.com.br" target="_blank" class="tutorial-action-btn">Ir para o site Decathlon</a>
         </div>
-    </div>
-    
-    <script src="../gift-page.js"></script>
-</body>
+
+        <script src="../gift-page.js"></script>
+    </body>
 </html>

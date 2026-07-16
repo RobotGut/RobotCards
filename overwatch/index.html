@@ -16,36 +16,38 @@
     <div class="topbar">
         <div class="logo">RobotCard</div>  
         
-        <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
-        
-        <div class="carrinho">
-            <a href="../CarrinhoCompra.html" class="carrinho-icone">
-                <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
-            </a>
-
-            <div class="carrinho-dropdown">
-                <table class="mini-tabela">
-                    <thead>
-                        <tr>
-                            <th>Prod.</th>
-                            <th>Qtd.</th>
-                            <th>Preço</th>
-                        </tr>
-                    </thead>
-                    <tbody id="itens-carrinho">
-                        <tr id="carrinho-vazio">
-                            <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <div class="links-container">
+                <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
                 
-                <div class="carrinho-total">
-                    <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                <div class="carrinho">
+                    <a href="../CarrinhoCompra.html" class="carrinho-icone">
+                        <img src="../imgs/icons/Carrinho.svg" alt="carrinho-de-compra">
+                    </a>
+                    
+                    <div class="carrinho-dropdown">
+                        <table class="mini-tabela">
+                            <thead>
+                                <tr>
+                                    <th>Prod.</th>
+                                    <th>Qtd.</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </thead>
+                            <tbody id="itens-carrinho">
+                                <tr id="carrinho-vazio">
+                                    <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="carrinho-total">
+                            <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                        </div>
+                        
+                        <a href="../CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
+                    </div>
                 </div>
-                
-                <a href="../CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
             </div>
-        </div>
     </div>
 </header>
 

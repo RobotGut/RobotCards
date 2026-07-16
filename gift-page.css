@@ -80,6 +80,12 @@ header {
     -webkit-text-fill-color: transparent;
 }
 
+.links-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .back-btn {
     color: white;
     text-decoration: none;
@@ -251,25 +257,8 @@ header {
     margin: 25px 0;
 }
 
-.prices button {
-    padding: 16px 22px;
-    border: none;
-    font-family: Poppins, sans-serif;
-    border-radius: 16px;
-    background: #111;
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-.prices button:hover {
-    background: linear-gradient(90deg, #00ffcc, #00a2ff);
-    color: rgb(0, 0, 0);
-    transform: translateY(-3px);
-}
-
-.prices select {
+#valor-gift {
     flex: 1;
     background: #1a1a1a;
     border: 1px solid #3b485c;
@@ -277,11 +266,14 @@ header {
     padding: 11px;
     border-radius: 15px;
     font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600;
     cursor: pointer;
     outline: none;
     text-align: center;
     text-align-last: center;
 }
+
 
 /* =========================
    ACTION BUTTONS
@@ -357,43 +349,43 @@ header {
 }
 
 .microsoft {
-    background-image: url("https://tse4.mm.bing.net/th/id/OIP.KoXP2pIwAJPg3EWTNpWykgHaHa?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3");
+    background-image: url("imgs/microsoft.png");
 }
 
 .overwatch {
-    background-image: url("https://i1.sndcdn.com/artworks-000173076152-q5gpvq-t500x500.jpg");
+    background-image: url("imgs/overwatch.png");
 }
 
 .lol {
-    background-image: url("https://wallpapers.com/images/hd/illustration-of-league-of-legends-logo-7zbgxnhjkphhcwb3.jpg");
+    background-image: url("imgs/league-of-legends.png");
 }
 
 .sea {
-    background-image: url("https://th.bing.com/th/id/OIP.lNdoy4fkf1f4YSpC8cFw5AHaEK");
+    background-image: url("imgs/sea-of-thieves.png");
 }
 
 .netshoes {
-    background-image: url("https://logowik.com/content/uploads/images/netshoes-202468058.logowik.com.webp");
+    background-image: url("imgs/netshoes.png");
 }
 
 .decathlon {
-    background-image: url("https://th.bing.com/th/id/OIP.3dkVR78o12ltTgbZY2bDogHaF2");
+    background-image: url("imgs/decathlon.png");
 }
 
 .roblox {
-    background-image: url("https://i.pinimg.com/originals/b6/f4/2a/b6f42a199afddb797150104841ae31b4.jpg");
+    background-image: url("imgs/roblox.png");
 }
 
 .uber {
-    background-image: url("https://blog.romaindasilva.fr/wp-content/uploads/2019/09/uber-logo.jpg");
+    background-image: url("imgs/uber.png");
 }
 
 .centauro {
-    background-image: url("imgs/centauro.jpg");
+    background-image: url("imgs/centauro.png");
 }
 
 .kopenhagen {
-    background-image: url("https://manualdofranchising.com/wp-content/uploads/2023/01/franquia-kopenhagen.jpg");
+    background-image: url("imgs/kopenhagen.png");
 }
 
 .xbox {
@@ -891,8 +883,6 @@ header {
 }
 
 .carrinho {
-    position: absolute; 
-    right: 32px; 
     width: 22px;
     height: 10px;
     display: flex;

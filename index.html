@@ -26,59 +26,22 @@
 <header>
     <div class="topbar">
 
-        <a href="#secao-pesquisa" class="lupa">
-            <img src="imgs/icons/pesquisador.svg" alt="Pesquisar">
-        </a>
-
+        
         <div class="logo">
             <a href="#">RobotCard</a>
         </div>
-
-        <div class="carrinho">
-
-            <a href="CarrinhoCompra.html" class="carrinho-icone">
-                <img src="imgs/icons/Carrinho.svg" alt="Carrinho de compras">
-            </a>
-
-            <div class="carrinho-dropdown">
-
-                <table class="mini-tabela">
-                    <thead>
-                        <tr>
-                            <th>Prod.</th>
-                            <th>Qtd.</th>
-                            <th>Preço</th>
-                        </tr>
-                    </thead>
-
-                    <tbody id="itens-carrinho">
-                        <tr id="carrinho-vazio">
-                            <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="carrinho-total">
-                    <strong>Total: R$ <span id="valor-total">0.00</span></strong>
-                </div>
-
-                <a href="CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
-
-            </div>
-
-        </div>
-
+        
         <nav>
-
+            
             <ul>
-
+                
                 <li class="dropdown">
-
+                    
                     <button type="button" class="btn btn-categorias">
                         Categorias
                         <i class="fa-solid fa-chevron-down"></i>
                     </button>
-
+                    
                     <div class="dropdown-menu">
                         <a href="#populares">Populares</a>
                         <a href="#jogos">Jogos</a>
@@ -98,23 +61,64 @@
                 <li>
                     <a href="#support">Suporte</a>
                 </li>
-
+                
             </ul>
-
+            
         </nav>
 
+        
         <div id="header-btns-container">
-
+            
             <div class="header-buttons">
-
+                
                 <button type="button" class="btn btn-login">
                     Entrar
                 </button>
-
+                
                 <button type="button" class="btn btn-register">
                     Criar Conta
                 </button>
-
+                
+            </div>
+            <div class="icons-container">
+    
+                <a href="#secao-pesquisa" class="lupa">
+                    <img src="imgs/icons/pesquisador.svg" alt="Pesquisar">
+                </a>
+                
+                <div class="carrinho">
+                    
+                    <a href="CarrinhoCompra.html" class="carrinho-icone">
+                        <img src="imgs/icons/Carrinho.svg" alt="Carrinho de compras">
+                    </a>
+                    
+                    <div class="carrinho-dropdown">
+                        
+                        <table class="mini-tabela">
+                            <thead>
+                                <tr>
+                                    <th>Prod.</th>
+                                    <th>Qtd.</th>
+                                    <th>Preço</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody id="itens-carrinho">
+                                <tr id="carrinho-vazio">
+                                    <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="carrinho-total">
+                            <strong>Total: R$ <span id="valor-total">0.00</span></strong>
+                        </div>
+                        
+                        <a href="CarrinhoCompra.html" class="btn-finalizar">Finalizar Compra</a>
+                        
+                    </div>
+                    
+                </div>
             </div>
 
             <button type="button" id="menu-btn">
