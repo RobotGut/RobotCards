@@ -67,7 +67,7 @@ function atualizarInterfaceMiniCarrinho() {
 
 function formataNome(str) {
     const nome = str.match(/[a-zA-Z]{2,}/g);
-    const formatado = nome.length > 1 ? nome.join('-') : nome.join("").toLowerCase();
+    const formatado = nome.length > 1 ? nome.join('-').toLowerCase() : nome.join("").toLowerCase();
 
     return formatado;
 }
