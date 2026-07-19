@@ -2,8 +2,8 @@
     --primary-color: #2ecc71;
     --primary-hover: #27ae60;
     --dark-color: #2c3e50;
-    --light-bg: #1a1a1a;        /* MODIFICADO: Fundo escuro para os botões de quantidade */
-    --border-color: #222222;    /* MODIFICADO: Borda escura sutil combinando com tema dark */
+    --light-bg: #1a1a1a; /* MODIFICADO: Fundo escuro para os botões de quantidade */
+    --border-color: #222222; /* MODIFICADO: Borda escura sutil combinando com tema dark */
     --danger-color: #e74c3c;
 }
 
@@ -52,7 +52,6 @@ body::before {
     z-index: -1;
 }
 
-
 .cart-container {
     max-width: 1100px;
     margin: 2rem auto;
@@ -78,11 +77,12 @@ h2 {
     background: #0b0b0b; /* MODIFICADO: Um tom levemente acima do preto puro para dar profundidade */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .cart-item {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
     padding: 20px 0;
@@ -91,6 +91,11 @@ h2 {
 
 .cart-items:last-child {
     border-bottom: none;
+}
+
+.img-info-group {
+    display: flex;
+    align-items: center;
 }
 
 .cart-item img {
@@ -113,6 +118,11 @@ h2 {
 .item-category {
     font-size: 13px;
     color: #7f8c8d;
+}
+
+.item-group {
+    display: flex;
+    align-items: center;
 }
 
 /* Controles de Quantidade */
@@ -148,8 +158,8 @@ h2 {
 
 .item-price {
     font-weight: 600;
-    width: 100px;
-    text-align: right;
+    margin: 0 0.5rem 0 1.5rem;
+    text-align: center;
 }
 
 .btn-remove {
@@ -166,12 +176,25 @@ h2 {
     color: var(--danger-color);
 }
 
+@media (max-width: 500px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .item-group {
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+}
+
 /* Resumo do Pedido */
 .cart-summary {
     background: #0b0b0b; /* MODIFICADO: Padronizado com a lista de itens */
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     height: fit-content;
 }
 
@@ -241,12 +264,12 @@ hr {
     .cart-content {
         grid-template-columns: 1fr;
     }
-    
+
     .cart-item {
         flex-wrap: wrap;
         gap: 15px;
     }
-    
+
     .item-price {
         width: auto;
     }
@@ -287,9 +310,7 @@ header {
 
 .topbar {
     max-width: 1400px;
-
     margin: auto;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -304,4 +325,10 @@ header {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 20px 15px;
+    }
 }

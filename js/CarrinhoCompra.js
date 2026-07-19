@@ -1,25 +1,27 @@
 // carrinho.js
 
 // Inicialização do array buscando dados já salvos
-let carrinho = JSON.parse(localStorage.getItem('meu_carrinho')) || [];
+let carrinho = JSON.parse(localStorage.getItem("meu_carrinho")) || [];
 
 // Elementos do Mini-Carrinho (Dropdown do Header)
-const listaCarrinho = document.getElementById('itens-carrinho');
-const elementoTotal = document.getElementById('valor-total');
+const listaCarrinho = document.getElementById("itens-carrinho");
+const elementoTotal = document.getElementById("valor-total");
 
 // Elementos da Página Completa de Carrinho (Carrinho de Compra.html)
-const containerCarrinhoCompleto = document.getElementById('cart-items-container');
-const subtotalCompleto = document.getElementById('subtotal');
-const totalCompleto = document.getElementById('total-price');
+const containerCarrinhoCompleto = document.getElementById(
+    "cart-items-container",
+);
+const subtotalCompleto = document.getElementById("subtotal");
+const totalCompleto = document.getElementById("total-price");
 
 // Executa automaticamente ao carregar a página para atualizar as interfaces existentes
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     atualizarInterfaces();
 });
 
 // Salva o estado atual do carrinho no LocalStorage e atualiza as telas
 function salvarEAtualizar() {
-    localStorage.setItem('meu_carrinho', JSON.stringify(carrinho));
+    localStorage.setItem("meu_carrinho", JSON.stringify(carrinho));
     atualizarInterfaces();
 }
 
@@ -33,7 +35,7 @@ export function atualizarInterfaces() {
 function atualizarInterfaceMiniCarrinho() {
     if (!listaCarrinho || !elementoTotal) return;
 
-    listaCarrinho.innerHTML = '';
+    listaCarrinho.innerHTML = "";
 
     if (carrinho.length === 0) {
         listaCarrinho.innerHTML = `
@@ -41,33 +43,40 @@ function atualizarInterfaceMiniCarrinho() {
                 <td colspan="3" style="text-align: center; padding: 15px; color: #777;">O carrinho está vazio.</td>
             </tr>
         `;
-        elementoTotal.textContent = '0,00';
+        elementoTotal.textContent = "0,00";
         return;
     }
 
     let valorTotalCarrinho = 0;
 
-    carrinho.forEach(item => {
+    carrinho.forEach((item) => {
         const subtotal = item.preco * item.quantidade;
         valorTotalCarrinho += subtotal;
 
-        const tr = document.createElement('tr');
+        const tr = document.createElement("tr");
         tr.innerHTML = `
             <td>${item.nome}</td>
             <td style="text-align: center;">x${item.quantidade}</td>
-            <td>R$ ${subtotal.toFixed(2).replace('.', ',')}</td>
+            <td>R$ ${subtotal.toFixed(2).replace(".", ",")}</td>
         `;
         listaCarrinho.appendChild(tr);
     });
 
-    elementoTotal.textContent = valorTotalCarrinho.toFixed(2).replace('.', ',');
+    elementoTotal.textContent = valorTotalCarrinho.toFixed(2).replace(".", ",");
+}
+
+function formataNome(str) {
+    const nome = str.match(/[a-zA-Z]{2,}/g);
+    const formatado = nome.length > 1 ? nome.join('-') : nome.join("");
+
+    return formatado;
 }
 
 // 2. PAGINA COMPLETA DO CARRINHO (Carrinho de Compra.html)
 function atualizarInterfaceCarrinhoCompleto() {
     if (!containerCarrinhoCompleto) return;
 
-    containerCarrinhoCompleto.innerHTML = '';
+    containerCarrinhoCompleto.innerHTML = "";
 
     if (carrinho.length === 0) {
         containerCarrinhoCompleto.innerHTML = `
@@ -89,26 +98,30 @@ function atualizarInterfaceCarrinhoCompleto() {
 
         const cartItemHTML = `
             <div class="cart-item" data-id="${item.id}">
-                <img src="imgs/netflix.png" alt="${item.nome}">
-                <div class="item-info">
-                    <h3>${item.nome}</h3>
-                    <p class="item-category">Código Digital</p>
+                <div class="img-info-group">
+                    <img src="imgs/${formataNome(item.nome)}.png" alt="${item.nome}">
+                    <div class="item-info">
+                        <h3>${item.nome}</h3>
+                        <p class="item-category">Código Digital</p>
+                    </div>
                 </div>
-                <div class="item-quantity">
-                    <button class="btn-qty minus" data-index="${index}">-</button>
-                    <span class="qty-number">${item.quantidade}</span>
-                    <button class="btn-qty plus" data-index="${index}">+</button>
+                <div class="item-group">
+                    <div class="item-quantity">
+                        <button class="btn-qty minus" data-index="${index}">-</button>
+                        <span class="qty-number">${item.quantidade}</span>
+                        <button class="btn-qty plus" data-index="${index}">+</button>
+                    </div>
+                    <div class="item-price">R$ ${subtotalItem.toFixed(2).replace(".", ",")}</div>
+                        <button class="btn-remove" data-index="${index}">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
                 </div>
-                <div class="item-price">R$ ${subtotalItem.toFixed(2).replace('.', ',')}</div>
-                <button class="btn-remove" data-index="${index}">
-                    <i class="fa-solid fa-trash"></i>
-                </button>
             </div>
         `;
         containerCarrinhoCompleto.innerHTML += cartItemHTML;
     });
 
-    const totalFormatado = `R$ ${valorTotalAcumulado.toFixed(2).replace('.', ',')}`;
+    const totalFormatado = `R$ ${valorTotalAcumulado.toFixed(2).replace(".", ",")}`;
     if (subtotalCompleto) subtotalCompleto.textContent = totalFormatado;
     if (totalCompleto) totalCompleto.textContent = totalFormatado;
 
@@ -118,18 +131,18 @@ function atualizarInterfaceCarrinhoCompleto() {
 // Configura os cliques dos botões de + , - e lixeira da página do carrinho
 function configurarEventosBotoes() {
     // Botões de Mais (+)
-    document.querySelectorAll('.btn-qty.plus').forEach(botao => {
+    document.querySelectorAll(".btn-qty.plus").forEach((botao) => {
         botao.onclick = (e) => {
-            const index = e.target.getAttribute('data-index');
+            const index = e.target.getAttribute("data-index");
             carrinho[index].quantidade += 1;
             salvarEAtualizar();
         };
     });
 
     // Botões de Menos (-)
-    document.querySelectorAll('.btn-qty.minus').forEach(botao => {
+    document.querySelectorAll(".btn-qty.minus").forEach((botao) => {
         botao.onclick = (e) => {
-            const index = e.target.getAttribute('data-index');
+            const index = e.target.getAttribute("data-index");
             carrinho[index].quantidade -= 1;
             if (carrinho[index].quantidade <= 0) {
                 carrinho.splice(index, 1);
@@ -139,10 +152,10 @@ function configurarEventosBotoes() {
     });
 
     // Botões de Remover (Lixeira)
-    document.querySelectorAll('.btn-remove').forEach(botao => {
+    document.querySelectorAll(".btn-remove").forEach((botao) => {
         botao.onclick = (e) => {
-            const botaoLixeira = e.target.closest('.btn-remove');
-            const index = botaoLixeira.getAttribute('data-index');
+            const botaoLixeira = e.target.closest(".btn-remove");
+            const index = botaoLixeira.getAttribute("data-index");
             carrinho.splice(index, 1);
             salvarEAtualizar();
         };
@@ -155,13 +168,13 @@ export function obterCarrinho() {
 }
 
 export function adicionarAoCarrinho(evento) {
-    const botao = evento.currentTarget; 
-    
-    const id = botao.getAttribute('data-id');
-    const nome = botao.getAttribute('data-nome');
-    const preco = parseFloat(botao.getAttribute('data-preco'));
+    const botao = evento.currentTarget;
 
-    const produtoExistente = carrinho.find(item => item.id === id);
+    const id = botao.getAttribute("data-id");
+    const nome = botao.getAttribute("data-nome");
+    const preco = parseFloat(botao.getAttribute("data-preco"));
+
+    const produtoExistente = carrinho.find((item) => item.id === id);
 
     if (produtoExistente) {
         produtoExistente.quantidade += 1;
@@ -170,7 +183,7 @@ export function adicionarAoCarrinho(evento) {
             id: id,
             nome: nome,
             preco: preco,
-            quantidade: 1
+            quantidade: 1,
         });
     }
 
