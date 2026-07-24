@@ -1,6 +1,7 @@
 // main.js
 import { inicializarModais } from './modais.js';
-import { adicionarAoCarrinho, atualizarInterfaceCarrinho, obterCarrinho } from './carrinho.js';
+// MUDANÇA AQUI: Trocado 'atualizarInterfaceCarrinho' por 'atualizarInterfaces'
+import { adicionarAoCarrinho, atualizarInterfaces, obterCarrinho } from './CarrinhoCompra.js';
 // NOVOS IMPORTS:
 import { inicializarAutenticacao } from './auth.js';
 import { inicializarNavegacao } from './navegacao.js';
@@ -15,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
     inicializarNavegacao();
     inicializarBusca();
 
-    // 2. Sistema do Carrinho (Sincroniza do LocalStorage)
-    atualizarInterfaceCarrinho();
+    // 2. Sistema do Carrinho (Sincroniza do LocalStorage para todas as telas)
+    // MUDANÇA AQUI: Chama a função unificada da versão 2 do carrinho.js
+    atualizarInterfaces();
 
     // Configura botões de adicionar ao carrinho
     const botoesAdicionar = document.querySelectorAll('.add-to-cart');
@@ -34,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
             // Se o botão for de compra imediata, redireciona o usuário para o Checkout
             if (this.classList.contains("buy")) {
                 console.log("Redirecionando para o checkout...");
-                // Aqui você pode colocar o redirecionamento real caso queira:
                 // window.location.href = "checkout.html";
             }
             
@@ -55,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-    
 
     // 4. Atualização Dinâmica do Select de Gift Card
     const selectGift = document.getElementById("valor-gift");
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const tituloLimpo = document.title.replace("Gift Card", "").trim();
             const idAmigavel = tituloLimpo.toLowerCase().replace(/\s+/g, '_');
 
-            const nomeProduto = `${tituloLimpo} ${saldoTexto}`;
+            const nomeProduto = `${tituloLimpo} ${saldoTexto} - R$ ${preco.replace('.', ',')}`;
             const idProduto = `${idAmigavel}_gift_${valor}`;
 
             btnCarrinhoMain.setAttribute("data-id", idProduto);
