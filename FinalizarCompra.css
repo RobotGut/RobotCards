@@ -205,7 +205,7 @@ h2.checkout-title {
 
 .payment-option.active {
     border-color: var(--accent-cyan);
-    background: rgba(0, 255, 204, 0.04);
+    background: rgba(0, 206, 165, 0.04);
 }
 
 .payment-option i {
@@ -265,7 +265,7 @@ h2.checkout-title {
     padding: 10px 16px;
     cursor: pointer;
     border: none;
-    background-color: #32bcad;
+    background-color: #2ecc71;
     color: white;
     border-radius: 6px;
     font-weight: 600;
@@ -274,7 +274,7 @@ h2.checkout-title {
 }
 
 .btn-copy-pix:hover {
-    background-color: #28978b;
+    background-color: #25a45a;
 }
 
 .pix-warning-box {

@@ -1,17 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // INICIALIZA O EMAILJS COM A SUA PUBLIC KEY
+    emailjs.init("iuRQTaUbqt-8Us_Af");
+
     // ==========================================
     // 1. SISTEMA DE ABAS DE PAGAMENTO
     // ==========================================
     document.querySelectorAll('.payment-option').forEach(option => {
         option.addEventListener('click', () => {
-            // Remove classe ativa de todas as opções e abas
             document.querySelectorAll('.payment-option').forEach(o => o.classList.remove('active'));
             document.querySelectorAll('.payment-tab').forEach(t => t.classList.remove('active'));
 
-            // Ativa a opção (botão) clicada
             option.classList.add('active');
             
-            // Pega o valor (ex: 'pix', 'cartao') e ativa a aba correspondente
             const selectedValue = option.querySelector('input').value;
             const tabContent = document.getElementById(`tab-${selectedValue}`);
             
@@ -24,20 +24,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // ==========================================
     // 2. EXTRAÇÃO E EXIBIÇÃO DO CARRINHO
     // ==========================================
-    
-    // Puxa o carrinho do LocalStorage
     const carrinho = JSON.parse(localStorage.getItem('meu_carrinho')) || [];
     
-    // Mapeia os elementos do Resumo da Compra na tela
     const listaItensCheckout = document.getElementById('checkout-items-list');
     const subtotalCheckout = document.getElementById('checkout-subtotal');
     const totalCheckout = document.getElementById('checkout-total');
 
-    // Função para renderizar os itens
     function renderizarResumo() {
         if (!listaItensCheckout) return;
 
-        // Limpa o conteúdo HTML base (aquele "RobotCard Pro x1" manual)
         listaItensCheckout.innerHTML = '';
 
         if (carrinho.length === 0) {
@@ -54,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let totalSoma = 0;
 
-        // Passa por cada item do carrinho e cria a linha no resumo
         carrinho.forEach(item => {
             const subtotalItem = item.preco * item.quantidade;
             totalSoma += subtotalItem;
@@ -62,44 +56,75 @@ document.addEventListener("DOMContentLoaded", () => {
             const divItem = document.createElement('div');
             divItem.className = 'preview-item';
             divItem.innerHTML = `
-                <span>${item.nome} <strong style="color: #00ffcc;">x${item.quantidade}</strong></span>
+                <span>${item.nome} <strong style="color: #767474;">x${item.quantidade}</strong></span>
                 <strong>R$ ${subtotalItem.toFixed(2).replace('.', ',')}</strong>
             `;
             listaItensCheckout.appendChild(divItem);
         });
 
-        // Atualiza os valores finais na tela
         const totalFormatado = `R$ ${totalSoma.toFixed(2).replace('.', ',')}`;
         if (subtotalCheckout) subtotalCheckout.textContent = totalFormatado;
         if (totalCheckout) totalCheckout.textContent = totalFormatado;
     }
 
-    // Executa a função para montar o resumo assim que a página carrega
     renderizarResumo();
 
     // ==========================================
-    // 3. FINALIZAÇÃO DO PEDIDO (BOTÃO CONCLUIR)
+    // 3. FINALIZAÇÃO DO PEDIDO E ENVIO DE E-MAIL
     // ==========================================
     const formCheckout = document.getElementById('checkout-form');
     
     if (formCheckout) {
         formCheckout.addEventListener('submit', (e) => {
-            e.preventDefault(); // Impede o recarregamento da página
+            e.preventDefault();
 
             if (carrinho.length === 0) {
                 alert("Seu carrinho está vazio! Adicione produtos antes de finalizar.");
-                window.location.href = "index.html"; // Redireciona para a home
+                window.location.href = "index.html";
                 return;
             }
 
-            // Exemplo de conclusão com sucesso
-            alert("Pedido concluído com sucesso! Verificando pagamento...");
+            // Captura os dados do formulário preenchido pelo cliente
+            const formData = new FormData(formCheckout);
+            const dadosCliente = Object.fromEntries(formData.entries());
+
+            // Formata a lista de produtos para o corpo do e-mail
+            let resumoProdutos = "";
+            let valorTotal = 0;
+            carrinho.forEach(item => {
+                let sub = item.preco * item.quantidade;
+                valorTotal += sub;
+                resumoProdutos += `- ${item.nome} (Qtd: ${item.quantidade}) - R$ ${sub.toFixed(2)}\n`;
+            });
+
+            // Parâmetros que serão enviados para o seu e-mail
+            const templateParams = {
+                to_email: "robot.lojas@gmail.com",
+                cliente_nome: dadosCliente.nome || "Não informado",
+                cliente_email: dadosCliente.email || "Não informado",
+                cliente_telefone: dadosCliente.whatsapp || "Não informado",
+                produtos: resumoProdutos,
+                valor_total: `R$ ${valorTotal.toFixed(2).replace('.', ',')}`
+            };
+
+            // Envio via EmailJS com tempo de espera seguro antes de sair da página
+            emailjs.send('loja_gift_cards', 'template_4kcv3jm', templateParams)
+                .then((response) => {
+                    console.log('E-MAIL ENVIADO COM SUCESSO!', response.status, response.text);
+                })
+                .catch((error) => {
+                    console.log('ERRO AO ENVIAR E-MAIL:', error);
+                });
+
+            alert("Pedido concluído com sucesso! E-mail enviado.");
             
             // Limpa o carrinho
             localStorage.removeItem('meu_carrinho');
             
-            // Redireciona para uma página de sucesso ou para a home
-            window.location.href = "index.html"; 
+            // Aguarda 1.5 segundos (1500 milissegundos) para garantir o envio e redireciona
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 1500);
         });
     }
 });

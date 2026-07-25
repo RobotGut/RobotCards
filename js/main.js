@@ -65,13 +65,13 @@ document.addEventListener("DOMContentLoaded", () => {
         function atualizarBotaoCarrinho() {
             const opcaoSelecionada = selectGift.options[selectGift.selectedIndex];
             const valor = opcaoSelecionada.value;
-            const preco = parseFloat(valor).toFixed(2);
+            const preco = (Math.floor(parseFloat(valor)) + 0.99).toFixed(2);
             
             const saldoTexto = opcaoSelecionada.getAttribute("data-moedas") || `R$ ${valor}`;
             const tituloLimpo = document.title.replace("Gift Card", "").trim();
             const idAmigavel = tituloLimpo.toLowerCase().replace(/\s+/g, '_');
 
-            const nomeProduto = `${tituloLimpo} ${saldoTexto} - R$ ${preco.replace('.', ',')}`;
+            const nomeProduto = `${tituloLimpo} ${saldoTexto} `;
             const idProduto = `${idAmigavel}_gift_${valor}`;
 
             btnCarrinhoMain.setAttribute("data-id", idProduto);
