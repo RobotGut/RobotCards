@@ -57,29 +57,85 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 4. Atualização Dinâmica do Select de Gift Card
+    // 4. Atualização Dinâmica do Valor de Gift Card (Com Limite de R$ 25 a R$ 500)
     const selectGift = document.getElementById("valor-gift");
     const btnCarrinhoMain = document.getElementById("btn-carrinho-main");
 
     if (selectGift && btnCarrinhoMain) {
+        // Criação dinâmica do campo de input personalizado (com min=25 e max=500)
+        let grupoPersonalizado = document.getElementById("grupo-personalizado");
+        if (!grupoPersonalizado) {
+            grupoPersonalizado = document.createElement("div");
+            grupoPersonalizado.id = "grupo-personalizado";
+            grupoPersonalizado.style.display = "none";
+            grupoPersonalizado.style.marginTop = "15px";
+            grupoPersonalizado.innerHTML = `
+                <label for="valor-personalizado" style="font-size: 14px; font-weight: 500; display: block; margin-bottom: 5px;">Digite um valor (Entre R$ 25 e R$ 500):</label>
+                <input type="number" id="valor-personalizado" min="25" max="500" step="1" placeholder="Ex: 150" style="padding: 10px; width: 100%; border: 1px solid #ccc; border-radius: 8px; font-size: 16px;">
+                <span id="erro-valor" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">O valor deve estar entre R$ 25 e R$ 500.</span>
+            `;
+            selectGift.parentNode.appendChild(grupoPersonalizado);
+        }
+
+        const inputPersonalizado = document.getElementById("valor-personalizado");
+        const avisoErro = document.getElementById("erro-valor");
+
         function atualizarBotaoCarrinho() {
             const opcaoSelecionada = selectGift.options[selectGift.selectedIndex];
-            const valor = opcaoSelecionada.value;
-            const preco = (Math.floor(parseFloat(valor)) + 0.99).toFixed(2);
-            
-            const saldoTexto = opcaoSelecionada.getAttribute("data-moedas") || `R$ ${valor}`;
             const tituloLimpo = document.title.replace("Gift Card", "").trim();
             const idAmigavel = tituloLimpo.toLowerCase().replace(/\s+/g, '_');
 
-            const nomeProduto = `${tituloLimpo} ${saldoTexto} `;
-            const idProduto = `${idAmigavel}_gift_${valor}`;
+            let valorStr = opcaoSelecionada.value;
+            let preco = 0;
+            let saldoTexto = "";
+            let idProduto = "";
+            let nomeProduto = "";
+
+            if (valorStr === "custom" || opcaoSelecionada.text.toLowerCase().includes("personalizado")) {
+                grupoPersonalizado.style.display = "block";
+                
+                let valorCustom = parseFloat(inputPersonalizado.value) || 0;
+                
+                // Validação de limite (25 a 500)
+                if (inputPersonalizado.value !== "" && (valorCustom < 25 || valorCustom > 500)) {
+                    avisoErro.style.display = "block";
+                    btnCarrinhoMain.style.opacity = "0.5";
+                    btnCarrinhoMain.style.pointerEvents = "none"; // Bloqueia o botão se passar do limite
+                } else {
+                    avisoErro.style.display = "none";
+                    btnCarrinhoMain.style.opacity = "1";
+                    btnCarrinhoMain.style.pointerEvents = "auto";
+                }
+
+                preco = valorCustom.toFixed(2);
+                saldoTexto = `- R$${valorCustom}`;
+                nomeProduto = `${tituloLimpo} Personalizado (R$ ${preco})`;
+                idProduto = `${idAmigavel}_gift_custom_${valorCustom}`;
+            } else {
+                grupoPersonalizado.style.display = "none";
+                avisoErro.style.display = "none";
+                btnCarrinhoMain.style.opacity = "1";
+                btnCarrinhoMain.style.pointerEvents = "auto";
+                
+                preco = (Math.floor(parseFloat(valorStr)) + 0.99).toFixed(2);
+                saldoTexto = opcaoSelecionada.getAttribute("data-moedas") || `R$ ${valorStr}`;
+                nomeProduto = `${tituloLimpo} ${saldoTexto} `;
+                idProduto = `${idAmigavel}_gift_${valorStr}`;
+            }
 
             btnCarrinhoMain.setAttribute("data-id", idProduto);
             btnCarrinhoMain.setAttribute("data-nome", nomeProduto);
             btnCarrinhoMain.setAttribute("data-preco", preco);
         }
 
+        const opcaoCustom = Array.from(selectGift.options).find(opt => opt.text.toLowerCase().includes("personalizado"));
+        if (opcaoCustom) {
+            opcaoCustom.value = "custom";
+        }
+
         selectGift.addEventListener("change", atualizarBotaoCarrinho);
+        inputPersonalizado.addEventListener("input", atualizarBotaoCarrinho);
+        
         atualizarBotaoCarrinho(); 
     }
 });

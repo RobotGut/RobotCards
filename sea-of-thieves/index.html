@@ -57,7 +57,7 @@
             <div class="text">
                 <h2>Sobre o Sea of Thieves</h2>
                 <p>Sea of Thieves offers a experiência pirata definitiva, desde a navegação e o combate até a exploração e os saques — tudo o que você precisa para viver a vida pirata e se tornar uma lenda.</p>
-                <p>Com os vales pré-pagos de Moedas Antigas, você pode visitar o Empório Pirata no jogo para comprar mascotes companheres exclusivas, trajes temáticos de navios e gestos divertidos.</p>
+                <p>Com os vales pré-pagos de Moedas Antigas, você pode visitar o Empório Pirata no jogo para comprar mascotes companheiras exclusivas, trajes temáticos de navios e gestos divertidos.</p>
             </div>
         </div>
         <div class="product-info">
@@ -72,28 +72,25 @@
             
             <h3>Escolha o valor</h3>
             
-            <!--Apenas 150 moedas antigas - R$ 8,99 , 550 moedas antigas - R$ 28,99 e 1.000 moedas antigas - R$ !,99 -->
-            <!-- Questão 2: Mudado de data-saldo para data-moedas para unificar com o JS do Overwatch -->
             <div class="prices">
                 <select id="valor-gift">
-                    <option value="8,99" data-moedas="- 150 moedas antigas">150 moedas antigas - R$ 8,99</option>
-                    <option value="28,99" data-moedas="- 550 moedas antigas" selected>550 moedas antigas - R$ 28,99</option>
-                    <option value="45,99" data-moedas="- 1.000 moedas antigas">1.000 moedas antigas - R$ 45,99</option>
+                    <option value="8.99" data-moedas="Sea of Thieves">150 moedas antigas - R$ 8,99</option>
+                    <option value="28.99" data-moedas="- 550 moedas antigas" selected>550 moedas antigas - R$ 28,99</option>
+                    <option value="45.99" data-moedas="- 1.000 moedas antigas">1.000 moedas antigas - R$ 45,99</option>
                 </select>
             </div>
             
             <div class="actions">
                 <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
                 
-                <!-- Botão de carrinho unificado com a classe add-to-cart e ID principal -->
-                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="sea_gift_50" data-nome="Gift Card Sea of Thieves R$ 50" data-preco="50.00">
+                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="sea_gift_550" data-nome="Gift Card Sea of Thieves 550 moedas" data-preco="28.99">
                     <i class="fa-solid fa-bag-shopping"></i> Carrinho
                 </button>
             </div>
             
             <div class="security">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp" alt="Site Seguro">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp" alt="Entrega Imediata">
             </div>
              <button class="como-resgatar" data-target="modal-sea">
                 <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
@@ -111,20 +108,20 @@
                  </div>
                  <ul class="tutorial-steps">
                        <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">1</div>
-                         <div class="tutorial-step-text">Guarde o seu código digital recebido após a validação do seu pedido.</div>
+                          <div class="tutorial-step-number">1</div>
+                          <div class="tutorial-step-text">Guarde o seu código digital recebido após a validação do seu pedido.</div>
                        </li>
                        <li class="tutorial-step-item">
                             <div class="tutorial-step-number">2</div>
                             <div class="tutorial-step-text">Como o ecossistema do jogo roda via Microsoft, acesse a página: <strong>xbox.com/redeem</strong>.</div>
                        </li>
                        <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">3</div>
-                         <div class="tutorial-step-text">Faça login com a mesma conta que você utiliza para jogar e insira o código de 25 dígitos.</div>
+                          <div class="tutorial-step-number">3</div>
+                          <div class="tutorial-step-text">Faça login com a mesma conta que você utiliza para jogar e insira o código de 25 dígitos.</div>
                        </li>
                         <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">4</div>
-                         <div class="tutorial-step-text">Confirme a operação. Os itens ou moedas aparecerão na sua conta no próximo boot do jogo.</div>
+                          <div class="tutorial-step-number">4</div>
+                          <div class="tutorial-step-text">Confirme a operação. Os itens ou moedas aparecerão na sua conta no próximo boot do jogo.</div>
                        </li>
                  </ul>
             </div>
@@ -132,7 +129,6 @@
         </div>
     </div>
     
-<!-- Questão 3: Alterado para carregar o módulo em js/main.js -->
 <script type="module" src="../js/main.js"></script>
 </body>
 </html>

@@ -66,7 +66,18 @@ function atualizarInterfaceMiniCarrinho() {
 }
 
 function formataNome(str) {
+    if (!str) return "produto";
+
+    const lowerStr = str.toLowerCase();
+    
+    // Exceções manuais para imagens base
+    if (lowerStr.includes("sea of thieves")) return "sea-of-thieves";
+    if (lowerStr.includes("league of legends")) return "league-of-legends";
+    if (lowerStr.includes("roblox")) return "roblox";
+    if (lowerStr.includes("uber")) return "uber"; // <--- Adicionado para a Uber apontar para a imagem correta!
+
     const nome = str.match(/[a-zA-Z]{2,}/g);
+    if (!nome) return "produto";
     const formatado = nome.length > 1 ? nome.join('-').toLowerCase() : nome.join("").toLowerCase();
 
     return formatado;
@@ -169,6 +180,20 @@ export function obterCarrinho() {
 
 export function adicionarAoCarrinho(evento) {
     const botao = evento.currentTarget;
+
+    // Se o input personalizado estiver visível, atualiza os atributos do botão na marra antes de ler
+    const inputPersonalizado = document.getElementById("valor-personalizado");
+    const selectGift = document.getElementById("valor-gift");
+    
+    if (inputPersonalizado && selectGift && selectGift.value === "custom") {
+        const valorCustom = parseFloat(inputPersonalizado.value) || 25;
+        const tituloLimpo = document.title.replace("Gift Card", "").trim();
+        const idAmigavel = tituloLimpo.toLowerCase().replace(/\s+/g, '_');
+        
+        botao.setAttribute("data-id", `${idAmigavel}_gift_custom_${valorCustom}`);
+        botao.setAttribute("data-nome", `${tituloLimpo} Personalizado (R$ ${valorCustom.toFixed(2)})`);
+        botao.setAttribute("data-preco", valorCustom.toFixed(2));
+    }
 
     const id = botao.getAttribute("data-id");
     const nome = botao.getAttribute("data-nome");
