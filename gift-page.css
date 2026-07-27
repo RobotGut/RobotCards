@@ -989,3 +989,40 @@ header {
 .btn-finalizar:hover {
     background-color: #26af5f;
 }
+
+
+/* Estilo do rótulo */
+#grupo-personalizado label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Estilo do input */
+#valor-personalizado {
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 9px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Efeito ao focar no input */
+#valor-personalizado:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+}
+
+/* Oculta as setinhas de incremento padrão do input number em alguns navegadores (opcional) */
+#valor-personalizado::-webkit-inner-spin-button,
+#valor-personalizado::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Mensagem de erro */
+.mensagem-erro {
+  font-size: 13px;
+  color: #d9534f;
+  margin: 0;
+  display: none; /* Por padrão fica oculta, ative via JS quando houver erro */
+}

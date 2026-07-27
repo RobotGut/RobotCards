@@ -97,20 +97,20 @@
 
             <h3>Escolha o valor</h3>
             
-<div class="prices">
-    <select id="valor-gift">
-        <option value="20" data-moedas="- R$25">R$ 25</option>
-        <option value="43" data-moedas=" - R$50" selected>R$ 50</option>
-        <option value="91" data-moedas=" - R$100">R$ 100</option>
-        <option value="custom" data-moedas="">Personalizado</option>
-    </select>
+            <div class="prices">
+             <select id="valor-gift">
+                 <option value="20" data-moedas="- R$25">R$ 25</option>
+                 <option value="43" data-moedas=" - R$50" selected>R$ 50</option>
+                 <option value="91" data-moedas=" - R$100">R$ 100</option>
+              <option value="custom" data-moedas="">Personalizado</option>
+             </select>
 
-    <!-- Campo de input para o valor personalizado (inicialmente oculto) -->
-    <div id="grupo-personalizado">
-        <label for="valor-personalizado" >Digite o valor desejado (R$):</label>
-        <input type="number" id="valor-personalizado" min="10" step="1" placeholder="Entre 25 e 500">
-    </div>
-</div>
+                <div id="grupo-personalizado">
+                 <label for="valor-personalizado">Digite o valor desejado (R$):</label>
+                 <input type="number" id="valor-personalizado" min="25" max="500" step="1" placeholder="Entre 25 e 500">
+                  <p id="erro-valor" class="mensagem-erro">O valor deve estar entre R$ 25 e R$ 500.</p>
+                </div>
+            </div>
 
             <div class="actions">
                 <button class="buy">

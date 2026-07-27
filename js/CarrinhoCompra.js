@@ -1,5 +1,3 @@
-// carrinho.js
-
 // Inicialização do array buscando dados já salvos
 let carrinho = JSON.parse(localStorage.getItem("meu_carrinho")) || [];
 
@@ -69,16 +67,20 @@ function formataNome(str) {
     if (!str) return "produto";
 
     const lowerStr = str.toLowerCase();
-    
+
     // Exceções manuais para imagens base
     if (lowerStr.includes("sea of thieves")) return "sea-of-thieves";
     if (lowerStr.includes("league of legends")) return "league-of-legends";
     if (lowerStr.includes("roblox")) return "roblox";
-    if (lowerStr.includes("uber")) return "uber"; // <--- Adicionado para a Uber apontar para a imagem correta!
+    if (lowerStr.includes("uber")) return "uber";
 
     const nome = str.match(/[a-zA-Z]{2,}/g);
     if (!nome) return "produto";
-    const formatado = nome.length > 1 ? nome.join('-').toLowerCase() : nome.join("").toLowerCase();
+
+    const formatado =
+        nome.length > 1
+            ? nome.join("-").toLowerCase()
+            : nome.join("").toLowerCase();
 
     return formatado;
 }
@@ -96,8 +98,10 @@ function atualizarInterfaceCarrinhoCompleto() {
                 <p>Seu carrinho de compras está vazio.</p>
             </div>
         `;
+
         if (subtotalCompleto) subtotalCompleto.textContent = "R$ 0,00";
         if (totalCompleto) totalCompleto.textContent = "R$ 0,00";
+
         return;
     }
 
@@ -116,32 +120,39 @@ function atualizarInterfaceCarrinhoCompleto() {
                         <p class="item-category">Código Digital</p>
                     </div>
                 </div>
+
                 <div class="item-group">
                     <div class="item-quantity">
                         <button class="btn-qty minus" data-index="${index}">-</button>
                         <span class="qty-number">${item.quantidade}</span>
                         <button class="btn-qty plus" data-index="${index}">+</button>
                     </div>
-                    <div class="item-price">R$ ${subtotalItem.toFixed(2).replace(".", ",")}</div>
-                        <button class="btn-remove" data-index="${index}">
+
+                    <div class="item-price">
+                        R$ ${subtotalItem.toFixed(2).replace(".", ",")}
+                    </div>
+
+                    <button class="btn-remove" data-index="${index}">
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
             </div>
         `;
+
         containerCarrinhoCompleto.innerHTML += cartItemHTML;
     });
 
-    const totalFormatado = `R$ ${valorTotalAcumulado.toFixed(2).replace(".", ",")}`;
+    const totalFormatado = `R$ ${valorTotalAcumulado
+        .toFixed(2)
+        .replace(".", ",")}`;
+
     if (subtotalCompleto) subtotalCompleto.textContent = totalFormatado;
     if (totalCompleto) totalCompleto.textContent = totalFormatado;
 
     configurarEventosBotoes();
 }
 
-// Configura os cliques dos botões de + , - e lixeira da página do carrinho
 function configurarEventosBotoes() {
-    // Botões de Mais (+)
     document.querySelectorAll(".btn-qty.plus").forEach((botao) => {
         botao.onclick = (e) => {
             const index = e.target.getAttribute("data-index");
@@ -150,65 +161,52 @@ function configurarEventosBotoes() {
         };
     });
 
-    // Botões de Menos (-)
     document.querySelectorAll(".btn-qty.minus").forEach((botao) => {
         botao.onclick = (e) => {
             const index = e.target.getAttribute("data-index");
             carrinho[index].quantidade -= 1;
+
             if (carrinho[index].quantidade <= 0) {
                 carrinho.splice(index, 1);
             }
+
             salvarEAtualizar();
         };
     });
 
-    // Botões de Remover (Lixeira)
     document.querySelectorAll(".btn-remove").forEach((botao) => {
         botao.onclick = (e) => {
             const botaoLixeira = e.target.closest(".btn-remove");
             const index = botaoLixeira.getAttribute("data-index");
+
             carrinho.splice(index, 1);
             salvarEAtualizar();
         };
     });
 }
 
-// 3. FUNÇÕES DE EXPORTAÇÃO (Para páginas de produtos externos)
 export function obterCarrinho() {
     return carrinho;
 }
+// 3. FUNÇÕES DE EXPORTAÇÃO
 
 export function adicionarAoCarrinho(evento) {
     const botao = evento.currentTarget;
 
-    // Se o input personalizado estiver visível, atualiza os atributos do botão na marra antes de ler
-    const inputPersonalizado = document.getElementById("valor-personalizado");
-    const selectGift = document.getElementById("valor-gift");
-    
-    if (inputPersonalizado && selectGift && selectGift.value === "custom") {
-        const valorCustom = parseFloat(inputPersonalizado.value) || 25;
-        const tituloLimpo = document.title.replace("Gift Card", "").trim();
-        const idAmigavel = tituloLimpo.toLowerCase().replace(/\s+/g, '_');
-        
-        botao.setAttribute("data-id", `${idAmigavel}_gift_custom_${valorCustom}`);
-        botao.setAttribute("data-nome", `${tituloLimpo} Personalizado (R$ ${valorCustom.toFixed(2)})`);
-        botao.setAttribute("data-preco", valorCustom.toFixed(2));
-    }
+    const id = botao.dataset.id;
+    const nome = botao.dataset.nome;
+    const preco = parseFloat(botao.dataset.preco);
 
-    const id = botao.getAttribute("data-id");
-    const nome = botao.getAttribute("data-nome");
-    const preco = parseFloat(botao.getAttribute("data-preco"));
-
-    const produtoExistente = carrinho.find((item) => item.id === id);
+    const produtoExistente = carrinho.find(item => item.id === id);
 
     if (produtoExistente) {
-        produtoExistente.quantidade += 1;
+        produtoExistente.quantidade++;
     } else {
         carrinho.push({
-            id: id,
-            nome: nome,
-            preco: preco,
-            quantidade: 1,
+            id,
+            nome,
+            preco,
+            quantidade: 1
         });
     }
 

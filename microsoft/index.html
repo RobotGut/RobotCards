@@ -144,10 +144,14 @@
                         </option>
                         <option value="25" data-moembed="- R$30">R$ 30</option>
                        
-                        <!--Personalizado-->
-                        <option value="200" data-moembed="">R$ 200</option>
-                    
-                    </select>
+                 <option value="custom" data-moedas="">Personalizado</option>
+                </select>
+
+                <div id="grupo-personalizado">
+                 <label for="valor-personalizado">Digite o valor desejado (R$):</label>
+                 <input type="number" id="valor-personalizado" min="25" max="500" step="1" placeholder="Entre 25 e 500">
+                 <p id="erro-valor" class="mensagem-erro">O valor deve estar entre R$ 25 e R$ 500.</p>
+                </div>
                 </div>
 
                 <div class="actions">
@@ -160,7 +164,7 @@
                         class="add-to-cart cart"
                         id="btn-carrinho-main"
                         data-id="microsoft_gift_60"
-                        data-nome="Gift Card Microsoft R$ 60"
+                        data-nome="Microsoft R$ 60"
                         data-preco="60.00"
                     >
                         <i class="fa-solid fa-bag-shopping"></i>

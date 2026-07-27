@@ -16,7 +16,6 @@
         <div class="topbar">
             <div class="logo">RobotCard</div>
             
-
             <div class="links-container">
                 <a href="../index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
                 
@@ -49,9 +48,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-
     </header>
 
     <section class="product">
@@ -60,7 +57,7 @@
             <div class="text">
                 <h2>Sobre o Xbox</h2>
                 <p>Encontre tudo o que precisa na Xbox Store. Compre os últimos blockbusters digitais, expansões de mapas da comunidade, assinaturas e moedas virtuais de jogos.</p>
-                <p>Com o Gift Card Xbox, você também pode assinar serviços consolidados de streaming de games, como o **Xbox Game Pass Ultimate**, tracking acesso instantâneo a centenas de jogos lendários.</p>
+                <p>Com o Gift Card Xbox, você também pode assinar serviços consolidados de streaming de games, como o **Xbox Game Pass Ultimate**, tendo acesso instantâneo a centenas de jogos lendários.</p>
             </div>
         </div>
         <div class="product-info">
@@ -76,27 +73,31 @@
             <h3>Opções de giftcard Xbox</h3>
             <div class="prices">
                 <select id="valor-gift">
-                    <option value="3" data-moedas="- R$5" selected> R$ 5</option>
-                    <option value="10" data-moedas="- R$15"> R$ 15</option>
-                    <option value="25" data-moedas="- R$30"> R$ 30</option>
-                   
-                    <option value="Personalizado" data-moedas="- Personalizado"> Personalizado</option>
-               
+                    <option value="5" data-moedas="- R$ 5" selected> R$ 5</option>
+                    <option value="15" data-moedas="- R$ 15"> R$ 15</option>
+                    <option value="30" data-moedas="- R$ 30"> R$ 30</option>
+                    <option value="custom" data-moedas="">Personalizado</option>
                 </select>
+
+                <div id="grupo-personalizado">
+                 <label for="valor-personalizado">Digite o valor desejado (R$):</label>
+                 <input type="number" id="valor-personalizado" min="25" max="500" step="1" placeholder="Entre 25 e 500">
+                 <p id="erro-valor" class="mensagem-erro">O valor deve estar entre R$ 25 e R$ 500.</p>
+                </div>
             </div>
             
             <div class="actions">
-                <button class="buy"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
-                <button class="add-to-cart cart" id="btn-carrinho-main" data-id="xbox_gift_50" data-nome="Gift Card Xbox R$ 50" data-preco="50.00">
+                <button class="buy" id="btn-comprar-agora"><i class="fa-solid fa-cart-shopping"></i> Comprar Agora</button>
+                <button class="add-to-cart cart" id="btn-carrinho-main">
                     <i class="fa-solid fa-bag-shopping"></i> Carrinho
                 </button>
             </div>
             
             <div class="security">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp">
-                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/site_seguro.webp" alt="Site Seguro">
+                <img src="https://lojadosgifts.com.br/assets/img/pages/entrega_imediata.webp" alt="Entrega Imediata">
             </div>
-             <button class="como-resgatar" data-target="modal-xbox">
+            <button class="como-resgatar" data-target="modal-xbox">
                 <i class="fa-solid fa-circle-question"></i> Como resgatar este Gift Card?
             </button>
         </div>
@@ -107,25 +108,25 @@
             <button class="tutorial-close-btn">&times;</button>
             <div class="tema-xbox">
                  <div class="tutorial-header">
-                        <span>Passo a Passo</span>
-                       <h2>Resgatar Gift Card</h2>
+                       <span>Passo a Passo</span>
+                      <h2>Resgatar Gift Card</h2>
                  </div>
                  <ul class="tutorial-steps">
                        <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">1</div>
-                         <div class="tutorial-step-text">Acesse a página de resgates oficial da Microsoft no seu computador ou celular: <strong>xbox.com/redeem</strong>.</div>
+                          <div class="tutorial-step-number">1</div>
+                          <div class="tutorial-step-text">Acesse a página de resgates oficial da Microsoft no seu computador ou celular: <strong>xbox.com/redeem</strong>.</div>
                        </li>
                        <li class="tutorial-step-item">
                             <div class="tutorial-step-number">2</div>
                             <div class="tutorial-step-text">Faça login com a sua conta da Microsoft/Xbox onde deseja utilizar o saldo.</div>
                        </li>
                        <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">3</div>
-                         <div class="tutorial-step-text">Digite cuidadosamente o código de 25 caracteres recebido no seu e-mail e clique em Avançar.</div>
+                          <div class="tutorial-step-number">3</div>
+                          <div class="tutorial-step-text">Digite cuidadosamente o código de 25 caracteres recebido no seu e-mail e clique em Avançar.</div>
                        </li>
                         <li class="tutorial-step-item">
-                         <div class="tutorial-step-number">4</div>
-                         <div class="tutorial-step-text">Pronto! O crédito digital entrará na sua carteira unificada e já poderá ser visto no seu console Xbox ou PC.</div>
+                          <div class="tutorial-step-number">4</div>
+                          <div class="tutorial-step-text">Pronto! O crédito digital entrará na sua carteira unificada e já poderá ser visto no seu console Xbox ou PC.</div>
                        </li>
                  </ul>
             </div>
