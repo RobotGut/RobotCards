@@ -30,21 +30,9 @@ body::before {
     position: fixed;
     inset: 0;
     background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(0, 255, 204, 0.08),
-            transparent 20%
-        ),
-        radial-gradient(
-            circle at 80% 40%,
-            rgba(0, 153, 255, 0.08),
-            transparent 20%
-        ),
-        radial-gradient(
-            circle at 50% 80%,
-            rgba(255, 0, 140, 0.08),
-            transparent 20%
-        );
+        radial-gradient(circle at 20% 20%, rgba(0, 255, 204, 0.08), transparent 20%),
+        radial-gradient(circle at 80% 40%, rgba(0, 153, 255, 0.08), transparent 20%),
+        radial-gradient(circle at 50% 80%, rgba(255, 0, 140, 0.08), transparent 20%);
     pointer-events: none;
     z-index: -1;
 }
@@ -118,19 +106,11 @@ header {
     align-items: center;
 }
 
-/* =========================
-   LEFT SIDE
-========================= */
-
 .left-side {
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
-
-/* =========================
-   PRODUCT IMAGE
-========================= */
 
 .product-image {
     width: 100%;
@@ -149,16 +129,8 @@ header {
     transform: scale(1.02);
 }
 
-/* =========================
-   INFO TEXT
-========================= */
-
 .text {
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.06),
-        rgba(255, 255, 255, 0.03)
-    );
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 30px;
     border-radius: 25px;
@@ -171,25 +143,13 @@ header {
     color: white;
 }
 
-/* =========================
-   PRODUCT INFO
-========================= */
-
 .product-info {
-    background: linear-gradient(
-        145deg,
-        rgba(255, 255, 255, 0.06),
-        rgba(255, 255, 255, 0.03)
-    );
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.03));
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 30px;
     padding: 40px;
     backdrop-filter: blur(20px);
 }
-
-/* =========================
-   TAG
-========================= */
 
 .tag {
     display: inline-block;
@@ -202,10 +162,6 @@ header {
     font-weight: 700;
 }
 
-/* =========================
-   TITLES
-========================= */
-
 .product-info h1 {
     font-size: 3rem;
     margin-bottom: 20px;
@@ -215,19 +171,11 @@ header {
     margin-top: 15px;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
-
 .description {
     color: #cfcfcf;
     line-height: 1.8;
     margin-bottom: 30px;
 }
-
-/* =========================
-   BADGES
-========================= */
 
 .badges {
     display: flex;
@@ -246,17 +194,12 @@ header {
     gap: 10px;
 }
 
-/* =========================
-   PRICES
-========================= */
-
 .prices {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
     margin: 25px 0;
 }
-
 
 #valor-gift {
     flex: 1;
@@ -273,7 +216,6 @@ header {
     text-align: center;
     text-align-last: center;
 }
-
 
 /* =========================
    ACTION BUTTONS
@@ -340,133 +282,34 @@ header {
 }
 
 /* =========================
-   IMAGE BACKGROUNDS
+   IMAGE BACKGROUNDS & HOVERS
 ========================= */
 
-.netflix {
-    background-image: url("./imgs/netflix.png");
-    background-color: black;
-}
+.netflix { background-image: url("./imgs/netflix.png"); background-color: black; }
+.microsoft { background-image: url("./imgs/microsoft.png"); }
+.overwatch { background-image: url("imgs/overwatch.png"); }
+.lol { background-image: url("imgs/league-of-legends.png"); }
+.sea { background-image: url("imgs/sea-of-thieves.png"); }
+.netshoes { background-image: url("imgs/netshoes.png"); }
+.decathlon { background-image: url("imgs/decathlon.png"); }
+.roblox { background-image: url("imgs/roblox.png"); }
+.uber { background-image: url("imgs/uber.png"); }
+.centauro { background-image: url("imgs/centauro.png"); }
+.kopenhagen { background-image: url("imgs/kopenhagen.png"); }
+.xbox { background-image: url("imgs/xbox.png"); }
 
-.microsoft {
-    background-image: url("./imgs/microsoft.png");
-}
-
-.overwatch {
-    background-image: url("imgs/overwatch.png");
-}
-
-.lol {
-    background-image: url("imgs/league-of-legends.png");
-}
-
-.sea {
-    background-image: url("imgs/sea-of-thieves.png");
-}
-
-.netshoes {
-    background-image: url("imgs/netshoes.png");
-}
-
-.decathlon {
-    background-image: url("imgs/decathlon.png");
-}
-
-.roblox {
-    background-image: url("imgs/roblox.png");
-}
-
-.uber {
-    background-image: url("imgs/uber.png");
-}
-
-.centauro {
-    background-image: url("imgs/centauro.png");
-}
-
-.kopenhagen {
-    background-image: url("imgs/kopenhagen.png");
-}
-
-.xbox {
-    background-image: url("imgs/xbox.png");
-}
-
-/* =========================
-   HOVER GLOW EFFECTS
-========================= */
-
-.netflix:hover {
-    box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.5),
-        0 0 40px rgba(255, 0, 0, 0.5);
-}
-
-.microsoft:hover {
-    box-shadow:
-        0 0 15px rgba(255, 255, 255, 0.5),
-        0 0 40px rgba(255, 255, 255, 0.4);
-}
-
-.overwatch:hover {
-    box-shadow:
-        0 0 15px rgba(255, 166, 0, 0.5),
-        0 0 40px rgba(255, 166, 0, 0.4);
-}
-
-.lol:hover {
-    box-shadow:
-        0 0 15px rgba(0, 255, 200, 0.5),
-        0 0 40px rgba(255, 208, 0, 0.3);
-}
-
-.sea:hover {
-    box-shadow:
-        0 0 15px rgba(0, 183, 255, 0.5),
-        0 0 40px rgba(255, 230, 0, 0.3);
-}
-
-.netshoes:hover {
-    box-shadow:
-        0 0 15px rgba(140, 0, 255, 0.5),
-        0 0 40px rgba(140, 0, 255, 0.4);
-}
-
-.decathlon:hover {
-    box-shadow:
-        0 0 15px rgba(0, 119, 255, 0.5),
-        0 0 40px rgba(0, 119, 255, 0.4);
-}
-
-.roblox:hover {
-    box-shadow:
-        0 0 15px rgb(255, 255, 255),
-        0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-.uber:hover {
-    box-shadow:
-        0 0 15px rgba(255, 255, 255, 0.4),
-        0 0 40px rgba(255, 255, 255, 0.2);
-}
-
-.centauro:hover {
-    box-shadow:
-        0 0 15px rgba(255, 0, 0, 0.4),
-        0 0 40px rgba(255, 255, 255, 0.3);
-}
-
-.kopenhagen:hover {
-    box-shadow:
-        0 0 15px rgba(255, 217, 0, 0.5),
-        0 0 40px rgba(255, 217, 0, 0.3);
-}
-
-.xbox:hover {
-    box-shadow:
-        0 0 15px rgba(67, 153, 9, 0.5),
-        0 0 40px rgba(179, 255, 0, 0.3);
-}
+.netflix:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.5), 0 0 40px rgba(255, 0, 0, 0.5); }
+.microsoft:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.4); }
+.overwatch:hover { box-shadow: 0 0 15px rgba(255, 166, 0, 0.5), 0 0 40px rgba(255, 166, 0, 0.4); }
+.lol:hover { box-shadow: 0 0 15px rgba(0, 255, 200, 0.5), 0 0 40px rgba(255, 208, 0, 0.3); }
+.sea:hover { box-shadow: 0 0 15px rgba(0, 183, 255, 0.5), 0 0 40px rgba(255, 230, 0, 0.3); }
+.netshoes:hover { box-shadow: 0 0 15px rgba(140, 0, 255, 0.5), 0 0 40px rgba(140, 0, 255, 0.4); }
+.decathlon:hover { box-shadow: 0 0 15px rgba(0, 119, 255, 0.5), 0 0 40px rgba(0, 119, 255, 0.4); }
+.roblox:hover { box-shadow: 0 0 15px rgb(255, 255, 255), 0 0 40px rgba(255, 255, 255, 0.3); }
+.uber:hover { box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 40px rgba(255, 255, 255, 0.2); }
+.centauro:hover { box-shadow: 0 0 15px rgba(255, 0, 0, 0.4), 0 0 40px rgba(255, 255, 255, 0.3); }
+.kopenhagen:hover { box-shadow: 0 0 15px rgba(255, 217, 0, 0.5), 0 0 40px rgba(255, 217, 0, 0.3); }
+.xbox:hover { box-shadow: 0 0 15px rgba(67, 153, 9, 0.5), 0 0 40px rgba(179, 255, 0, 0.3); }
 
 /* =========================
    RESPONSIVE
@@ -476,7 +319,6 @@ header {
     .product {
         grid-template-columns: 1fr;
     }
-
     .product-info h1 {
         font-size: 2.3rem;
     }
@@ -486,41 +328,34 @@ header {
     header {
         padding: 20px;
     }
-
     .topbar {
         flex-direction: column;
         gap: 15px;
     }
-
     .product {
         padding: 30px 20px;
     }
-
     .product-image {
         height: 350px;
     }
-
     .actions {
         flex-direction: column;
     }
-
     .buy,
     .cart {
         width: 100%;
     }
-
     .product-info {
         padding: 25px;
     }
-
     .product-info h1 {
         font-size: 2rem;
     }
 }
 
-/* ==========================================================================
-   ACRÉSCIMO: Botão de como funciona
-   ========================================================================== */
+/* =========================
+   TUTORIAL & MODAL
+========================= */
 
 .como-resgatar {
     margin: 24px auto; 
@@ -550,10 +385,6 @@ header {
     background: white;
     color: rgb(0, 0, 0);
 }
-
-/* ==========================================================================
-   ACRÉSCIMO: ESTILOS DO CARD MODAL DE TUTORIAL
-   ========================================================================== */
 
 .tutorial-modal-overlay {
     position: fixed;
@@ -609,6 +440,15 @@ header {
     font-weight: 700;
 }
 
+.tutorial-header span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 6px;
+}
+
 .tutorial-steps {
     list-style: none;
 }
@@ -653,10 +493,6 @@ header {
     box-shadow: 0 10px 25px rgba(0, 255, 204, 0.2);
 }
 
-/* ==========================================================================
-   ACRÉSCIMO: CLASSES BASE DOS MODAIS
-   ========================================================================== */
-
 .tutorial-card {
     background: #0d0d0d;
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -683,192 +519,58 @@ header {
     margin-top: 2px;
 }
 
-.tutorial-header span {
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 2px;
-    display: block;
-    margin-bottom: 6px;
-}
+/* Modals Themes */
+.tutorial-card:has(.tema-netflix) { box-shadow: 0 25px 60px rgba(229, 9, 20, 0.4); }
+.tema-netflix .tutorial-step-number { background: linear-gradient(135deg, #141414, #000000); color: rgb(255, 0, 0); }
+.tema-netflix .tutorial-header span { color: #e50914; }
 
-/* ==========================================================================
-   TEMAS CUSTOMIZADOS DOS MODAIS
-   ========================================================================== */
+.tutorial-card:has(.tema-microsoft) { box-shadow: 0 0 5px rgba(0, 0, 0, .6), 0 0 10px rgba(255, 60, 0, .6), 0 0 20px rgba(0, 255, 150, .6); }
+.tema-microsoft .tutorial-step-number { background: #1e1e1e; color: #f2f2f2; border: 1px solid rgba(255, 255, 255, 0.2); }
+.tema-microsoft .tutorial-header span { color: #00a4ef; }
 
-/* Tema: Netflix */
-.tutorial-card:has(.tema-netflix) {
-    box-shadow: 0 25px 60px rgba(229, 9, 20, 0.4);
-}
-.tema-netflix .tutorial-step-number {
-    background: linear-gradient(135deg, #141414, #000000);
-    color: rgb(255, 0, 0);
-}
-.tema-netflix .tutorial-header span {
-    color: #e50914; 
-}
+.tutorial-card:has(.tema-roblox) { box-shadow: 0 0 5px rgba(121, 121, 121, .6), 0 0 20px rgba(109, 109, 109, 0.6); }
+.tema-roblox .tutorial-step-number { background: #1c1c1c; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); }
+.tema-roblox .tutorial-header span { color: #aaaaaa; }
 
-/* Tema: Microsoft */
-.tutorial-card:has(.tema-microsoft) {
-    box-shadow:
-        0 0 5px rgba(0, 0, 0, .6),
-        0 0 10px rgba(255, 60, 0, .6),
-        0 0 20px rgba(0, 255, 150, .6);
-}
-.tema-microsoft .tutorial-step-number {
-    background: #1e1e1e;
-    color: #f2f2f2; 
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.tema-microsoft .tutorial-header span {
-    color: #00a4ef; 
-}
+.tutorial-card:has(.tema-overwatch) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(249, 156, 25, 0.3); }
+.tema-overwatch .tutorial-step-number { background: linear-gradient(135deg, #404a54, #21272c); color: #f99c19; border: 1px solid rgba(249, 156, 25, 0.4); }
+.tema-overwatch .tutorial-header span { color: #f99c19; }
 
-/* Tema: Roblox */
-.tutorial-card:has(.tema-roblox) {
-   box-shadow:
-        0 0 5px rgba(121, 121, 121, .6),
-        0 0 20px rgba(109, 109, 109, 0.6);
-}
-.tema-roblox .tutorial-step-number {
-    background: #1c1c1c;
-    color: #ffffff; 
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.tema-roblox .tutorial-header span {
-    color: #aaaaaa; 
-}
+.tutorial-card:has(.tema-lol) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(194, 143, 36, 0.25); }
+.tema-lol .tutorial-step-number { background: linear-gradient(135deg, #091420, #0a1428); color: #c28f24; border: 1px solid rgba(194, 143, 36, 0.5); }
+.tema-lol .tutorial-header span { color: #c28f24; }
 
-/* Tema: Overwatch */
-.tutorial-card:has(.tema-overwatch) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
-                0 0 35px rgba(249, 156, 25, 0.3); 
-}
-.tema-overwatch .tutorial-step-number {
-    background: linear-gradient(135deg, #404a54, #21272c); 
-    color: #f99c19; 
-    border: 1px solid rgba(249, 156, 25, 0.4);
-}
-.tema-overwatch .tutorial-header span {
-    color: #f99c19;
-}
+.tutorial-card:has(.tema-sea) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 204, 153, 0.25); }
+.tema-sea .tutorial-step-number { background: linear-gradient(135deg, #041a16, #010a08); color: #00ffcc; border: 1px solid rgba(0, 255, 204, 0.3); }
+.tema-sea .tutorial-header span { color: #00cc99; }
 
-/* Tema: League of Legends */
-.tutorial-card:has(.tema-lol) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
-                0 0 35px rgba(194, 143, 36, 0.25);
-}
-.tema-lol .tutorial-step-number {
-    background: linear-gradient(135deg, #091420, #0a1428);
-    color: #c28f24;
-    border: 1px solid rgba(194, 143, 36, 0.5);
-}
-.tema-lol .tutorial-header span {
-    color: #c28f24;
-}
+.tutorial-card:has(.tema-netshoes) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(111, 0, 255, 0.5); }
+.tema-netshoes .tutorial-step-number { background: linear-gradient(135deg, #1b003a, #0b001a); color: #8c00ff; border: 1px solid rgba(140, 0, 255, 0.4); }
+.tema-netshoes .tutorial-header span { color: #8c00ff; }
 
-/* Tema: Sea of Thieves */
-.tutorial-card:has(.tema-sea) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 
-                0 0 35px rgba(0, 204, 153, 0.25); 
-}
-.tema-sea .tutorial-step-number {
-    background: linear-gradient(135deg, #041a16, #010a08); 
-    color: #00ffcc; 
-    border: 1px solid rgba(0, 255, 204, 0.3);
-}
-.tema-sea .tutorial-header span {
-    color: #00cc99;
-}
+.tutorial-card:has(.tema-decathlon) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 119, 255, 0.43); }
+.tema-decathlon .tutorial-step-number { background: #ffffff; color: #0077ff; border: 1px solid rgba(0, 119, 255, 0.4); }
+.tema-decathlon .tutorial-header span { color: #0077ff; }
 
-/* Tema: Netshoes */
-.tutorial-card:has(.tema-netshoes) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                0 0 35px rgba(111, 0, 255, 0.5);
-}
-.tema-netshoes .tutorial-step-number {
-    background: linear-gradient(135deg, #1b003a, #0b001a);
-    color: #8c00ff;
-    border: 1px solid rgba(140, 0, 255, 0.4);
-}
-.tema-netshoes .tutorial-header span { 
-    color: #8c00ff; 
-}
+.tutorial-card:has(.tema-xbox) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(16, 124, 16, 0.35); }
+.tema-xbox .tutorial-step-number { background: linear-gradient(135deg, #083a08, #001100); color: #107c10; border: 1px solid rgba(16, 124, 16, 0.4); }
+.tema-xbox .tutorial-header span { color: #107c10; }
 
-/* Tema: Decathlon */
-.tutorial-card:has(.tema-decathlon) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                0 0 35px rgba(0, 119, 255, 0.43);
-}
-.tema-decathlon .tutorial-step-number {
-    background: linear-gradient(135deg, #ffffff, #ffffff);
-    color: #0077ff;
-    border: 1px solid rgba(0, 119, 255, 0.4);
-}
-.tema-decathlon .tutorial-header span { 
-    color: #0077ff; 
-}
+.tutorial-card:has(.tema-uber) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 30px rgb(255, 255, 255); }
+.tema-uber .tutorial-step-number { background: #1f1f1f; color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.3); }
+.tema-uber .tutorial-header span { color: #ffffff; }
 
-/* Tema: Xbox */
-.tutorial-card:has(.tema-xbox) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                0 0 35px rgba(16, 124, 16, 0.35);
-}
-.tema-xbox .tutorial-step-number {
-    background: linear-gradient(135deg, #083a08, #001100);
-    color: #107c10;
-    border: 1px solid rgba(16, 124, 16, 0.4);
-}
-.tema-xbox .tutorial-header span {
-     color: #107c10;
-}
+.tutorial-card:has(.tema-centauro) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(255, 0, 0, 0.25); }
+.tema-centauro .tutorial-step-number { background: #ffffff; color: #e50000; border: 1px solid rgba(255, 0, 0, 0.3); }
+.tema-centauro .tutorial-header span { color: #ffffff; }
 
-/* Tema: Uber */
-.tutorial-card:has(.tema-uber) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                0 0 30px rgb(255, 255, 255);
-}
-.tema-uber .tutorial-step-number {
-    background: #1f1f1f;
-    color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-}
-.tema-uber .tutorial-header span {
-     color: #ffffff; 
-}
+.tutorial-card:has(.tema-kopenhagen) { box-shadow: 0 0 10px rgba(197, 8, 8, .6), 0 0 20px rgba(250, 246, 37, 0.6); }
+.tema-kopenhagen .tutorial-step-number { background: linear-gradient(135deg, #2b2100, #141000); color: #ffd900; border: 1px solid rgba(255, 217, 0, 0.3); }
+.tema-kopenhagen .tutorial-header span { color: #ffd900; }
 
-/* Tema: Centauro */
-.tutorial-card:has(.tema-centauro) {
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8),
-                0 0 35px rgba(255, 0, 0, 0.25);
-}
-.tema-centauro .tutorial-step-number {
-    background: linear-gradient(135deg, #ffffff, #ffffff);
-    color: #e50000;
-    border: 1px solid rgba(255, 0, 0, 0.3);
-}
-.tema-centauro .tutorial-header span { 
-    color: #ffffff;
-}
-
-/* Tema: Kopenhagen */
-.tutorial-card:has(.tema-kopenhagen) {
-    box-shadow:
-        0 0 10px rgba(197, 8, 8, .6),
-        0 0 20px rgba(250, 246, 37, 0.6);
-}
-.tema-kopenhagen .tutorial-step-number {
-    background: linear-gradient(135deg, #2b2100, #141000);
-    color: #ffd900;
-    border: 1px solid rgba(255, 217, 0, 0.3);
-}
-.tema-kopenhagen .tutorial-header span { 
-    color: #ffd900; 
-}
-
-/* ==========================================================================
-   CARRINHO E ELEMENTOS DE INTERAÇÃO
-   ========================================================================== */
+/* =========================
+   CART & CUSTOM INPUT
+========================= */
 
 #itens-carrinho {
     list-style: none;
@@ -896,7 +598,6 @@ header {
 
 .carrinho:hover {
     transform: scale(1.05);
-    cursor: pointer;
     border-radius: 5px;
 }
 
@@ -920,7 +621,6 @@ header {
     margin-left: 5px;
 }
 
-/* Dropdown da Mini Tabela */
 .carrinho-dropdown {
     display: none;
     position: absolute;
@@ -979,7 +679,7 @@ header {
     background-color: #28a765;
     color: white;
     border: none;
-    padding: 8px 5px;      
+    padding: 8px 5px;       
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
@@ -990,39 +690,54 @@ header {
     background-color: #26af5f;
 }
 
+/* Grupo Personalizado */
+#grupo-personalizado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 320px;
+  margin: 0 auto;
+}
 
-/* Estilo do rótulo */
 #grupo-personalizado label {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-/* Estilo do input */
-#valor-personalizado {
-  padding: 10px 12px;
   font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 9px;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  color: #ceced2;
+  letter-spacing: -0.01em;
+  text-align: center;
 }
 
-/* Efeito ao focar no input */
+#valor-personalizado {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  color: #0f172a;
+  background-color: #f8fafc;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  box-sizing: border-box;
+  text-align: center;
+  transition: all 0.25s ease-in-out;
+  -moz-appearance: textfield;
+}
+
+#valor-personalizado::placeholder {
+  color: #94a3b8;
+  text-align: center;
+}
+
 #valor-personalizado:focus {
-  border-color: #0066cc;
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+  background-color: #ffffff;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.12);
 }
 
-/* Oculta as setinhas de incremento padrão do input number em alguns navegadores (opcional) */
 #valor-personalizado::-webkit-inner-spin-button,
 #valor-personalizado::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* Mensagem de erro */
-.mensagem-erro {
-  font-size: 13px;
-  color: #d9534f;
-  margin: 0;
-  display: none; /* Por padrão fica oculta, ative via JS quando houver erro */
 }

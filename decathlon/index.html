@@ -119,15 +119,16 @@
 
                 <h3>Escolha o valor</h3>
 
-                <!-- Menu select isolado (sem texto do lado) e preparado para centralização -->
+                <!-- Corrigido para data-moedas para o JS conseguir ler corretamente -->
                 <div class="prices">
                     <select id="valor-gift">
-                        <option value="44" data-saldo="- R$ 50" selected> R$ 50</option>
+                        <option value="44" data-moedas="- R$ 50" selected>R$ 50</option>
                     </select>
                 </div>
 
                 <div class="actions">
-                    <button class="buy">
+                    <!-- Adicionado o id="btn-comprar-agora" aqui -->
+                    <button class="buy" id="btn-comprar-agora">
                         <i class="fa-solid fa-cart-shopping"></i> Comprar Agora
                     </button>
 

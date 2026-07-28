@@ -109,43 +109,39 @@ document.addEventListener("DOMContentLoaded", () => {
                 nomeProduto = `${tituloLimpo} ${saldoTexto}`.replace(/\./g, "");
                 idProduto = `${idAmigavel}_gift_custom_${valorCustom}`;
             } else {
-    if (grupoPersonalizado) grupoPersonalizado.style.display = "none";
-    if (avisoErro) avisoErro.style.display = "none";
-    btnCarrinhoMain.style.opacity = "1";
-    btnCarrinhoMain.style.pointerEvents = "auto";
+                if (grupoPersonalizado) grupoPersonalizado.style.display = "none";
+                if (avisoErro) avisoErro.style.display = "none";
+                btnCarrinhoMain.style.opacity = "1";
+                btnCarrinhoMain.style.pointerEvents = "auto";
 
-    let brutoMoedas = opcaoSelecionada.getAttribute("data-moedas") || "";
+                let brutoMoedas = opcaoSelecionada.getAttribute("data-moedas") || "";
 
-    // Se possui moedas/pontos, o value já é o preço final
-    if (brutoMoedas !== "") {
-        preco = parseFloat(valorStr.replace(",", ".")).toFixed(2);
+                // VERIFICAÇÃO INTELIGENTE:
+                // Se o data-moedas contiver "R$" (ex: "- R$ 5", "- R$ 15"), ele aplica o desconto de 20%.
+                // Se o data-moedas for em moeda do jogo (ex: "800 Robux", "V-Bucks"), ele assume o value fixo direto.
+                if (brutoMoedas.includes("R$")) {
+                    let valorBase = parseFloat(brutoMoedas.replace(/[^0-9]/g, "")) || 0;
+                    let valorComDesconto = valorBase * 0.80;
+                    let valorReduzido = Math.floor(valorComDesconto) - 1;
+                    if (valorReduzido < 0) valorReduzido = 0;
+                    preco = (valorReduzido + 0.99).toFixed(2);
+                } else {
+                    // Para Roblox / Moedas virtuais: usa exatamente o preço informado no value (ex: 639,99)
+                    preco = parseFloat(valorStr.replace(",", ".")).toFixed(2);
+                }
 
-    } else {
-        // Gift card normal recebe desconto
-        let valorBase = parseFloat(valorStr.replace(",", "."));
+                let saldoLimpo = brutoMoedas
+                    .split(".")[0]
+                    .replace(/\./g, "");
 
-        let valorComDesconto = valorBase * 0.80;
-        let valorReduzido = Math.floor(valorComDesconto) - 1;
+                if (!saldoLimpo.includes("-") && brutoMoedas.includes("R$")) {
+                    saldoLimpo = `- ${saldoLimpo}`;
+                }
 
-        if (valorReduzido < 0) valorReduzido = 0;
-
-        preco = (valorReduzido + 0.99).toFixed(2);
-    }
-
-    let saldoLimpo = brutoMoedas
-        .split(".")[0]
-        .replace(/\./g, "");
-
-    if (!saldoLimpo.includes("-")) {
-        saldoLimpo = `- ${saldoLimpo}`;
-    }
-
-    saldoTexto = saldoLimpo.trim();
-
-    nomeProduto = `${tituloLimpo} ${saldoTexto}`.replace(/\./g, "");
-
-    idProduto = `${idAmigavel}_gift_${valorStr}`;
-}
+                saldoTexto = saldoLimpo.trim();
+                nomeProduto = `${tituloLimpo} ${saldoTexto}`.replace(/\./g, "");
+                idProduto = `${idAmigavel}_gift_${valorStr.replace(",", "_")}`;
+            }
 
             btnCarrinhoMain.setAttribute("data-id", idProduto);
             btnCarrinhoMain.setAttribute("data-nome", nomeProduto);

@@ -105,15 +105,15 @@
               <option value="custom" data-moedas="">Personalizado</option>
              </select>
 
-                <div id="grupo-personalizado">
-                 <label for="valor-personalizado">Digite o valor desejado (R$):</label>
-                 <input type="number" id="valor-personalizado" min="25" max="500" step="1" placeholder="Entre 25 e 500">
-                  <p id="erro-valor" class="mensagem-erro">O valor deve estar entre R$ 25 e R$ 500.</p>
+                <div id="grupo-personalizado" style="display: none; margin-top: 15px;">
+                    <label for="valor-personalizado" style="font-size: 14px; font-weight: 500; display: block; margin-bottom: 5px;">Digite o valor desejado (entre R$ 25 e R$ 500):</label>
+                    <input type="number" id="valor-personalizado" min="25" max="500" placeholder="Ex: 50" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-size: 14px;">
+                    <span id="erro-valor" style="color: #e74c3c; font-size: 12px; display: none; margin-top: 5px;">O valor deve estar entre R$ 25 e R$ 500.</span>
                 </div>
             </div>
 
             <div class="actions">
-                <button class="buy">
+                <button class="buy" id="btn-comprar-agora">
                     <i class="fa-solid fa-cart-shopping"></i>
                     Comprar Agora
                 </button>
