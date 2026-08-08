@@ -156,7 +156,7 @@ function configurarEventosBotoes() {
     document.querySelectorAll(".btn-qty.plus").forEach((botao) => {
         botao.onclick = (e) => {
             const index = e.target.getAttribute("data-index");
-            carrinho[index].quantidade += 1;
+            carrinho[index].quantidade += 1;891379
             salvarEAtualizar();
         };
     });
