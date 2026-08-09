@@ -570,9 +570,9 @@ header {
 .tema-kopenhagen .tutorial-step-number { background: linear-gradient(135deg, #2b2100, #141000); color: #ffd900; border: 1px solid rgba(255, 217, 0, 0.3); }
 .tema-kopenhagen .tutorial-header span { color: #ffd900; }
 
-.tutorial-card:has(.tema-casasbahia) { box-shadow: 0 0 10px rgba(197, 8, 8, .6), 0 0 20px rgba(250, 246, 37, 0.6); }
-.tema-casasbahia .tutorial-step-number { background: linear-gradient(135deg, #2b2100, #141000); color: #ffd900; border: 1px solid rgba(255, 217, 0, 0.3); }
-.tema-casasbahia .tutorial-header span { color: #ffd900; }
+.tutorial-card:has(.tema-casasbahia) { box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(0, 85, 255, 0.4), 0 0 15px rgba(230, 0, 0, 0.3); }
+.tema-casasbahia .tutorial-step-number { background: linear-gradient(135deg, #001a4d, #000a1a); color: #f5f6f7; border: 2px solid rgba(199, 16, 16, 0.5); }
+.tema-casasbahia .tutorial-header span { color: #0055ff; }
 
 /* =========================
    CART & CUSTOM INPUT

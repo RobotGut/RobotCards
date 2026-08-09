@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Compras - Gift Cards</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="topbar">
+            <div class="logo">
+                <a href="/index.html">RobotCard</a>
+            </div>
+
+            <a href="/index.html" class="back-btn">
+                <i class="fa-solid fa-arrow-left"></i> Voltar
+            </a>
+
+            <button id="menu-btn" aria-label="Abrir Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="card history-summary-card">
+            <div class="section-header">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <h2>Histórico de <span class="highlight-green">Atividades</span></h2>
+            </div>
+            <p>Acompanhe e gerencie todas as suas ações, compras e resgates em um só lugar.</p>
+
+            <div class="history-controls">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" id="search-input" placeholder="Buscar no histórico...">
+                </div>
+                <div class="filter-box">
+                    <select id="filter-status">
+                        <option value="all">Todos os Status</option>
+                        <option value="completed">Concluídos</option>
+                        <option value="pending">Pendentes</option>
+                        <option value="failed">Cancelados / Falhas</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <div class="history-list" id="history-container">
+
+                <div class="history-item status-completed">
+                    <div class="history-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+                    <div class="history-details">
+                        <h4>Gift Card Roblox - R$ 50</h4>
+                        <span class="history-date">Hoje às 14:32</span>
+                    </div>
+                    <div class="history-value positive">
+                        R$ 39,99
+                    </div>
+                    <div class="history-status badge-completed">
+                        Concluído
+                    </div>
+                </div>
+
+                <div class="history-item status-completed">
+                    <div class="history-icon icon-blue">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div class="history-details">
+                        <h4>Comprovante de Compra #1024</h4>
+                        <span class="history-date">Ontem às 18:15</span>
+                    </div>
+                    <div class="history-value neutral">
+                        PDF
+                    </div>
+                    <div class="history-status badge-completed">
+                        Concluído
+                    </div>
+                </div>
+
+                <div class="history-item status-pending">
+                    <div class="history-icon icon-yellow">
+                        <i class="fa-solid fa-hourglass-half"></i>
+                    </div>
+                    <div class="history-details">
+                        <h4>Gift Card Personalizado - R$ 100</h4>
+                        <span class="history-date">10 de Out, 2026</span>
+                    </div>
+                    <div class="history-value neutral">
+                        R$ 79,99
+                    </div>
+                    <div class="history-status badge-pending">
+                        Pendente
+                    </div>
+                </div>
+
+                <div class="history-item status-failed">
+                    <div class="history-icon icon-red">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                    </div>
+                    <div class="history-details">
+                        <h4>Tentativa de Transação</h4>
+                        <span class="history-date">08 de Out, 2026</span>
+                    </div>
+                    <div class="history-value negative">
+                        Recusado
+                    </div>
+                    <div class="history-status badge-failed">
+                        Falhou
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pagination">
+                <button class="page-btn disabled" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+    </main>
+
+    <script type="module" src="../js/FinalizarCompra.js"></script>
+</body>
+</html>

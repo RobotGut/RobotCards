@@ -3,7 +3,8 @@ import { adicionarAoCarrinho, atualizarInterfaces } from './CarrinhoCompra.js';
 import { inicializarAutenticacao } from './auth.js';
 import { inicializarNavegacao } from './navegacao.js';
 import { inicializarBusca } from './busca.js';
-import { initReviews } from './Avaliacao.js'; // Importação do sistema de avaliações
+import { initReviews } from './Avaliacao.js';
+import { inicializarHistorico } from './historico.js'; // <- Importado aqui
 
 document.addEventListener("DOMContentLoaded", () => {
     console.log("Script JavaScript carregado com sucesso!");
@@ -13,8 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
     inicializarAutenticacao();
     inicializarNavegacao();
     inicializarBusca();
-    initReviews(); // Inicialização do sistema de avaliações
-
+    initReviews();
+    inicializarHistorico(); 
+    
     // 2. Sistema do Carrinho
     atualizarInterfaces();
 
@@ -162,22 +164,4 @@ document.addEventListener("DOMContentLoaded", () => {
         
         atualizarBotaoCarrinho(); 
     }
-});
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            // Opcional: para de observar após animar uma vez
-            observer.unobserve(entry.target); 
-        }
-    });
-}, {
-    threshold: 0.15 // Anima quando 15% do elemento aparecer na tela
-});
-
-// Seleciona todos os cards ou seções que você quer animar
-document.querySelectorAll('.card, .benefit, .section-title').forEach(el => {
-    el.classList.add('reveal');
-    observer.observe(el);
 });

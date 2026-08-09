@@ -25,11 +25,9 @@
     <main class="checkout-container">
         <h2 class="checkout-title"><i class="fa-solid fa-bag-shopping"></i> Finalizar Compra</h2>
 
-        <!-- Envolvemos a área de checkout com um form para o evento de submit funcionar -->
         <form id="checkout-form">
             <div class="checkout-content-three-columns">
                 
-                <!-- COLUNA 1: Guia Como Funciona (Esquerda) -->
                 <aside class="como-funciona-pagamento">
                     <h2 class="guide-title"><i class="fa-solid fa-circle-question"></i> Como Funciona?</h2>
                     <p class="pagamento-subtitle">Veja o passo a passo da entrega:</p>
@@ -78,30 +76,28 @@
                     </div>
                 </aside>
 
-                <!-- COLUNA 2: Formulário e Dados (Centro) -->
                 <div class="checkout-center">
                     <div class="checkout-card">
                         <h3><i class="fa-solid fa-user"></i> Seus Dados</h3>
                         <div class="form-grid">
-                          <div class="input-group full-width">
-                              <label for="nome">Nome Completo</label>
-                              <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
-                         </div>
-                         <div class="input-group">
-                           <label for="email">E-mail para entrega</label>
-                           <input type="email" id="email" name="email" placeholder="seu@email.com" required>
-                         </div>
-                         <div class="input-group">
-                          <label for="whatsapp">WhatsApp</label>
-                          <input type="text" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
-                         </div>
+                            <div class="input-group full-width">
+                                <label for="nome">Nome Completo</label>
+                                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="email">E-mail para entrega</label>
+                                <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="whatsapp">WhatsApp</label>
+                                <input type="text" id="whatsapp" name="whatsapp" placeholder="(11) 99999-9999" required>
+                            </div>
+                        </div>
                     </div>
-                </div>
 
                     <div class="checkout-card">
                         <h3><i class="fa-solid fa-wallet"></i> Forma de Pagamento</h3>
                         <div class="payment-methods">
-                            <!-- Adicionado value="pix" e classe payment-tab se necessário -->
                             <label class="payment-option active">
                                 <input type="radio" name="payment" value="pix" checked>
                                 <i class="fa-solid fa-qrcode"></i>
@@ -115,28 +111,25 @@
                             
                             <div class="pix-copy-wrapper">
                                 <input type="text" class="pix-input" value="1aca0b83-9496-4db4-bfa9-e433e8055a7f" readonly id="pixCode">
-                                <button type="button" class="btn-copy-pix" onclick="navigator.clipboard.writeText(document.getElementById('pixCode').value); alert('Chave Pix copiada!');">
+                                <button type="button" class="btn-copy-pix" onclick="copiarPix()">
                                     Copiar
                                 </button>
                             </div>
 
                             <div class="pix-warning-box">
                                 <i class="fa-solid fa-triangle-exclamation warning-icon"></i>
-                               <span>Após realizar o pagamento, clique no botão de concluir abaixo e aguarde a validação.</span>
+                                <span>Após realizar o pagamento, clique no botão de concluir abaixo e aguarde a validação.</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- COLUNA 3: Resumo do Pedido (Direita) -->
                 <div class="checkout-right">
                     <div class="checkout-summary-card">
                         <h3><i class="fa-solid fa-receipt"></i> Resumo do Pedido</h3>
                         
-                        <!-- ID adicionado para o JS injetar os produtos dinamicamente -->
                         <div class="checkout-items-preview" id="checkout-items-list">
-                            <!-- Os itens do carrinho entram aqui via JavaScript -->
-                        </div>
+                            </div>
 
                         <hr>
 
@@ -157,7 +150,6 @@
                             <span id="checkout-total">R$ 0,00</span>
                         </div>
 
-                        <!-- Botão com type="submit" para disparar o evento do formulário -->
                         <button type="submit" class="btn-finish">
                             <i class="fa-solid fa-check"></i> Concluir Pedido
                         </button>
@@ -172,7 +164,15 @@
         </form>
     </main>
 
-    <!-- Cole seu script aqui dentro de um arquivo separado (ex: script.js) ou numa tag <script> -->
+    <div id="customAlert" class="custom-alert-bg">
+        <div class="custom-alert-box">
+            <div class="alert-icon">✓</div>
+            <h3 id="customAlertTitle">Sucesso!</h3>
+            <p id="customAlertMessage">Chave Pix copiada com sucesso.</p>
+            <button onclick="fecharAviso()">Entendi</button>
+        </div>
+    </div>
+
     <script src="js/FinalizarCompra.js"></script>
 </body>
 </html>
