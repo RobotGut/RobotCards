@@ -132,7 +132,6 @@ function inicializarNavegacao() {
     const menuBtn = document.getElementById('menu-btn');
     if (menuBtn) {
         menuBtn.addEventListener('click', () => {
-            alert('Menu aberto'); // Insira o comportamento de toggle da sidebar/menu mobile aqui
         });
     }
 }
